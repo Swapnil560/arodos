@@ -25,7 +25,7 @@ export const ContactCard = () => {
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="flex flex-col lg:flex-row min-h-[600px]">
             {/* Left Section - Red Background */}
-            <div className="lg:w-1/2 bg-gradient-to-b from-red-500 to-red-600 p-12 flex items-center justify-center">
+            <div className="lg:w-1/2 bg-red-500 p-12 flex items-center justify-center">
               <div className="text-center lg:text-left max-w-md">
                 <h2 className="text-4xl font-bold text-white mb-6">Get in Touch</h2>
                 <p className="text-lg text-white mb-8 leading-relaxed">
@@ -35,19 +35,19 @@ export const ContactCard = () => {
                 
                 <div className="space-y-4">
                   <div className="flex items-center text-white">
-                    <span className="text-2xl mr-4">📞</span>
+                    <img src="/images/phone.png" alt="Phone" className="w-6 h-6 mr-4" />
                     <span className="text-base">+91 9620861198</span>
                   </div>
                   <div className="flex items-center text-white">
-                    <span className="text-2xl mr-4">✉️</span>
+                    <img src="/images/message.png" alt="Email" className="w-6 h-6 mr-4" />
                     <span className="text-base">contact@arodos.com</span>
                   </div>
                   <div className="flex items-center text-white">
-                    <span className="text-2xl mr-4">🌐</span>
+                    <img src="/images/arrow (2).png" alt="Website" className="w-6 h-6 mr-4" />
                     <span className="text-base">www.arodos.com</span>
                   </div>
                   <div className="flex items-center text-white">
-                    <span className="text-2xl mr-4">📍</span>
+                    <img src="/images/location.png" alt="Location" className="w-6 h-6 mr-4" />
                     <span className="text-base">Guwahati, Bangalore</span>
                   </div>
                 </div>

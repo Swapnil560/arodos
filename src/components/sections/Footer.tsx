@@ -10,23 +10,10 @@ export const Footer = () => {
   return (
     <footer className="bg-black text-white py-12">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
-          {/* Company Info */}
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
+          {/* Navigation */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Arodos</h3>
-            <p className="text-gray-400 mb-4">
-              Building the future with innovative technology solutions.
-            </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-2xl hover:text-blue-400 transition-colors">📘</a>
-              <a href="#" className="text-2xl hover:text-blue-400 transition-colors">📷</a>
-              <a href="#" className="text-2xl hover:text-blue-400 transition-colors">🐦</a>
-            </div>
-          </div>
-          
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4">Navigation</h4>
             <ul className="space-y-2">
               <li>
                 <button 
@@ -45,32 +32,47 @@ export const Footer = () => {
                 </button>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">About</a>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">Why Us?</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Contact</a>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">About Us</a>
               </li>
-            </ul>
-          </div>
-          
-          {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li>Web Development</li>
-              <li>Mobile Apps</li>
-              <li>AI Solutions</li>
-              <li>UI/UX Design</li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">Contact Us</a>
+              </li>
             </ul>
           </div>
           
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <div className="space-y-2 text-gray-400">
-              <p>📧 hello@arodos.in</p>
-              <p>📞 +91-xxxxxxxxxx</p>
-              <p>📍 Guwahati & Bangalore</p>
+              <p>Guwahati, Assam, India</p>
+              <p>Call Us: +91 96269 6186</p>
+              <p>Email: contact@arodos.com</p>
+            </div>
+          </div>
+          
+          {/* Socials */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Socials</h4>
+            <div className="space-y-2">
+              <a href="#" className="flex items-center hover:opacity-75 transition-opacity">
+                <img src="/images/link.png" alt="LinkedIn" className="w-6 h-6 mr-3" />
+                <span className="text-gray-400">LinkedIn</span>
+              </a>
+              <a href="#" className="flex items-center hover:opacity-75 transition-opacity">
+                <img src="/images/insta.png" alt="Instagram" className="w-6 h-6 mr-3" />
+                <span className="text-gray-400">Instagram</span>
+              </a>
+              <a href="#" className="flex items-center hover:opacity-75 transition-opacity">
+                <img src="/images/x.png" alt="Twitter" className="w-6 h-6 mr-3" />
+                <span className="text-gray-400">Twitter</span>
+              </a>
+              <a href="#" className="flex items-center hover:opacity-75 transition-opacity">
+                <img src="/images/facebook.png" alt="Facebook" className="w-6 h-6 mr-3" />
+                <span className="text-gray-400">Facebook</span>
+              </a>
             </div>
           </div>
         </div>
@@ -78,15 +80,16 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 mb-4 md:mb-0">
-            © 2025 Arodos. All rights reserved.
+            © 2025 www.arodos.com
           </p>
-          <div className="flex space-x-6">
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-              Privacy Policy
-            </a>
+          <div className="flex items-center space-x-6">
             <a href="#" className="text-gray-400 hover:text-white transition-colors">
               Terms of Use
             </a>
+            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              Privacy Policy
+            </a>
+            <img src="/images/arodoslogo.png" alt="Arodos Logo" className="h-6" />
           </div>
         </div>
       </div>

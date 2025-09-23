@@ -41,10 +41,8 @@ export const Hero = () => {
         </div>
         <div className="flex items-center">
           <span className="text-gray-300 text-sm">Trusted by 100+ Happy Customers</span>
-          <div className="flex ml-3 space-x-1">
-            <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs">👤</div>
-            <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs">👤</div>
-            <div className="w-5 h-5 bg-purple-500 rounded-full flex items-center justify-center text-white text-xs">👤</div>
+          <div className="ml-3">
+            <img src="/images/ppl.png" alt="Users" className="w-12 h-6" />
           </div>
         </div>
       </div>

@@ -2,19 +2,18 @@ import { useState, useEffect } from 'react';
 
 const testimonials = [
   {
-    quote: "Their expertise transformed our digital presence, boosting our efficiency significantly.",
-    client: "Minbury - CEO John Doe",
-    logo: "M"
+    quote: "Arodos delivered our MVP on time with exceptional quality. Their agile team truly understood our startup vision and executed flawlessly.",
+    client: "Deepankar Bhattacharjya - Co-Founder & COO, ZEMIDI",
+    logo: "Z",
+    rating: "★★★★★",
+    image: "/images/Deepankar Bhattacharjya.png"
   },
   {
-    quote: "Innovative solutions that drove measurable growth for our business.",
-    client: "Brigosha Technologies - Jane Smith",
-    logo: "B"
-  },
-  {
-    quote: "A reliable partner in navigating the ever-evolving digital landscape.",
-    client: "Auranayak - Michael Lee",
-    logo: "A"
+    quote: "Arodos built a robust backend for our vehicle tracking system — scalable, secure, and API-first. They're our go-to engineering partner now",
+    client: "David Pierce - Director NA Sales | POWWR",
+    logo: "P",
+    rating: "★★★★★",
+    image: "/images/David Pierce.png"
   }
 ];
 
@@ -42,8 +41,15 @@ export const TestimonialSlider = () => {
       <div className="bg-white rounded-2xl shadow-lg p-16 min-h-80">
         <div className="flex items-center justify-between h-full">
           <div className="flex-1 text-center pr-12">
-            <blockquote className="text-2xl text-gray-800 mb-8 leading-relaxed min-h-24 flex items-center justify-center">
-              "{testimonials[currentSlide].quote}"
+            {testimonials[currentSlide].rating && (
+              <div className="text-yellow-400 text-2xl mb-4">
+                {testimonials[currentSlide].rating}
+              </div>
+            )}
+            <blockquote className="text-2xl text-gray-800 mb-8 leading-relaxed min-h-24 flex items-start justify-center relative">
+              <img src="/images/open.png" alt="" className="w-20 h-20 absolute -top-4 -left-12" />
+              <span className="px-12">{testimonials[currentSlide].quote}</span>
+              <img src="/images/close.png" alt="" className="w-20 h-20 absolute -bottom-4 -right-12" />
             </blockquote>
             <cite className="text-blue-500 font-medium text-lg">
               {testimonials[currentSlide].client}
@@ -52,10 +58,18 @@ export const TestimonialSlider = () => {
           
           {/* Client Logo Circle */}
           <div className="flex-shrink-0">
-            <div className="w-32 h-32 bg-blue-500 rounded-full flex items-center justify-center">
-              <span className="text-white text-4xl font-bold">
-                {testimonials[currentSlide].logo}
-              </span>
+            <div className={`${testimonials[currentSlide].client.includes('Deepankar') ? 'w-48 h-48' : 'w-40 h-40'} bg-white overflow-hidden`}>
+              {testimonials[currentSlide].image ? (
+                <img 
+                  src={testimonials[currentSlide].image} 
+                  alt={testimonials[currentSlide].client} 
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <span className="text-gray-800 text-4xl font-bold">
+                  {testimonials[currentSlide].logo}
+                </span>
+              )}
             </div>
           </div>
         </div>

@@ -81,7 +81,7 @@ export const VisionMission = () => {
       </section>
 
       {/* Agile Approach Section */}
-      <section ref={agileRef} className="py-20" style={{ backgroundColor: '#F5F5F5' }}>
+      <section id="agile-approach" ref={agileRef} className="py-20" style={{ backgroundColor: '#F5F5F5' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className={`transform transition-all duration-700 ${
             agileVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
@@ -108,13 +108,14 @@ export const VisionMission = () => {
             <div className="agile-cards-container flex justify-center gap-5" style={{ maxWidth: '1080px', margin: '0 auto' }}>
               {/* Card 1 - Customer First */}
               <div className="relative group overflow-hidden" style={{
-                width: '360px',
+                width: '280px',
                 height: '480px',
                 borderRadius: '10px',
                 backgroundImage: 'url("/images/customer first.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.2)',
+                transform: 'perspective(1000px) translateZ(20px)',
                 transition: 'all 0.3s ease-in-out'
               }}>
                 {/* Bottom heading */}
@@ -141,12 +142,13 @@ export const VisionMission = () => {
               {/* Card 2 - Professional */}
               <div className="relative group overflow-hidden" style={{
                 width: '360px',
-                height: '480px',
+                height: '400px',
                 borderRadius: '10px',
                 backgroundImage: 'url("/images/professional.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                boxShadow: '0 25px 50px rgba(0, 0, 0, 0.4), 0 15px 30px rgba(0, 0, 0, 0.3)',
+                transform: 'perspective(1000px) translateY(16px) translateZ(30px)',
                 transition: 'all 0.3s ease-in-out'
               }}>
                 {/* Bottom heading */}
@@ -172,13 +174,14 @@ export const VisionMission = () => {
               
               {/* Card 3 - Problem Solver */}
               <div className="relative group overflow-hidden" style={{
-                width: '360px',
+                width: '280px',
                 height: '480px',
                 borderRadius: '10px',
                 backgroundImage: 'url("/images/problem solver.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.2)',
+                transform: 'perspective(1000px) translateZ(20px)',
                 transition: 'all 0.3s ease-in-out'
               }}>
                 {/* Bottom heading */}
@@ -207,7 +210,7 @@ export const VisionMission = () => {
       </section>
 
       {/* Our Services Section */}
-      <section className="py-20 bg-white">
+      <section id="services" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -281,42 +284,43 @@ export const VisionMission = () => {
           </div>
           
           {/* Bottom Section */}
-          <div className="flex gap-8 max-w-6xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 max-w-6xl mx-auto">
             {/* Left Column - Statistics */}
-            <div className="w-96 bg-white rounded-lg p-8 shadow-lg flex items-center justify-center" style={{ height: '450px' }}>
-              <div className="space-y-12">
-                <div>
-                  <div className="text-gray-800 text-lg mb-2">Brands partnered</div>
-                  <div className="text-blue-600 text-3xl font-bold">35+</div>
+            <div className="w-full lg:w-96 bg-white rounded-lg p-6 lg:p-8 shadow-lg flex items-center justify-center min-h-[300px] lg:h-[450px]">
+              <div className="grid grid-cols-3 lg:grid-cols-1 gap-6 lg:gap-12 w-full lg:w-auto">
+                <div className="text-center lg:text-left">
+                  <div className="text-gray-800 text-sm lg:text-lg mb-2">Brands partnered</div>
+                  <div className="text-blue-600 text-2xl lg:text-3xl font-bold">35+</div>
                 </div>
-                <div>
-                  <div className="text-gray-800 text-lg mb-2">Client satisfaction</div>
-                  <div className="text-blue-600 text-3xl font-bold">98%</div>
+                <div className="text-center lg:text-left">
+                  <div className="text-gray-800 text-sm lg:text-lg mb-2">Client satisfaction</div>
+                  <div className="text-blue-600 text-2xl lg:text-3xl font-bold">98%</div>
                 </div>
-                <div>
-                  <div className="text-gray-800 text-lg mb-2">Industries served</div>
-                  <div className="text-blue-600 text-3xl font-bold">12+</div>
+                <div className="text-center lg:text-left">
+                  <div className="text-gray-800 text-sm lg:text-lg mb-2">Industries served</div>
+                  <div className="text-blue-600 text-2xl lg:text-3xl font-bold">12+</div>
                 </div>
               </div>
             </div>
             
             {/* Right Column - Client Logos */}
-            <div className="flex-1 bg-white rounded-lg p-8 shadow-lg flex items-center justify-center" style={{ height: '450px' }}>
-              <div className="grid grid-cols-5 gap-8 items-center justify-items-center">
+            <div className="flex-1 bg-white rounded-lg p-6 lg:p-8 shadow-lg flex items-center justify-center min-h-[300px] lg:h-[450px]">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-8 items-center justify-items-center w-full">
                 {[
-                  { name: 'YHA India', color: 'text-green-600' },
+                  { name: 'YHA India', color: 'text-green-600', image: '/images/Yha.png' },
                   { name: 'Aurobindo', color: 'text-blue-600' },
-                  { name: 'Aulas', color: 'text-purple-600' },
-                  { name: 'Zemidi', color: 'text-red-600' },
-                  { name: 'Minbury', color: 'text-blue-600' },
-                  { name: 'Electrower', color: 'text-blue-800' },
-                  { name: 'Brigosha', color: 'text-blue-600' },
-                  { name: 'Aurobindo', color: 'text-blue-600' },
-                  { name: 'Minbury', color: 'text-blue-600' },
-                  { name: 'YHA India', color: 'text-green-600' }
+                  { name: 'Aulas', color: 'text-purple-600', image: '/images/aulas.png' },
+                  { name: 'Zemidi', color: 'text-red-600', image: '/images/auto.png' },
+                  { name: 'Minbury', color: 'text-blue-600', image: '/images/minbury.png' },
+                  { name: 'Electrower', color: 'text-blue-800', image: '/images/elect.png' },
+                  { name: 'Brigosha', color: 'text-blue-600', image: '/images/brigosh.png' }
                 ].map((client, index) => (
-                  <div key={index} className="w-32 h-16 bg-gray-100 rounded flex items-center justify-center">
-                    <span className={`text-sm font-semibold ${client.color}`}>{client.name}</span>
+                  <div key={index} className={`w-24 h-12 lg:w-32 lg:h-16 ${client.image ? '' : 'bg-gray-100'} rounded flex items-center justify-center`}>
+                    {client.image ? (
+                      <img src={client.image} alt={client.name} className="max-w-full max-h-full object-contain" />
+                    ) : (
+                      <span className={`text-xs lg:text-sm font-semibold ${client.color}`}>{client.name}</span>
+                    )}
                   </div>
                 ))}
               </div>
@@ -326,7 +330,7 @@ export const VisionMission = () => {
       </section>
 
       {/* What Our Clients Say Section */}
-      <section className="py-20" style={{ backgroundColor: '#F5F5F5' }}>
+      <section id="clients-say" className="py-20" style={{ backgroundColor: '#F5F5F5' }}>
         <div className="max-w-6xl mx-auto px-4">
           {/* Section Header */}
           <div className="text-center mb-16">

@@ -5,11 +5,16 @@ export const Navigation = () => {
   const navItems = ['Home', 'Services', 'Why Us?', 'About Us', 'Contact Us'];
 
   const scrollToSection = (item: string) => {
+    if (item === 'Home') {
+      document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false);
+      return;
+    }
+    
     const sectionMap: { [key: string]: string } = {
-      'Home': 'home',
       'Services': 'services',
-      'Why Us?': 'why-us',
-      'About Us': 'about-us',
+      'Why Us?': 'agile-approach', 
+      'About Us': 'clients-say',
       'Contact Us': 'contact-us'
     };
     
