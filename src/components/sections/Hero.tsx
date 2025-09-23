@@ -25,7 +25,7 @@ export const Hero = () => {
       {/* Header */}
       <div className="relative z-10 flex justify-between items-start p-5">
         <Logo />
-        <div className="mt-10">
+        <div className="relative mt-10">
           <Navigation />
         </div>
       </div>
