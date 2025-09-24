@@ -6,7 +6,7 @@ export const WhoWeAre = () => {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <section ref={ref} className="py-20 bg-gray-100">
+    <section id="who-we-are" ref={ref} className="py-20 bg-gray-100">
       <div className="max-w-5xl mx-auto px-4">
         <div className={`grid lg:grid-cols-2 gap-8 items-center transform transition-all duration-700 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'

@@ -5,22 +5,20 @@ export const Navigation = () => {
   const navItems = ['Home', 'Services', 'Why Us?', 'About Us', 'Contact Us'];
 
   const scrollToSection = (item: string) => {
-    if (item === 'Home') {
-      document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
-      return;
-    }
-    
     const sectionMap: { [key: string]: string } = {
+      'Home': 'hero',
       'Services': 'services',
       'Why Us?': 'agile-approach', 
-      'About Us': 'clients-say',
+      'About Us': 'who-we-are',
       'Contact Us': 'contact-us'
     };
     
     const sectionId = sectionMap[item];
     if (sectionId) {
-      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
     setIsOpen(false);
   };
@@ -54,13 +52,17 @@ export const Navigation = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-full right-0 mt-2 w-48 bg-gray-900 bg-opacity-95 rounded-lg shadow-lg md:hidden">
+        <div className="fixed top-20 right-4 w-48 bg-gray-900 bg-opacity-95 rounded-lg shadow-lg md:hidden z-50">
           <nav className="flex flex-col p-4 space-y-3">
             {navItems.map((item) => (
               <button
                 key={item}
-                onClick={() => scrollToSection(item)}
-                className="text-white text-left hover:text-red-500 transition-colors duration-300 py-2"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  scrollToSection(item);
+                }}
+                className="text-white text-left hover:text-red-500 transition-colors duration-300 py-2 w-full"
               >
                 {item}
               </button>
