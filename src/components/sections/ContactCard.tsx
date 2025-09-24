@@ -30,7 +30,7 @@ export const ContactCard = () => {
       <style dangerouslySetInnerHTML={{ __html: placeholderStyle }} />
       <section id="contact-us" className="py-12 md:py-16" style={{ backgroundColor: '#FAFAFA' }}>
       <div className="max-w-6xl mx-auto px-4">
-        <div className="rounded-lg overflow-hidden" style={{ background: 'linear-gradient(135deg, #FF4444 0%, #CC0000 50%, #990000 100%)', boxShadow: '0 8px 24px rgba(224, 224, 224, 0.3)' }}>
+        <div className="rounded-lg overflow-hidden" style={{ background: 'linear-gradient(135deg, #FF6B6B 0%, #FF4444 50%, #FF2222 100%)', boxShadow: '0 8px 24px rgba(224, 224, 224, 0.3)' }}>
           <div className="flex flex-col lg:flex-row min-h-[600px] md:min-h-[700px] p-6 md:p-8 lg:p-12">
             {/* Left Section - Contact Info */}
             <div className="lg:w-1/2 flex items-center justify-center mb-6 lg:mb-0">

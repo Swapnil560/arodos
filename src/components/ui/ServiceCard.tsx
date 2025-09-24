@@ -20,7 +20,7 @@ export const ServiceCard = ({
   const isBlueLeft = layout === 'blue-left';
   
   const BlueSection = (
-    <div className="bg-gradient-to-b from-blue-800 to-blue-400 p-6 md:p-8 flex flex-col relative min-h-[300px] md:min-h-[500px]">
+    <div className="bg-gradient-to-b from-blue-500 to-blue-300 p-6 md:p-8 flex flex-col relative min-h-[300px] md:min-h-[500px]">
       <div className="absolute top-4 left-4 md:top-6 md:left-6">
         <span className="text-white text-xl md:text-4xl font-bold">{number}</span>
         <div className="text-white text-base md:text-2xl mt-1">/</div>
