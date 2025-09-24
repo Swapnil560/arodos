@@ -2,72 +2,84 @@ import { useState } from 'react';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navItems = ['Home', 'Services', 'Why Us?', 'About Us', 'Contact Us'];
 
-  const scrollToSection = (item: string) => {
-    const sectionMap: { [key: string]: string } = {
-      'Home': 'hero',
-      'Services': 'services',
-      'Why Us?': 'agile-approach', 
-      'About Us': 'who-we-are',
-      'Contact Us': 'contact-us'
-    };
-    
-    const sectionId = sectionMap[item];
-    if (sectionId) {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
+  const handleNavClick = (sectionId: string) => {
     setIsOpen(false);
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex space-x-5">
-        {navItems.map((item) => (
-          <button
-            key={item}
-            onClick={() => scrollToSection(item)}
-            className="text-white text-base hover:text-red-500 transition-colors duration-300"
-          >
-            {item}
-          </button>
-        ))}
+      <nav className="hidden md:flex space-x-6">
+        <button onClick={() => handleNavClick('hero')} className="text-white hover:text-red-500 transition-colors">Home</button>
+        <button onClick={() => handleNavClick('services')} className="text-white hover:text-red-500 transition-colors">Services</button>
+        <button onClick={() => handleNavClick('agile-approach')} className="text-white hover:text-red-500 transition-colors">Why Us?</button>
+        <button onClick={() => handleNavClick('who-we-are')} className="text-white hover:text-red-500 transition-colors">About Us</button>
+        <button onClick={() => handleNavClick('contact-us')} className="text-white hover:text-red-500 transition-colors">Contact Us</button>
       </nav>
 
-      {/* Mobile Hamburger Button */}
+      {/* Stylish Mobile Hamburger */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden text-white p-2"
+        className="md:hidden relative w-8 h-8 flex items-center justify-center rounded-lg bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300"
+        style={{ zIndex: 100000 }}
       >
-        <div className="w-6 h-6 flex flex-col justify-center space-y-1">
-          <span className={`block h-0.5 w-6 bg-white transition-transform ${isOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-          <span className={`block h-0.5 w-6 bg-white transition-opacity ${isOpen ? 'opacity-0' : ''}`}></span>
-          <span className={`block h-0.5 w-6 bg-white transition-transform ${isOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+        <div className="w-4 h-4 flex flex-col justify-center items-center">
+          <span className={`block h-0.5 w-4 bg-white rounded-full transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-0.5' : 'mb-0.5'}`}></span>
+          <span className={`block h-0.5 w-4 bg-white rounded-full transition-all duration-300 ${isOpen ? 'opacity-0' : 'mb-0.5'}`}></span>
+          <span className={`block h-0.5 w-4 bg-white rounded-full transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-0.5' : ''}`}></span>
         </div>
       </button>
 
-      {/* Mobile Menu */}
+      {/* Stylish Mobile Menu */}
       {isOpen && (
-        <div className="fixed top-20 right-4 w-48 bg-gray-900 bg-opacity-95 rounded-lg shadow-lg md:hidden z-50">
-          <nav className="flex flex-col p-4 space-y-3">
-            {navItems.map((item) => (
-              <button
-                key={item}
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  scrollToSection(item);
-                }}
-                className="text-white text-left hover:text-red-500 transition-colors duration-300 py-2 w-full"
-              >
-                {item}
-              </button>
-            ))}
-          </nav>
+        <div className="fixed inset-0 md:hidden" style={{ zIndex: 999999 }}>
+          <div className="absolute inset-0 bg-black bg-opacity-20 backdrop-blur-sm" onClick={() => setIsOpen(false)}></div>
+          <div className="absolute top-16 right-4 w-36 bg-white bg-opacity-10 backdrop-blur-md rounded-lg shadow-2xl" style={{ zIndex: 1000000, boxShadow: '0 8px 32px rgba(0, 0, 0, 0.8)' }}>
+            <div className="p-3">
+              <nav className="flex flex-col space-y-2">
+                <button 
+                  onClick={() => handleNavClick('hero')} 
+                  className="text-white text-sm font-medium hover:text-red-500 transition-all duration-300 text-left py-2 px-2 rounded hover:bg-white hover:bg-opacity-10 relative"
+                  style={{ zIndex: 1000001 }}
+                >
+                  Home
+                </button>
+                <button 
+                  onClick={() => handleNavClick('services')} 
+                  className="text-white text-sm font-medium hover:text-red-500 transition-all duration-300 text-left py-2 px-2 rounded hover:bg-white hover:bg-opacity-10 relative"
+                  style={{ zIndex: 1000001 }}
+                >
+                  Services
+                </button>
+                <button 
+                  onClick={() => handleNavClick('agile-approach')} 
+                  className="text-white text-sm font-medium hover:text-red-500 transition-all duration-300 text-left py-2 px-2 rounded hover:bg-white hover:bg-opacity-10 relative"
+                  style={{ zIndex: 1000001 }}
+                >
+                  Why Us?
+                </button>
+                <button 
+                  onClick={() => handleNavClick('who-we-are')} 
+                  className="text-white text-sm font-medium hover:text-red-500 transition-all duration-300 text-left py-2 px-2 rounded hover:bg-white hover:bg-opacity-10 relative"
+                  style={{ zIndex: 1000001 }}
+                >
+                  About Us
+                </button>
+                <button 
+                  onClick={() => handleNavClick('contact-us')} 
+                  className="text-white text-sm font-medium hover:text-red-500 transition-all duration-300 text-left py-2 px-2 rounded hover:bg-white hover:bg-opacity-10 relative"
+                  style={{ zIndex: 1000001 }}
+                >
+                  Contact Us
+                </button>
+              </nav>
+            </div>
+          </div>
         </div>
       )}
     </>

@@ -119,4 +119,17 @@ html {
     font-size: 14px !important;
     padding: 0 20px;
   }
+  
+  .agile-card {
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 auto 20px auto !important;
+    transform: none !important;
+  }
+  
+  .agile-card-center {
+    transform: none !important;
+    scale: 1 !important;
+    translate: 0 0 !important;
+  }
 }

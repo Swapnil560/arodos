@@ -32,27 +32,25 @@ export const TestimonialSlider = () => {
 
   return (
     <div className="max-w-6xl mx-auto relative">
-      <div className="bg-white rounded-2xl shadow-lg p-16 min-h-80">
-        <div className="flex items-center justify-between h-full">
-          <div className="flex-1 text-center pr-12">
+      <div className="bg-white rounded-2xl shadow-lg p-6 md:p-12 lg:p-16 min-h-[300px] md:min-h-80">
+        <div className="flex flex-col md:flex-row items-center justify-between h-full gap-6 md:gap-0">
+          <div className="flex-1 text-center md:pr-6 lg:pr-12 order-2 md:order-1">
             {testimonials[currentSlide].rating && (
-              <div className="text-yellow-400 text-2xl mb-4">
+              <div className="text-yellow-400 text-lg md:text-2xl mb-3 md:mb-4">
                 {testimonials[currentSlide].rating}
               </div>
             )}
-            <blockquote className="text-2xl text-gray-800 mb-8 leading-relaxed min-h-24 flex items-start justify-center relative">
-              <img src="/images/open.png" alt="" className="w-20 h-20 absolute -top-4 -left-12" />
-              <span className="px-12">{testimonials[currentSlide].quote}</span>
-              <img src="/images/close.png" alt="" className="w-20 h-20 absolute -bottom-4 -right-12" />
+            <blockquote className="text-sm md:text-lg lg:text-2xl text-gray-800 mb-4 md:mb-8 leading-relaxed min-h-[60px] md:min-h-24 flex items-center justify-center relative px-4">
+              <span>{testimonials[currentSlide].quote}</span>
             </blockquote>
-            <cite className="text-blue-500 font-medium text-lg">
+            <cite className="text-blue-500 font-medium text-sm md:text-base lg:text-lg">
               {testimonials[currentSlide].client}
             </cite>
           </div>
           
           {/* Client Logo Circle */}
-          <div className="flex-shrink-0">
-            <div className={`${testimonials[currentSlide].client.includes('Deepankar') ? 'w-48 h-48' : 'w-40 h-40'} bg-white overflow-hidden`}>
+          <div className="flex-shrink-0 order-1 md:order-2">
+            <div className={`${testimonials[currentSlide].client.includes('Deepankar') ? 'w-24 h-24 md:w-32 md:h-32 lg:w-48 lg:h-48' : 'w-20 h-20 md:w-28 md:h-28 lg:w-40 lg:h-40'} bg-white overflow-hidden rounded-full`}>
               {testimonials[currentSlide].image ? (
                 <img 
                   src={testimonials[currentSlide].image} 
@@ -60,7 +58,7 @@ export const TestimonialSlider = () => {
                   className="w-full h-full object-cover"
                 />
               ) : (
-                <span className="text-gray-800 text-4xl font-bold">
+                <span className="text-gray-800 text-2xl md:text-3xl lg:text-4xl font-bold flex items-center justify-center h-full">
                   {testimonials[currentSlide].logo}
                 </span>
               )}
@@ -69,15 +67,13 @@ export const TestimonialSlider = () => {
         </div>
       </div>
       
-
-      
       {/* Slide Indicators */}
-      <div className="flex justify-center mt-8 space-x-2">
+      <div className="flex justify-center mt-6 md:mt-8 space-x-2">
         {testimonials.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full ${
+            className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${
               index === currentSlide ? 'bg-blue-500' : 'bg-gray-300'
             }`}
           />
