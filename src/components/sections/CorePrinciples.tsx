@@ -70,7 +70,7 @@ export const CorePrinciples = () => {
             
             {/* Second Row - Card 3 (Center) */}
             <div className="flex justify-center">
-              <div className="group bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-6 md:p-8 hover:shadow-lg transition-all duration-300 border border-indigo-100 max-w-2xl w-full">
+              <div className="group bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 md:p-8 hover:shadow-lg transition-all duration-300 border border-blue-100 max-w-2xl w-full">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-gray-600 to-gray-800 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0 shadow-lg ring-2 ring-gray-300 ring-opacity-50 group-hover:scale-110 transition-transform duration-300">
                     {principles[2].number}
