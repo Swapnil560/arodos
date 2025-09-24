@@ -30,7 +30,7 @@ export const ContactCard = () => {
       <style dangerouslySetInnerHTML={{ __html: placeholderStyle }} />
       <section id="contact-us" className="py-12 md:py-16" style={{ backgroundColor: '#FAFAFA' }}>
       <div className="max-w-6xl mx-auto px-4">
-        <div className="rounded-lg overflow-hidden" style={{ background: 'linear-gradient(135deg, #FF6B6B 0%, #FF4444 50%, #FF2222 100%)', boxShadow: '0 8px 24px rgba(224, 224, 224, 0.3)' }}>
+        <div className="rounded-lg overflow-hidden" style={{ background: 'linear-gradient(135deg, #EF9A9A 0%, #E57373 50%, #EF5350 100%)', boxShadow: '0 8px 24px rgba(224, 224, 224, 0.3)' }}>
           <div className="flex flex-col lg:flex-row min-h-[600px] md:min-h-[700px] p-6 md:p-8 lg:p-12">
             {/* Left Section - Contact Info */}
             <div className="lg:w-1/2 flex items-center justify-center mb-6 lg:mb-0">
@@ -43,22 +43,34 @@ export const ContactCard = () => {
                   something exceptional.
                 </p>
                 
-                <div className="space-y-3 md:space-y-4">
-                  <div className="flex items-center text-white justify-center lg:justify-start">
-                    <img src="/images/phone.png" alt="Phone" className="w-5 h-5 md:w-6 md:h-6 mr-3 md:mr-4" />
-                    <span className="text-sm md:text-base">+919620861198</span>
+                <div className="space-y-4 md:space-y-5">
+                  <div className="text-white text-center lg:text-left">
+                    <div className="flex items-center justify-center lg:justify-start mb-1">
+                      <img src="/images/phone.png" alt="Phone" className="w-5 h-5 md:w-6 md:h-6 mr-3 md:mr-4" />
+                      <span className="text-sm md:text-base font-semibold">Phone</span>
+                    </div>
+                    <div className="text-sm md:text-base ml-8 md:ml-10 lg:ml-8">+919620861198</div>
                   </div>
-                  <div className="flex items-center text-white justify-center lg:justify-start">
-                    <img src="/images/message.png" alt="Email" className="w-5 h-5 md:w-6 md:h-6 mr-3 md:mr-4" />
-                    <span className="text-sm md:text-base">contact@arodos.com</span>
+                  <div className="text-white text-center lg:text-left">
+                    <div className="flex items-center justify-center lg:justify-start mb-1">
+                      <img src="/images/mess.png" alt="Email" className="w-5 h-5 md:w-6 md:h-6 mr-3 md:mr-4" />
+                      <span className="text-sm md:text-base font-semibold">Email</span>
+                    </div>
+                    <div className="text-sm md:text-base ml-8 md:ml-10 lg:ml-8">contact@arodos.com</div>
                   </div>
-                  <div className="flex items-center text-white justify-center lg:justify-start">
-                    <img src="/images/arrow (2).png" alt="Website" className="w-5 h-5 md:w-6 md:h-6 mr-3 md:mr-4" />
-                    <span className="text-sm md:text-base">www.arodos.com</span>
+                  <div className="text-white text-center lg:text-left">
+                    <div className="flex items-center justify-center lg:justify-start mb-1">
+                      <img src="/images/arrow (2).png" alt="Website" className="w-5 h-5 md:w-6 md:h-6 mr-3 md:mr-4" />
+                      <span className="text-sm md:text-base font-semibold">Website</span>
+                    </div>
+                    <div className="text-sm md:text-base ml-8 md:ml-10 lg:ml-8">www.arodos.com</div>
                   </div>
-                  <div className="flex items-center text-white justify-center lg:justify-start">
-                    <img src="/images/location.png" alt="Location" className="w-5 h-5 md:w-6 md:h-6 mr-3 md:mr-4" />
-                    <span className="text-sm md:text-base">Guwahati, Bangalore</span>
+                  <div className="text-white text-center lg:text-left">
+                    <div className="flex items-center justify-center lg:justify-start mb-1">
+                      <img src="/images/loca.png" alt="Location" className="w-5 h-5 md:w-6 md:h-6 mr-3 md:mr-4" />
+                      <span className="text-sm md:text-base font-semibold">Location</span>
+                    </div>
+                    <div className="text-sm md:text-base ml-8 md:ml-10 lg:ml-8">Guwahati, Bangalore</div>
                   </div>
                 </div>
               </div>
