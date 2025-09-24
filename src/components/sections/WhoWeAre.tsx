@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 export const WhoWeAre = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const [showMore, setShowMore] = useState(false);
 
   return (
     <section ref={ref} className="py-20 bg-gray-100">
@@ -18,24 +20,30 @@ export const WhoWeAre = () => {
             
             <div className="space-y-4 text-gray-800 text-base leading-relaxed">
               <p>
-                Arodos Technologies began post-COVID when our founder returned from Bengaluru to Assam, 
-                determined to serve his own people with world-class tech solutions.
+                Born in Assam, built with global ambition- Arodos Technologies was founded post-COVID to bring world-class digital solutions closer to home.
               </p>
               
               <p>
-                We now deliver ERP, AI, and custom app development to empower businesses, startups, 
-                and institutions to grow faster.
+                Today, we partner with businesses, startups, and institutions across India, the US, Canada, and worldwide, delivering AI-driven ERP systems, custom web and mobile apps, and scalable digital services designed for growth and reliability.
               </p>
               
               <p>
-                With a client base spread across India, US and Canada, we specialize in systems that 
-                handle scale, security, and smart automation.
+                Every project- no matter its complexity or size- is crafted with precision, care, and attention to detail. This ensures that our clients receive top-notch, secure, and affordable solutions that truly transform the way they operate.
               </p>
+              
+              {showMore && (
+                <p>
+                  With each partnership, we aim to make technology not just accessible, but innovative and dependable- with a commitment to delivering utmost customer satisfaction every step of the way.
+                </p>
+              )}
             </div>
             
             <div className="mt-5">
-              <button className="text-blue-600 text-sm hover:underline hover:text-blue-700 transition-colors duration-300">
-                Read More →
+              <button 
+                onClick={() => setShowMore(!showMore)}
+                className="text-blue-600 text-sm hover:underline hover:text-blue-700 transition-colors duration-300"
+              >
+                {showMore ? 'Read Less' : 'Read More'}
               </button>
             </div>
           </div>

@@ -23,6 +23,7 @@ export const VisionMission = () => {
                 loop
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover"
+                style={{ zIndex: 1 }}
               >
                 <source src="/videos/our vision.mp4" type="video/mp4" />
               </video>
@@ -36,16 +37,14 @@ export const VisionMission = () => {
                   <span className="w-3 h-3 bg-red-500 rounded-full mr-2"></span>
                   <h3 className="text-white text-xl font-bold">Our Vision</h3>
                 </div>
-                <p className="text-white text-sm" style={{ lineHeight: '1.4' }}>
-                  At Arodos, innovation drives us forward. We explore bold ideas and technologies, 
-                  crafting impactful solutions that evolve with client needs, ensuring we always 
-                  stay ahead in a fast-changing digital world.
+                <p className="text-white text-base" style={{ lineHeight: '1.4' }}>
+                  To lead with innovation and deliver digital solutions that don't just meet today's challenges but evolve to power tomorrow's opportunities.
                 </p>
               </div>
             </div>
             
             {/* Right Column - Our Mission */}
-            <div className="relative p-5 flex flex-col justify-center min-h-[600px] rounded-lg overflow-hidden bg-gray-800">
+            <div className="relative p-5 flex flex-col justify-center min-h-[600px] rounded-lg overflow-hidden">
               {/* Background Video */}
               <video
                 autoPlay
@@ -61,7 +60,7 @@ export const VisionMission = () => {
               </video>
               
               {/* Semi-transparent overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-60" style={{ zIndex: 2 }}></div>
+              <div className="absolute inset-0 bg-black bg-opacity-20" style={{ zIndex: 2 }}></div>
               
               {/* Top overlay */}
               <div className="absolute top-0 left-0 right-0 bg-black bg-opacity-60 p-4" style={{ zIndex: 3 }}>
@@ -69,10 +68,9 @@ export const VisionMission = () => {
                   <span className="w-3 h-3 bg-red-500 rounded-full mr-2"></span>
                   <h3 className="text-white text-xl font-bold">Our Mission</h3>
                 </div>
-                <p className="text-white text-sm" style={{ lineHeight: '1.4' }}>
-                  Our clients guide every decision. We deeply understand their goals, creating 
-                  custom solutions that deliver real value. As they grow and thrive, we do too — 
-                  building lasting partnerships rooted in success.
+                <p className="text-white text-base" style={{ lineHeight: '1.4' }}>
+                  We put clients first, delivering tailored digital solutions built on quality, innovation, and long-term value. Every project is crafted with precision and handled by experienced professionals to ensure measurable impact. 
+                  As our clients grow, we grow- building lasting partnerships rooted in trust and customer satisfaction.
                 </p>
               </div>
             </div>
@@ -93,7 +91,7 @@ export const VisionMission = () => {
             </h2>
             
             {/* Body Text */}
-            <p className="agile-approach-text text-center mx-auto mb-5" style={{
+            <p className="agile-approach-text text-center mx-auto mb-8 md:mb-5 px-4" style={{
               fontSize: '16px',
               color: '#333333',
               maxWidth: '800px',
@@ -104,19 +102,24 @@ export const VisionMission = () => {
               and measurable impact at every step.
             </p>
             
-            {/* Three-Card Layout */}
-            <div className="agile-cards-container flex justify-center gap-5" style={{ maxWidth: '1080px', margin: '0 auto' }}>
-              {/* Card 1 - Customer First */}
+            {/* Three-Card Layout with 3D Perspective */}
+            <div className="agile-cards-container flex justify-center gap-8" style={{ 
+              maxWidth: '1200px', 
+              margin: '0 auto',
+              perspective: '1000px'
+            }}>
+              {/* Card 1 - Customer First (Rotated Right) */}
               <div className="relative group overflow-hidden" style={{
-                width: '280px',
+                width: '320px',
                 height: '480px',
                 borderRadius: '10px',
                 backgroundImage: 'url("/images/customer first.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.2)',
-                transform: 'perspective(1000px) translateZ(20px)',
-                transition: 'all 0.3s ease-in-out'
+                boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
+                transform: 'rotateY(15deg)',
+                transition: 'all 0.3s ease-in-out',
+                transformStyle: 'preserve-3d'
               }}>
                 {/* Bottom heading */}
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-4 group-hover:opacity-0 transition-opacity duration-300">
@@ -139,17 +142,19 @@ export const VisionMission = () => {
                 </div>
               </div>
               
-              {/* Card 2 - Professional */}
+              {/* Card 2 - Professional (Center, No Rotation) */}
               <div className="relative group overflow-hidden" style={{
-                width: '360px',
-                height: '400px',
+                width: '320px',
+                height: '480px',
                 borderRadius: '10px',
                 backgroundImage: 'url("/images/professional.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                boxShadow: '0 25px 50px rgba(0, 0, 0, 0.4), 0 15px 30px rgba(0, 0, 0, 0.3)',
-                transform: 'perspective(1000px) translateY(16px) translateZ(30px)',
-                transition: 'all 0.3s ease-in-out'
+                boxShadow: '0 12px 24px rgba(0, 0, 0, 0.3)',
+                transform: 'rotateY(0deg) scale(1.05) translateY(30px)',
+                transition: 'all 0.3s ease-in-out',
+                transformStyle: 'preserve-3d',
+                zIndex: 2
               }}>
                 {/* Bottom heading */}
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-4 group-hover:opacity-0 transition-opacity duration-300">
@@ -172,17 +177,18 @@ export const VisionMission = () => {
                 </div>
               </div>
               
-              {/* Card 3 - Problem Solver */}
+              {/* Card 3 - Problem Solver (Rotated Left) */}
               <div className="relative group overflow-hidden" style={{
-                width: '280px',
+                width: '320px',
                 height: '480px',
                 borderRadius: '10px',
                 backgroundImage: 'url("/images/problem solver.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3), 0 10px 20px rgba(0, 0, 0, 0.2)',
-                transform: 'perspective(1000px) translateZ(20px)',
-                transition: 'all 0.3s ease-in-out'
+                boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
+                transform: 'rotateY(-15deg)',
+                transition: 'all 0.3s ease-in-out',
+                transformStyle: 'preserve-3d'
               }}>
                 {/* Bottom heading */}
                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-4 group-hover:opacity-0 transition-opacity duration-300">
@@ -219,8 +225,7 @@ export const VisionMission = () => {
               <span className="text-red-500 italic">Services</span>
             </h2>
             <p className="text-gray-600 text-lg max-w-4xl mx-auto leading-relaxed">
-              Transforming visionary ideas into powerful, user-centric digital solutions that drive innovation, 
-              enhance operational efficiency, and accelerate sustainable business growth in an ever-evolving digital landscape.
+              Turning your ideas into scalable, innovative digital products that deliver measurable ROI for your business.
             </p>
           </div>
 
@@ -228,8 +233,8 @@ export const VisionMission = () => {
           <div className="max-w-5xl mx-auto">
             <ServiceCard
               number="01"
-              title="Custom Website & Mobile App"
-              description="Delivering a high-performance, mobile-friendly and user-centric online store to enhance customer experience, boost sales, and drive business growth for XYZ Retail Solutions."
+              title="Custom Websites & Mobile Apps"
+              description="We don't just build apps- we craft user-centric, performance-driven digital experiences designed to engage, convert, and scale. Every solution we create is tailored, intuitive, and built for impact, ensuring your brand stands out in the digital landscape."
               imagePlaceholder="💻"
               imageDescription="Laptop displaying webpage with hands on keyboard"
               layout="blue-left"
@@ -238,8 +243,8 @@ export const VisionMission = () => {
             
             <ServiceCard
               number="02"
-              title="Custom ERP, CRM, AI Solution"
-              description="We build intelligent ERP, CRM, and AI-powered systems that streamline operations, automate workflows, and provide actionable insights for data-driven decision-making."
+              title="ERP, CRM & AI Solutions"
+              description="Our approach to ERP, CRM, and AI is truly unique. We don't just automate workflows- we reimagine them, combining intelligence, efficiency, and security to deliver systems that think, adapt, and grow with your business. Unlike conventional solutions, ours are engineered for seamless scalability and actionable insights."
               imagePlaceholder="⌨️"
               imageDescription="Workspace with code monitor"
               layout="blue-right"
@@ -249,7 +254,7 @@ export const VisionMission = () => {
             <ServiceCard
               number="03"
               title="Technology Assessment"
-              description="Evaluating current technological capabilities to identify strengths and weaknesses, recommending improvements, and implementing solutions."
+              description="We go beyond standard audits. Our deep-dive technology assessment uncovers hidden inefficiencies, identifies untapped opportunities, and charts a future-ready roadmap. With Arodos Technologies, your tech stack becomes a strategic advantage, not just infrastructure."
               imagePlaceholder="💻"
               imageDescription="Laptop on wooden desk with water glass"
               layout="blue-left"
@@ -258,8 +263,8 @@ export const VisionMission = () => {
             
             <ServiceCard
               number="04"
-              title="Strategic Planning"
-              description="Strategic planning in the context of consulting service aims to outline a roadmap for technology adoption or improvement, aligning IT goals with business objectives to drive growth and innovation."
+              title="Strategic IT Planning"
+              description="We create IT strategies tailored specifically to your business- no generic solutions, only plans that fit your unique goals. We align technology with your vision in a way no one else does- crafting plans that accelerate growth, drive innovation, and maximize ROI. Every recommendation is precise, actionable, and tailored to your unique business context."
               imagePlaceholder="⌨️"
               imageDescription="Workspace with code monitor and professional setup"
               layout="blue-right"
@@ -305,7 +310,7 @@ export const VisionMission = () => {
             
             {/* Right Column - Client Logos */}
             <div className="flex-1 bg-white rounded-lg p-6 lg:p-8 shadow-lg flex items-center justify-center min-h-[300px] lg:h-[450px]">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-8 items-center justify-items-center w-full">
+              <div className="grid grid-cols-3 gap-4 lg:gap-8 items-center justify-items-center w-full">
                 {[
                   { name: 'YHA India', color: 'text-green-600', image: '/images/Yha.png' },
                   { name: 'Aurobindo', color: 'text-blue-600' },
@@ -315,9 +320,9 @@ export const VisionMission = () => {
                   { name: 'Electrower', color: 'text-blue-800', image: '/images/elect.png' },
                   { name: 'Brigosha', color: 'text-blue-600', image: '/images/brigosh.png' }
                 ].map((client, index) => (
-                  <div key={index} className={`w-24 h-12 lg:w-32 lg:h-16 ${client.image ? '' : 'bg-gray-100'} rounded flex items-center justify-center`}>
+                  <div key={index} className={`w-32 h-20 lg:w-40 lg:h-24 ${client.image ? '' : (client.name === 'Aurobindo' ? '' : 'bg-gray-100')} rounded flex items-center justify-center`}>
                     {client.image ? (
-                      <img src={client.image} alt={client.name} className="max-w-full max-h-full object-contain" />
+                      <img src={client.image} alt={client.name} className="w-full h-full object-contain" />
                     ) : (
                       <span className={`text-xs lg:text-sm font-semibold ${client.color}`}>{client.name}</span>
                     )}

@@ -52,21 +52,24 @@ export const Hero = () => {
         {/* Headline */}
         <div className="mb-5">
           <h1 className="text-5xl leading-tight">
-            <span className="text-white font-normal">Built to </span>
-            <span className="text-red-500 font-bold italic">Shape the Future</span>
+            <span className="text-white font-normal">Build Innovative Solutions </span>
+            <span className="text-red-500 font-bold italic">at Affordable Cost</span>
           </h1>
         </div>
         
         {/* Subtext */}
         <p className="text-gray-300 text-lg max-w-2xl mb-8 pt-5 leading-relaxed">
-          Welcome to Arodos Technologies. We are a digital innovation partner focused on building 
-          high-performance, scalable solutions across ERP, CRM, AI, and mobile app platforms.
+          Trusted Globally for Reliable, High-Performance Web, Mobile, ERP, CRM, and AI 
+          Development- Delivered on Time, Within budget, & Built to Last.
         </p>
         
         {/* CTA Button */}
         <button
           onClick={() => scrollToSection('services')}
-          className="bg-blue-600 text-white text-lg font-bold px-8 py-3 rounded-md hover:bg-blue-700 transition-colors duration-300 flex items-center mb-8"
+          className="text-white text-lg font-bold px-8 py-3 rounded-md transition-colors duration-300 flex items-center mb-8"
+          style={{ 
+            background: 'linear-gradient(to right, #007BFF, #0056B3)'
+          }}
         >
           Explore Our Expertise
           <span className="ml-2">→</span>

@@ -28,13 +28,7 @@ export const TestimonialSlider = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
-  };
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
 
   return (
     <div className="max-w-6xl mx-auto relative">
@@ -75,19 +69,7 @@ export const TestimonialSlider = () => {
         </div>
       </div>
       
-      {/* Navigation Arrows */}
-      <button 
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50"
-      >
-        <span className="text-gray-600 text-xl">‹</span>
-      </button>
-      <button 
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50"
-      >
-        <span className="text-gray-600 text-xl">›</span>
-      </button>
+
       
       {/* Slide Indicators */}
       <div className="flex justify-center mt-8 space-x-2">
