@@ -1,6 +1,8 @@
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import { ServiceCard } from '../ui/ServiceCard';
 import { TestimonialSlider } from '../ui/TestimonialSlider';
+import { CEOSection } from './CEOSection';
+import { CorePrinciples } from './CorePrinciples';
 
 export const VisionMission = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -78,6 +80,12 @@ export const VisionMission = () => {
         </div>
       </section>
 
+      {/* CEO Section */}
+      <CEOSection />
+
+      {/* Core Principles Section */}
+      <CorePrinciples />
+
       {/* Agile Approach Section */}
       <section id="agile-approach" ref={agileRef} className="py-20" style={{ backgroundColor: '#F5F5F5' }}>
         <div className="max-w-6xl mx-auto px-4">
@@ -86,7 +94,7 @@ export const VisionMission = () => {
           }`}>
             {/* Title */}
             <h2 className="agile-approach-title text-center text-5xl font-bold mb-5">
-              <span style={{ color: '#FF0000', fontStyle: 'italic' }}>Agile</span>
+              <span style={{ color: '#FF6B6B', fontStyle: 'italic' }}>Agile</span>
               <span style={{ color: '#000000' }}> Approach</span>
             </h2>
             
@@ -234,7 +242,8 @@ export const VisionMission = () => {
             <ServiceCard
               number="01"
               title="Custom Websites & Mobile Apps"
-              description="We don't just build apps- we craft user-centric, performance-driven digital experiences designed to engage, convert, and scale. Every solution we create is tailored, intuitive, and built for impact, ensuring your brand stands out in the digital landscape."
+              description="We don't just build apps- we craft user-centric, performance-driven digital experiences designed to engage, convert, and scale. 
+              Every solution we create is tailored, intuitive, and built for impact, ensuring your brand stands out in the digital landscape."
               imagePlaceholder="💻"
               imageDescription="Laptop displaying webpage with hands on keyboard"
               layout="blue-left"
@@ -244,7 +253,8 @@ export const VisionMission = () => {
             <ServiceCard
               number="02"
               title="ERP, CRM & AI Solutions"
-              description="Our approach to ERP, CRM, and AI is truly unique. We don't just automate workflows- we reimagine them, combining intelligence, efficiency, and security to deliver systems that think, adapt, and grow with your business. Unlike conventional solutions, ours are engineered for seamless scalability and actionable insights."
+              description="Our approach to ERP, CRM, and AI is truly unique. We don't just automate workflows- we reimagine them, combining intelligence, efficiency, and security to deliver systems that think, adapt, and grow with your business. 
+              Unlike conventional solutions, ours are engineered for seamless scalability and actionable insights."
               imagePlaceholder="⌨️"
               imageDescription="Workspace with code monitor"
               layout="blue-right"
@@ -254,7 +264,8 @@ export const VisionMission = () => {
             <ServiceCard
               number="03"
               title="Technology Assessment"
-              description="We go beyond standard audits. Our deep-dive technology assessment uncovers hidden inefficiencies, identifies untapped opportunities, and charts a future-ready roadmap. With Arodos Technologies, your tech stack becomes a strategic advantage, not just infrastructure."
+              description="We go beyond standard audits. Our deep-dive technology assessment uncovers hidden inefficiencies, identifies untapped opportunities, and charts a future-ready roadmap. 
+              With Arodos Technologies, your tech stack becomes a strategic advantage, not just infrastructure."
               imagePlaceholder="💻"
               imageDescription="Laptop on wooden desk with water glass"
               layout="blue-left"
@@ -264,7 +275,9 @@ export const VisionMission = () => {
             <ServiceCard
               number="04"
               title="Strategic IT Planning"
-              description="We create IT strategies tailored specifically to your business- no generic solutions, only plans that fit your unique goals. We align technology with your vision in a way no one else does- crafting plans that accelerate growth, drive innovation, and maximize ROI. Every recommendation is precise, actionable, and tailored to your unique business context."
+              description="We create IT strategies tailored specifically to your business- no generic solutions, only plans that fit your unique goals. 
+              We align technology with your vision in a way no one else does- crafting plans that accelerate growth, drive innovation, and maximize ROI. 
+              Every recommendation is precise, actionable, and tailored to your unique business context."
               imagePlaceholder="⌨️"
               imageDescription="Workspace with code monitor and professional setup"
               layout="blue-right"
