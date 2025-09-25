@@ -4,6 +4,7 @@ interface ButtonProps {
   variant?: 'primary' | 'secondary';
   type?: 'button' | 'submit';
   disabled?: boolean;
+  fullWidth?: boolean;
 }
 
 export const Button = ({ 
@@ -11,7 +12,8 @@ export const Button = ({
   onClick, 
   variant = 'primary', 
   type = 'button',
-  disabled = false 
+  disabled = false,
+  fullWidth = false
 }: ButtonProps) => {
   const baseClasses = 'px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105';
   const variants = {
@@ -24,7 +26,7 @@ export const Button = ({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`${baseClasses} ${variants[variant]} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+      className={`${baseClasses} ${variants[variant]} ${fullWidth ? 'w-full' : ''} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
     >
       {children}
     </button>

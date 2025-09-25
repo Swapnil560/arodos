@@ -1,5 +1,6 @@
 import { Logo } from '../ui/Logo';
 import { Navigation } from '../ui/Navigation';
+import { Button } from '../ui/Button';
 
 export const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -64,16 +65,11 @@ export const Hero = () => {
         </p>
         
         {/* CTA Button */}
-        <button
-          onClick={() => scrollToSection('services')}
-          className="text-white text-lg font-bold px-8 py-3 rounded-md transition-colors duration-300 flex items-center mb-8"
-          style={{ 
-            background: 'linear-gradient(to right, #007BFF, #0056B3)'
-          }}
-        >
-          Explore Our Expertise
-          <span className="ml-2">→</span>
-        </button>
+        <div className="mb-8">
+          <Button onClick={() => scrollToSection('services')}>
+            Explore Our Expertise →
+          </Button>
+        </div>
         
         {/* Statistics */}
         <div className="flex space-x-8 mt-5">

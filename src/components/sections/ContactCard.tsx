@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Button } from '../ui/Button';
+import { Card } from '../ui/Card';
 
 export const ContactCard = () => {
   const placeholderStyle = `
@@ -78,7 +80,7 @@ export const ContactCard = () => {
 
             {/* Right Section - White Form Card */}
             <div className="lg:w-1/2 flex items-center justify-center">
-              <div className="bg-white rounded-lg p-6 md:p-8 w-full max-w-md" style={{ boxShadow: '0 4px 16px rgba(224, 224, 224, 0.4)' }}>
+              <Card className="p-6 md:p-8 w-full max-w-md" hover={false}>
                 <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3" style={{ color: '#000000' }}>Got a project in mind?</h3>
                 <p className="text-sm md:text-base mb-4 md:mb-6" style={{ color: '#333333' }}>
                   Let us know what you need – our team will get in touch shortly.
@@ -125,19 +127,12 @@ export const ContactCard = () => {
                   </div>
 
                   <div className="pt-3 md:pt-4">
-                    <button
-                      type="submit"
-                      className="w-full h-10 md:h-12 font-bold text-sm md:text-base rounded transition-all duration-200 cursor-pointer"
-                      style={{ 
-                        background: 'linear-gradient(to right, #007BFF, #0056B3)',
-                        color: '#FFFFFF'
-                      }}
-                    >
+                    <Button type="submit" variant="primary" fullWidth>
                       Submit Request
-                    </button>
+                    </Button>
                   </div>
                 </form>
-              </div>
+              </Card>
             </div>
           </div>
         </div>
