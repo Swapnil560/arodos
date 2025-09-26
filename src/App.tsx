@@ -3,6 +3,7 @@ import { WhoWeAre } from './components/sections/WhoWeAre';
 import { VisionMission } from './components/sections/VisionMission';
 import { ContactCard } from './components/sections/ContactCard';
 import { Footer } from './components/sections/Footer';
+import { Chatbot } from './components/ui/Chatbot';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <VisionMission />
       <ContactCard />
       <Footer />
+      <Chatbot />
     </div>
   );
 }
