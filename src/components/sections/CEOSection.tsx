@@ -14,7 +14,7 @@ export const CEOSection = () => {
               {/* Left Column - CEO Image */}
               <div className="lg:col-span-2 relative h-48 sm:h-56 md:h-64 lg:h-full min-h-[180px] lg:min-h-[79px]">
                 <img 
-                  src="/images/ceo-placeholder.jpg" 
+                  src="/images/CEO.jpg" 
                   alt="Dhruba Sarma - CEO & Founder" 
                   className="w-full h-full object-cover object-center sm:object-top md:object-center"
                 />
