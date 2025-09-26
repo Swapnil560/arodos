@@ -168,6 +168,12 @@ export const Chatbot = () => {
           to { opacity: 1; transform: translateY(0); }
         }
         .slide-in { animation: slide-in 0.5s ease-out; }
+        video::-webkit-media-controls-picture-in-picture-button {
+          display: none !important;
+        }
+        video::-webkit-media-controls {
+          display: none !important;
+        }
       `}</style>
 
       {/* Toggle Button */}
@@ -186,6 +192,9 @@ export const Chatbot = () => {
             className="absolute inset-2 w-12 h-12 rounded-full cursor-pointer object-cover pulse-glow transition-all duration-300 hover:scale-110"
             muted
             playsInline
+            disablePictureInPicture
+            controlsList="nodownload nofullscreen noremoteplayback"
+            onContextMenu={(e) => e.preventDefault()}
           >
             <source src="/videos/gifrobot.mp4" type="video/mp4" />
           </video>
