@@ -177,7 +177,7 @@ export const Chatbot = () => {
       `}</style>
 
       {/* Toggle Button */}
-      <div className="fixed bottom-6 right-6 w-16 h-16 z-50">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 w-12 h-12 sm:w-16 sm:h-16 z-50">
         <div className="relative w-full h-full">
           <div className="absolute inset-0 rounded-full border-2 border-cyan-400 animate-spin" style={{ animationDuration: '4s' }}></div>
           <video
@@ -189,7 +189,7 @@ export const Chatbot = () => {
                 videoRef.current.play();
               }
             }}
-            className="absolute inset-2 w-12 h-12 rounded-full cursor-pointer object-cover pulse-glow transition-all duration-300 hover:scale-110"
+            className="absolute inset-1 sm:inset-2 w-10 h-10 sm:w-12 sm:h-12 rounded-full cursor-pointer object-cover pulse-glow transition-all duration-300 hover:scale-110"
             muted
             playsInline
             disablePictureInPicture
@@ -205,20 +205,25 @@ export const Chatbot = () => {
       {isOpen && (
         <div 
           ref={chatRef} 
-          className="fixed bottom-24 right-6 w-96 max-h-[80vh] h-[500px] hologram neon-border rounded-2xl flex flex-col z-50 transition-all duration-500"
-          style={{ top: 'auto', maxHeight: 'calc(100vh - 120px)' }}
+          className="fixed bottom-16 right-2 left-2 sm:bottom-24 sm:right-6 sm:left-auto w-auto sm:w-96 hologram neon-border rounded-2xl flex flex-col z-50 transition-all duration-500"
+          style={{ 
+            top: '20px',
+            maxHeight: 'calc(100vh - 100px)',
+            height: 'auto',
+            minHeight: '400px'
+          }}
         >
           {/* Header */}
-          <div className="p-4 border-b border-cyan-400/30 rounded-t-2xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-            <h3 className="font-bold text-xl text-cyan-300" style={{ textShadow: '0 0 10px rgba(0, 255, 255, 0.8)' }}>
+          <div className="p-3 sm:p-4 border-b border-cyan-400/30 rounded-t-2xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+            <h3 className="font-bold text-lg sm:text-xl text-cyan-300" style={{ textShadow: '0 0 10px rgba(0, 255, 255, 0.8)' }}>
               ARODOS AI
             </h3>
-            <p className="text-sm text-purple-300 font-mono">Arodos Assistant</p>
-            <div className="absolute top-4 right-4 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <p className="text-xs sm:text-sm text-purple-300 font-mono">Arodos Assistant</p>
+            <div className="absolute top-3 right-3 sm:top-4 sm:right-4 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-3 hide-scrollbar">
+          <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-2 sm:space-y-3 hide-scrollbar">
             {messages.map((message, index) => (
               <div
                 key={message.id}
@@ -226,7 +231,7 @@ export const Chatbot = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div
-                  className={`max-w-sm px-4 py-3 rounded-2xl text-sm transition-all duration-300 hover:scale-105 ${
+                  className={`max-w-[280px] sm:max-w-sm px-3 sm:px-4 py-2 sm:py-3 rounded-2xl text-xs sm:text-sm transition-all duration-300 hover:scale-105 ${
                     message.isUser
                       ? 'bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-100 neon-border'
                       : 'bg-gradient-to-r from-gray-900/80 to-gray-800/80 text-gray-100 border border-purple-400/30'
@@ -237,12 +242,12 @@ export const Chatbot = () => {
                     <div className="mt-3">
                       <iframe
                         src={message.videoSrc}
-                        width="280"
-                        height="160"
+                        width="100%"
+                        height="140"
                         frameBorder="0"
                         allow="encrypted-media; picture-in-picture"
                         allowFullScreen
-                        className="rounded-lg border border-cyan-400/30"
+                        className="rounded-lg border border-cyan-400/30 max-w-[250px] sm:max-w-[280px]"
                       />
                     </div>
                   )}
@@ -252,7 +257,7 @@ export const Chatbot = () => {
             
             {isLoading && (
               <div className="flex justify-start">
-                <div className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 text-gray-100 px-4 py-3 rounded-2xl text-sm border border-purple-400/30">
+                <div className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 text-gray-100 px-3 sm:px-4 py-2 sm:py-3 rounded-2xl text-xs sm:text-sm border border-purple-400/30">
                   <div className="flex items-center space-x-2">
                     <div className="flex space-x-1">
                       <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
@@ -268,15 +273,15 @@ export const Chatbot = () => {
           </div>
 
           {/* Input */}
-          <div className="p-4 border-t border-cyan-400/30 bg-gradient-to-r from-cyan-500/5 to-purple-500/5">
-            <div className="flex space-x-3">
+          <div className="p-3 sm:p-4 border-t border-cyan-400/30 bg-gradient-to-r from-cyan-500/5 to-purple-500/5">
+            <div className="flex space-x-2 sm:space-x-3">
               <input
                 type="text"
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 onKeyPress={handleKeyPress}
-                placeholder="Enter neural query..."
-                className="flex-1 px-4 py-3 text-sm text-cyan-100 placeholder-cyan-400/60 font-mono neon-border rounded-xl transition-all duration-300 focus:cyber-glow"
+                placeholder="Enter query..."
+                className="flex-1 px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-cyan-100 placeholder-cyan-400/60 font-mono neon-border rounded-xl transition-all duration-300 focus:cyber-glow"
                 style={{
                   background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(20, 20, 40, 0.8))',
                   backdropFilter: 'blur(10px)'
@@ -289,20 +294,20 @@ export const Chatbot = () => {
                   setTimeout(() => handleSendMessage(), 100);
                 }}
                 disabled={isLoading}
-                className="px-4 py-3 text-white rounded-xl transition-all duration-300 hover:scale-110 neon-border"
+                className="px-2 sm:px-4 py-2 sm:py-3 text-white rounded-xl transition-all duration-300 hover:scale-110 neon-border"
                 style={{ background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(147, 51, 234, 0.8))' }}
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                 </svg>
               </button>
               <button
                 onClick={handleSendMessage}
                 disabled={!inputText.trim() || isLoading}
-                className="px-5 py-3 text-white rounded-xl transition-all duration-300 hover:scale-110 neon-border disabled:opacity-50"
+                className="px-3 sm:px-5 py-2 sm:py-3 text-white rounded-xl transition-all duration-300 hover:scale-110 neon-border disabled:opacity-50"
                 style={{ background: 'linear-gradient(135deg, rgba(0, 255, 255, 0.8), rgba(255, 0, 255, 0.8))' }}
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                 </svg>
               </button>
