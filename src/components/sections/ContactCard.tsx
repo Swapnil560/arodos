@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';
+import { generateWebsiteTemplate } from '../ui/websiteGenerator';
 
 export const ContactCard = () => {
   const placeholderStyle = `
@@ -14,6 +15,8 @@ export const ContactCard = () => {
     workEmail: '',
     projectDetails: ''
   });
+  const [generatedImage, setGeneratedImage] = useState<string | null>(null);
+  const [isGenerating, setIsGenerating] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,6 +28,19 @@ export const ContactCard = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
+  };
+
+  const handleGenerateTemplate = async () => {
+    if (!formData.projectDetails.trim()) return;
+    
+    setIsGenerating(true);
+    try {
+      const imageUrl = await generateWebsiteTemplate(formData.projectDetails);
+      setGeneratedImage(imageUrl);
+    } catch (error) {
+      console.error('Error generating template:', error);
+    }
+    setIsGenerating(false);
   };
 
   return (
@@ -114,7 +130,30 @@ export const ContactCard = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs md:text-sm mb-1 md:mb-2" style={{ color: '#333333' }}>Project Details</label>
+                    <div className="flex items-center justify-between mb-1 md:mb-2">
+                      <label className="block text-xs md:text-sm" style={{ color: '#333333' }}>Project Details</label>
+                      <button
+                        type="button"
+                        onClick={handleGenerateTemplate}
+                        disabled={isGenerating || !formData.projectDetails.trim()}
+                        className="flex items-center space-x-1 px-2 py-1 text-xs bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-md hover:from-cyan-600 hover:to-purple-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+                        title="Generate website prototype"
+                      >
+                        {isGenerating ? (
+                          <>
+                            <div className="w-3 h-3 border border-white border-t-transparent rounded-full animate-spin"></div>
+                            <span>Generate</span>
+                          </>
+                        ) : (
+                          <>
+                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span>Generate</span>
+                          </>
+                        )}
+                      </button>
+                    </div>
                     <textarea
                       name="projectDetails"
                       value={formData.projectDetails}
@@ -124,6 +163,20 @@ export const ContactCard = () => {
                       className="w-full px-3 md:px-4 py-2 md:py-3 border rounded text-xs md:text-sm resize-none focus:outline-none"
                       style={{ backgroundColor: '#F5F5F5', color: '#000000', borderColor: '#CCCCCC' }}
                     />
+                    {generatedImage && (
+                      <div className="mt-3 p-3 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">
+                        <p className="text-xs text-blue-700 mb-2 font-medium">✨ Website Template Preview:</p>
+                        <div className="relative group">
+                          <img
+                            src={generatedImage}
+                            alt="Website Template"
+                            className="w-full h-32 object-cover rounded-lg"
+                          />
+
+                        </div>
+                        <p className="text-xs text-gray-600 mt-2">demo</p>
+                      </div>
+                    )}
                   </div>
 
                   <div className="pt-3 md:pt-4">
@@ -138,6 +191,8 @@ export const ContactCard = () => {
         </div>
       </div>
     </section>
+    
+
     </>
   );
 };

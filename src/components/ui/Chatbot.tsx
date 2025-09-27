@@ -177,7 +177,7 @@ export const Chatbot = () => {
       `}</style>
 
       {/* Toggle Button */}
-      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 w-12 h-12 sm:w-16 sm:h-16 z-50">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 w-16 h-16 sm:w-16 sm:h-16 z-50">
         <div className="relative w-full h-full">
           <div className="absolute inset-0 rounded-full border-2 border-cyan-400 animate-spin" style={{ animationDuration: '4s' }}></div>
           <video
@@ -189,7 +189,7 @@ export const Chatbot = () => {
                 videoRef.current.play();
               }
             }}
-            className="absolute inset-1 sm:inset-2 w-10 h-10 sm:w-12 sm:h-12 rounded-full cursor-pointer object-cover pulse-glow transition-all duration-300 hover:scale-110"
+            className="absolute inset-1 sm:inset-2 w-14 h-14 sm:w-12 sm:h-12 rounded-full cursor-pointer object-cover pulse-glow transition-all duration-300 hover:scale-110"
             muted
             playsInline
             disablePictureInPicture
@@ -205,12 +205,12 @@ export const Chatbot = () => {
       {isOpen && (
         <div 
           ref={chatRef} 
-          className="fixed bottom-16 right-2 left-2 sm:bottom-24 sm:right-6 sm:left-auto w-auto sm:w-96 hologram neon-border rounded-2xl flex flex-col z-50 transition-all duration-500"
+          className="fixed bottom-20 right-2 left-2 sm:bottom-24 sm:right-6 sm:left-auto w-auto sm:w-96 hologram neon-border rounded-2xl flex flex-col z-50 transition-all duration-500"
           style={{ 
-            top: '20px',
-            maxHeight: 'calc(100vh - 100px)',
+            top: '60px',
+            maxHeight: 'calc(100vh - 140px)',
             height: 'auto',
-            minHeight: '400px'
+            minHeight: '350px'
           }}
         >
           {/* Header */}
