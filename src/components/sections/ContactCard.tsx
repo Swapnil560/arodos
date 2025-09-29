@@ -172,7 +172,15 @@ export const ContactCard = () => {
                             alt="Website Template"
                             className="w-full h-32 object-cover rounded-lg"
                           />
-
+                          <button
+                            onClick={() => setGeneratedImage(null)}
+                            className="absolute bottom-2 right-2 text-gray-500 hover:text-red-600 p-1.5 rounded-full hover:bg-gray-100 transition-all duration-300 hover:scale-110"
+                            title="Delete template"
+                          >
+                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+                            </svg>
+                          </button>
                         </div>
                         <p className="text-xs text-gray-600 mt-2">demo</p>
                       </div>
