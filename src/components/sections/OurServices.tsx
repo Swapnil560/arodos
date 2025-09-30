@@ -6,9 +6,17 @@ export const OurServices = () => {
       <div className="max-w-6xl mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-6 md:mb-10">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">
-            <span className="text-black">Our </span>
-            <span className="text-red-500 italic">Services</span>
+          <h2 className="mb-3 md:mb-4" style={{
+            fontFamily: 'Mona Sans Expanded',
+            fontWeight: 500,
+            fontStyle: 'italic',
+            fontSize: '48px',
+            lineHeight: '47px',
+            letterSpacing: '-1%',
+            textAlign: 'center'
+          }}>
+            <span style={{ color: 'black', fontWeight: 'bold' }}>Our </span>
+            <span style={{ color: '#F40202' }}>Services</span>
           </h2>
           <p className="text-gray-600 text-sm md:text-base max-w-3xl mx-auto leading-relaxed px-4">
             Turning your ideas into scalable, innovative digital products that deliver measurable ROI for your business.
@@ -25,7 +33,7 @@ export const OurServices = () => {
             imagePlaceholder="💻"
             imageDescription="Laptop displaying webpage with hands on keyboard"
             layout="blue-left"
-            imageUrl="/images/Custom Website & Mobile App.jpg"
+            imageUrl="/images/services/s1.jpg"
           />
           
           <ServiceCard
@@ -36,7 +44,7 @@ export const OurServices = () => {
             imagePlaceholder="⌨️"
             imageDescription="Workspace with code monitor"
             layout="blue-right"
-            imageUrl="/images/customer first.jpg"
+            imageUrl="/images/services/s2.jpg"
           />
           
           <ServiceCard
@@ -47,7 +55,7 @@ export const OurServices = () => {
             imagePlaceholder="💻"
             imageDescription="Laptop on wooden desk with water glass"
             layout="blue-left"
-            imageUrl="/images/Custom Website & Mobile App.jpg"
+            imageUrl="/images/services/s3.jpg"
           />
           
           <ServiceCard
@@ -59,7 +67,7 @@ export const OurServices = () => {
             imagePlaceholder="⌨️"
             imageDescription="Workspace with code monitor and professional setup"
             layout="blue-right"
-            imageUrl="/images/customer first.jpg"
+            imageUrl="/images/services/s4.jpg"
           />
         </div>
       </div>
