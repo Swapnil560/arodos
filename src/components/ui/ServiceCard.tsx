@@ -20,7 +20,7 @@ export const ServiceCard = ({
   const isBlueLeft = layout === 'blue-left';
   
   const BlueSection = (
-    <div className="bg-gray-500/80 backdrop-blur-sm p-4 md:p-6 flex flex-col relative min-h-[250px] md:min-h-[350px]">
+    <div className="p-4 md:p-6 flex flex-col relative min-h-[250px] md:min-h-[350px]" style={{ backgroundColor: '#EAEAEA' }}>
       <div className="absolute top-3 left-3 md:top-4 md:left-4">
         <span className="text-lg md:text-3xl font-bold drop-shadow-lg" style={{ color: '#F40202' }}>{number}</span>
       </div>
@@ -28,7 +28,7 @@ export const ServiceCard = ({
         <h3 className="text-black text-xs md:text-sm font-bold mb-1 md:mb-2 text-left leading-tight drop-shadow-md">
           {title}
         </h3>
-        <p className="text-white/95 text-xs md:text-xs leading-snug text-left overflow-hidden drop-shadow-sm">
+        <p className="text-black text-xs md:text-xs leading-snug text-left overflow-hidden drop-shadow-sm">
           {description}
         </p>
       </div>
@@ -52,7 +52,7 @@ export const ServiceCard = ({
   );
 
   return (
-    <div className="rounded-xl shadow-xl overflow-hidden mt-4 md:mt-6 border border-white/30 bg-gray-200">
+    <div className="rounded-xl shadow-xl overflow-hidden mt-4 md:mt-6 border border-white/30" style={{ backgroundColor: '#EAEAEA' }}>
       <div className="grid grid-cols-1 md:grid-cols-2 min-h-[300px] md:h-[350px]">
         {isBlueLeft ? (
           <>
