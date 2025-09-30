@@ -7,7 +7,7 @@ export const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col bg-gray-900 rounded-3xl mx-4 mt-4 mb-4">
+    <section id="hero" className="relative min-h-screen flex flex-col bg-gray-900 rounded-3xl mx-2 md:mx-4 mt-2 md:mt-4 mb-2 md:mb-4">
       {/* Background Video */}
       <video
         autoPlay
@@ -51,7 +51,7 @@ export const Hero = () => {
       <div className="relative z-0 flex-1 flex flex-col items-center justify-center px-4 text-center md:px-8">
         {/* Headline */}
         <div className="mb-5 max-w-4xl">
-          <h1 style={{fontFamily: 'Mona Sans Expanded', fontWeight: 800, fontSize: '80px', lineHeight: '74px', letterSpacing: '-1%', textAlign: 'center', verticalAlign: 'middle'}}>
+          <h1 style={{fontFamily: 'Mona Sans Expanded', fontWeight: 800, fontSize: window.innerWidth < 768 ? '32px' : '80px', lineHeight: window.innerWidth < 768 ? '36px' : '74px', letterSpacing: '-1%', textAlign: 'center', verticalAlign: 'middle'}}>
             <span className="text-white">Build </span>
             <span style={{color: '#F40202'}}>Innovative</span>
             <span className="text-white"> Solutions at Affordable Cost</span>
@@ -75,7 +75,7 @@ export const Hero = () => {
         </div>
         
         {/* Statistics */}
-        <div className="flex space-x-8 mt-5">
+        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 mt-5">
           <div className="text-center w-30">
             <div className="text-white text-2xl font-bold" style={{fontFamily: 'Mona Sans Expanded'}}>98%</div>
             <div className="text-gray-300 text-base" style={{fontFamily: 'Mona Sans Expanded'}}>On-Time Delivery</div>
