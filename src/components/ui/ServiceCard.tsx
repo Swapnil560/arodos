@@ -20,16 +20,16 @@ export const ServiceCard = ({
   const isBlueLeft = layout === 'blue-left';
   
   const BlueSection = (
-    <div className="bg-gradient-to-b from-blue-500 to-blue-300 p-6 md:p-8 flex flex-col relative min-h-[300px] md:min-h-[500px]">
-      <div className="absolute top-4 left-4 md:top-6 md:left-6">
-        <span className="text-white text-xl md:text-4xl font-bold">{number}</span>
-        <div className="text-white text-base md:text-2xl mt-1">/</div>
+    <div className="bg-red-500/80 backdrop-blur-sm p-4 md:p-6 flex flex-col relative min-h-[250px] md:min-h-[350px]">
+      <div className="absolute top-3 left-3 md:top-4 md:left-4">
+        <span className="text-white text-lg md:text-3xl font-bold drop-shadow-lg">{number}</span>
+        <div className="text-white text-sm md:text-xl mt-1 drop-shadow-lg">/</div>
       </div>
-      <div className="flex-1 flex flex-col justify-center mt-8 md:mt-8">
-        <h3 className="text-white text-base md:text-2xl font-bold mb-3 md:mb-4 text-center px-2">
+      <div className="flex-1 flex flex-col justify-center mt-2 md:mt-4 px-2 py-1">
+        <h3 className="text-white text-xs md:text-sm font-bold mb-1 md:mb-2 text-left leading-tight drop-shadow-md">
           {title}
         </h3>
-        <p className="text-white text-xs md:text-base leading-relaxed text-center px-2">
+        <p className="text-white/95 text-xs md:text-xs leading-snug text-left overflow-hidden drop-shadow-sm">
           {description}
         </p>
       </div>
@@ -37,23 +37,24 @@ export const ServiceCard = ({
   );
 
   const ImageSection = (
-    <div className="bg-gray-200 flex items-center justify-center p-4 md:p-8 min-h-[200px] md:min-h-[500px]" style={{
+    <div className="bg-white/30 backdrop-blur-sm flex items-center justify-center p-3 md:p-6 min-h-[150px] md:min-h-[350px] relative overflow-hidden" style={{
       backgroundImage: imageUrl ? `url("${imageUrl}")` : 'none',
       backgroundSize: 'cover',
       backgroundPosition: 'center'
     }}>
+      <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent"></div>
       {!imageUrl && (
-        <div className="text-gray-500 text-center">
-          <div className="text-3xl md:text-6xl mb-2">{imagePlaceholder}</div>
-          <p className="text-xs md:text-sm">{imageDescription}</p>
+        <div className="text-red-600/90 text-center z-10">
+          <div className="text-2xl md:text-5xl mb-2 drop-shadow-lg">{imagePlaceholder}</div>
+          <p className="text-xs md:text-sm drop-shadow-md">{imageDescription}</p>
         </div>
       )}
     </div>
   );
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg overflow-hidden mt-6 md:mt-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 min-h-[400px] md:h-[500px]">
+    <div className="bg-white/20 backdrop-blur-md rounded-xl shadow-xl overflow-hidden mt-4 md:mt-6 border border-white/30">
+      <div className="grid grid-cols-1 md:grid-cols-2 min-h-[300px] md:h-[350px]">
         {isBlueLeft ? (
           <>
             {BlueSection}

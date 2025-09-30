@@ -1,6 +1,5 @@
 import { Logo } from '../ui/Logo';
 import { Navigation } from '../ui/Navigation';
-import { Button } from '../ui/Button';
 
 export const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -17,7 +16,7 @@ export const Hero = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="/videos/hero section vid.mp4" type="video/mp4" />
+        <source src="/videos/hero.mp4" type="video/mp4" />
       </video>
       
       {/* Semi-transparent overlay */}
@@ -41,7 +40,7 @@ export const Hero = () => {
           <span className="text-white ml-2 text-sm">4.7</span>
         </div>
         <div className="flex items-center">
-          <span className="text-gray-300 text-sm">Trusted by 100+ Happy Customers</span>
+          <span className="text-gray-300 text-sm font-jost">Trusted by 100+ Happy Customers</span>
           <div className="ml-3">
             <img src="/images/ppl.png" alt="Users" className="w-12 h-6" />
           </div>
@@ -53,37 +52,41 @@ export const Hero = () => {
         {/* Headline */}
         <div className="mb-5 max-w-4xl">
           <h1 className="text-3xl md:text-5xl leading-tight">
-            <span className="text-white font-normal">Build Innovative Solutions </span>
-            <span className="text-red-500 font-bold italic">at Affordable Cost</span>
+            <span className="text-white font-normal" style={{fontFamily: 'Mona Sans Expanded'}}>Build </span>
+            <span className="text-red-500" style={{fontFamily: 'Kode Mono'}}>Innovative</span>
+            <span className="text-white font-normal" style={{fontFamily: 'Mona Sans Expanded'}}> Solutions at Affordable Cost</span>
           </h1>
         </div>
         
         {/* Subtext */}
-        <p className="text-gray-300 text-base md:text-lg max-w-2xl mb-8 pt-5 leading-relaxed px-4 md:px-0">
+        <p className="text-gray-300 text-base md:text-lg max-w-2xl mb-8 pt-5 leading-relaxed px-4 md:px-0 font-jost">
           Trusted Globally for Reliable, High-Performance Web, Mobile, ERP, CRM, and AI 
           Development- Delivered on Time, Within budget, & Built to Last.
         </p>
         
         {/* CTA Button */}
         <div className="mb-8">
-          <Button onClick={() => scrollToSection('services')}>
+          <button 
+            onClick={() => scrollToSection('services')}
+            className="bg-white text-red-500 font-jost px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors duration-300 font-medium"
+          >
             Explore Our Expertise →
-          </Button>
+          </button>
         </div>
         
         {/* Statistics */}
         <div className="flex space-x-8 mt-5">
           <div className="text-center w-30">
-            <div className="text-white text-2xl font-bold">98%</div>
-            <div className="text-gray-300 text-base">On-Time Delivery</div>
+            <div className="text-white text-2xl font-bold" style={{fontFamily: 'Mona Sans Expanded'}}>98%</div>
+            <div className="text-gray-300 text-base" style={{fontFamily: 'Mona Sans Expanded'}}>On-Time Delivery</div>
           </div>
           <div className="text-center w-30">
-            <div className="text-white text-2xl font-bold">75</div>
-            <div className="text-gray-300 text-base">Apps Launched</div>
+            <div className="text-white text-2xl font-bold" style={{fontFamily: 'Mona Sans Expanded'}}>75</div>
+            <div className="text-gray-300 text-base" style={{fontFamily: 'Mona Sans Expanded'}}>Apps Launched</div>
           </div>
           <div className="text-center w-30">
-            <div className="text-white text-2xl font-bold">120+</div>
-            <div className="text-gray-300 text-base">Projects Completed</div>
+            <div className="text-white text-2xl font-bold" style={{fontFamily: 'Mona Sans Expanded'}}>120+</div>
+            <div className="text-gray-300 text-base" style={{fontFamily: 'Mona Sans Expanded'}}>Projects Completed</div>
           </div>
         </div>
       </div>

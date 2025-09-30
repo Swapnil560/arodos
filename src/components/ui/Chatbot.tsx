@@ -50,7 +50,9 @@ export const Chatbot = () => {
     };
   }, [isOpen]);
 
-  const getResponse = (question: string): string | { text: string; hasVideo: boolean; videoSrc: string } => {
+
+
+  const getResponse = async (question: string): Promise<string | { text: string; hasVideo: boolean; videoSrc: string }> => {
     const q = question.toLowerCase();
     
     // Home Section
@@ -93,11 +95,18 @@ export const Chatbot = () => {
       return '🎯 Our Vision: To lead with innovation and deliver digital solutions that don\'t just meet today\'s challenges but evolve to power tomorrow\'s opportunities. 🎯 Our Mission: We put clients first, delivering tailored digital solutions built on quality, innovation, and long-term value. Every project is crafted with precision and handled by experienced professionals to ensure measurable impact. As our clients grow, we grow—building lasting partnerships rooted in trust and customer satisfaction.';
     }
     
+
+    
+    if (q.includes('time')) {
+      const now = new Date();
+      return `🕐 Current time: ${now.toLocaleTimeString()} on ${now.toLocaleDateString()}. Time zone: ${Intl.DateTimeFormat().resolvedOptions().timeZone}`;
+    }
+    
     if (q.includes('demo') || q.includes('video') || q.includes('presentation') || q.includes('showcase') || q.includes('watch')) {
       return { text: 'Here is a video presentation showcasing our company and services!', hasVideo: true, videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&mute=1' };
     }
     
-    return 'Hello! I am your Arodos Technologies assistant. I have comprehensive information about: 🏠 Home - Company overview, stats, and introduction 🛠️ Services - Our 4 core technology solutions 🌟 Why Us - 5 core principles and competitive advantages 🏢 About Us - Company history, CEO insights, and team 👥 Clients - Our partnerships and testimonials ⚡ Agile Approach - Our methodology and work process 📞 Contact Us - Get in touch information. Ask me about any of these topics!';
+    return 'Hello! I am your Arodos Technologies assistant! 🌐 I can help with: 🏠 Home 🛠️ Services 🌟 Why Us 🏢 About Us 👥 Clients ⚡ Agile Approach 📞 Contact Us. Plus: 🕐 Current time. What would you like to know?';
   };
 
   const handleSendMessage = async () => {
@@ -115,8 +124,8 @@ export const Chatbot = () => {
     setInputText('');
     setIsLoading(true);
 
-    setTimeout(() => {
-      const response = getResponse(currentInput);
+    try {
+      const response = await getResponse(currentInput);
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
         text: typeof response === 'string' ? response : response.text,
@@ -126,8 +135,17 @@ export const Chatbot = () => {
         videoSrc: typeof response === 'object' ? response.videoSrc : undefined
       };
       setMessages(prev => [...prev, botMessage]);
+    } catch (error) {
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: 'Sorry, I encountered an error. Please try asking about Arodos Technologies!',
+        isUser: false,
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, errorMessage]);
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {

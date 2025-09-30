@@ -2,21 +2,21 @@ import { ServiceCard } from '../ui/ServiceCard';
 
 export const OurServices = () => {
   return (
-    <section id="services" className="py-12 md:py-20 bg-white">
+    <section id="services" className="py-8 md:py-12 bg-gradient-to-br from-slate-50 to-gray-100">
       <div className="max-w-6xl mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-8 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
+        <div className="text-center mb-6 md:mb-10">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">
             <span className="text-black">Our </span>
             <span className="text-red-500 italic">Services</span>
           </h2>
-          <p className="text-gray-600 text-sm md:text-base lg:text-lg max-w-4xl mx-auto leading-relaxed px-4">
+          <p className="text-gray-600 text-sm md:text-base max-w-3xl mx-auto leading-relaxed px-4">
             Turning your ideas into scalable, innovative digital products that deliver measurable ROI for your business.
           </p>
         </div>
 
         {/* Service Cards */}
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
           <ServiceCard
             number="01"
             title="Custom Websites & Mobile Apps"
