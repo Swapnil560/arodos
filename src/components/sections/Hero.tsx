@@ -7,20 +7,20 @@ export const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col bg-gray-900">
+    <section id="hero" className="relative min-h-screen flex flex-col bg-gray-900 rounded-3xl mx-4 mt-4 mb-4">
       {/* Background Video */}
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover rounded-3xl"
       >
         <source src="/videos/hero.mp4" type="video/mp4" />
       </video>
       
       {/* Semi-transparent overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-50 rounded-3xl"></div>
       
       {/* Header */}
       <div className="relative z-10 flex justify-between items-start p-5">
@@ -51,10 +51,10 @@ export const Hero = () => {
       <div className="relative z-0 flex-1 flex flex-col items-center justify-center px-4 text-center md:px-8">
         {/* Headline */}
         <div className="mb-5 max-w-4xl">
-          <h1 className="text-3xl md:text-5xl leading-tight">
-            <span className="text-white font-normal" style={{fontFamily: 'Mona Sans Expanded'}}>Build </span>
-            <span className="text-red-500" style={{fontFamily: 'Kode Mono'}}>Innovative</span>
-            <span className="text-white font-normal" style={{fontFamily: 'Mona Sans Expanded'}}> Solutions at Affordable Cost</span>
+          <h1 style={{fontFamily: 'Mona Sans Expanded', fontWeight: 800, fontSize: '80px', lineHeight: '74px', letterSpacing: '-1%', textAlign: 'center', verticalAlign: 'middle'}}>
+            <span className="text-white">Build </span>
+            <span style={{color: '#F40202'}}>Innovative</span>
+            <span className="text-white"> Solutions at Affordable Cost</span>
           </h1>
         </div>
         
