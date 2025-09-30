@@ -1,9 +1,7 @@
-import { useState } from 'react';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 export const WhoWeAre = () => {
   const { ref, isVisible } = useScrollAnimation();
-  const [showMore, setShowMore] = useState(false);
 
   return (
     <section id="who-we-are" ref={ref} className="py-12 md:py-20 bg-gray-100">
@@ -31,20 +29,9 @@ export const WhoWeAre = () => {
                 Every project- no matter its complexity or size- is crafted with precision, care, and attention to detail. This ensures that our clients receive top-notch, secure, and affordable solutions that truly transform the way they operate.
               </p>
               
-              {showMore && (
-                <p>
-                  With each partnership, we aim to make technology not just accessible, but innovative and dependable- with a commitment to delivering utmost customer satisfaction every step of the way.
-                </p>
-              )}
-            </div>
-            
-            <div className="mt-4 md:mt-5">
-              <button 
-                onClick={() => setShowMore(!showMore)}
-                className="text-blue-600 text-sm hover:underline hover:text-blue-700 transition-colors duration-300"
-              >
-                {showMore ? 'Read Less' : 'Read More'}
-              </button>
+              <p>
+                With each partnership, we aim to make technology not just accessible, but innovative and dependable- with a commitment to delivering utmost customer satisfaction every step of the way.
+              </p>
             </div>
           </div>
           
