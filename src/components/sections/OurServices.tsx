@@ -6,12 +6,10 @@ export const OurServices = () => {
       <div className="max-w-6xl mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-6 md:mb-10">
-          <h2 className="mb-3 md:mb-4" style={{
+          <h2 className="mb-3 md:mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl" style={{
             fontFamily: 'Mona Sans Expanded',
             fontWeight: 500,
             fontStyle: 'italic',
-            fontSize: '48px',
-            lineHeight: '47px',
             letterSpacing: '-1%',
             textAlign: 'center'
           }}>

@@ -76,18 +76,18 @@ export const Hero = () => {
         </div>
         
         {/* Statistics */}
-        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 mt-5">
-          <div className="text-center w-30">
-            <div className="text-white text-2xl font-bold" style={{fontFamily: 'Mona Sans Expanded'}}>98%</div>
-            <div className="text-gray-300 text-base" style={{fontFamily: 'Mona Sans Expanded'}}>On-Time Delivery</div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 mt-5 w-full max-w-2xl px-4">
+          <div className="text-center">
+            <div className="text-white text-xl sm:text-2xl font-bold" style={{fontFamily: 'Mona Sans Expanded'}}>98%</div>
+            <div className="text-gray-300 text-sm sm:text-base" style={{fontFamily: 'Mona Sans Expanded'}}>On-Time Delivery</div>
           </div>
-          <div className="text-center w-30">
-            <div className="text-white text-2xl font-bold" style={{fontFamily: 'Mona Sans Expanded'}}>75</div>
-            <div className="text-gray-300 text-base" style={{fontFamily: 'Mona Sans Expanded'}}>Apps Launched</div>
+          <div className="text-center">
+            <div className="text-white text-xl sm:text-2xl font-bold" style={{fontFamily: 'Mona Sans Expanded'}}>75</div>
+            <div className="text-gray-300 text-sm sm:text-base" style={{fontFamily: 'Mona Sans Expanded'}}>Apps Launched</div>
           </div>
-          <div className="text-center w-30">
-            <div className="text-white text-2xl font-bold" style={{fontFamily: 'Mona Sans Expanded'}}>120+</div>
-            <div className="text-gray-300 text-base" style={{fontFamily: 'Mona Sans Expanded'}}>Projects Completed</div>
+          <div className="text-center">
+            <div className="text-white text-xl sm:text-2xl font-bold" style={{fontFamily: 'Mona Sans Expanded'}}>120+</div>
+            <div className="text-gray-300 text-sm sm:text-base" style={{fontFamily: 'Mona Sans Expanded'}}>Projects Completed</div>
           </div>
         </div>
       </div>

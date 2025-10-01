@@ -18,21 +18,18 @@ const testimonials = [
 ];
 
 export const TestimonialSlider = () => {
-
-
-
   return (
-    <div className="max-w-6xl mx-auto relative">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+    <div className="max-w-6xl mx-auto relative px-2 sm:px-0">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="bg-white rounded-2xl shadow-lg p-4 md:p-6 lg:p-8 min-h-[250px] md:min-h-[300px] relative">
+          <div key={index} className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 min-h-[280px] sm:min-h-[320px] md:min-h-[350px] relative">
             {/* Quote icons */}
-            <img src="/images/clients/open.png" alt="Quote open" className="absolute top-2 right-2 md:top-4 md:right-4 w-6 h-6 md:w-8 md:h-8 lg:w-11 lg:h-11" />
-            <img src="/images/clients/close.png" alt="Quote close" className="absolute bottom-2 right-2 md:bottom-4 md:right-4 w-6 h-6 md:w-8 md:h-8 lg:w-11 lg:h-11 opacity-50" />
+            <img src="/images/clients/open.png" alt="Quote open" className="absolute top-3 right-3 sm:top-4 sm:right-4 w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
+            <img src="/images/clients/close.png" alt="Quote close" className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 opacity-50" />
             <div className="flex flex-col items-start text-left h-full">
               {/* Client Image */}
-              <div className="flex-shrink-0 mb-4">
-                <div className={`${testimonial.client.includes('Deepankar') ? 'w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32' : 'w-14 h-14 md:w-20 md:h-20 lg:w-28 lg:h-28'} bg-white overflow-hidden rounded-full`}>
+              <div className="flex-shrink-0 mb-3 sm:mb-4">
+                <div className={`${testimonial.client.includes('Deepankar') ? 'w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28' : 'w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24'} bg-white overflow-hidden rounded-full shadow-md`}>
                   {testimonial.image ? (
                     <img 
                       src={testimonial.image} 
@@ -40,7 +37,7 @@ export const TestimonialSlider = () => {
                       className="w-full h-full object-cover"
                     />
                   ) : (
-                    <span className="text-gray-800 text-xl md:text-2xl font-bold flex items-center justify-center h-full">
+                    <span className="text-gray-800 text-lg sm:text-xl md:text-2xl font-bold flex items-center justify-center h-full">
                       {testimonial.logo}
                     </span>
                   )}
@@ -49,18 +46,18 @@ export const TestimonialSlider = () => {
               
               {/* Rating */}
               {testimonial.rating && (
-                <div className="text-yellow-400 text-base md:text-lg mb-2 md:mb-3 ml-3 md:ml-6">
+                <div className="text-yellow-400 text-sm sm:text-base md:text-lg mb-2 sm:mb-3 ml-2 sm:ml-4">
                   {testimonial.rating}
                 </div>
               )}
               
               {/* Quote */}
-              <blockquote className="text-xs md:text-sm lg:text-base text-gray-800 mb-3 md:mb-4 leading-relaxed flex-1 flex items-center">
+              <blockquote className="text-sm sm:text-base md:text-lg text-gray-800 mb-3 sm:mb-4 leading-relaxed flex-1 flex items-center">
                 <span>{testimonial.quote}</span>
               </blockquote>
               
               {/* Client Name */}
-              <cite className="text-gray-800 font-medium text-xs md:text-sm lg:text-base whitespace-pre-line">
+              <cite className="text-gray-800 font-medium text-sm sm:text-base md:text-lg whitespace-pre-line">
                 {testimonial.client}
               </cite>
             </div>

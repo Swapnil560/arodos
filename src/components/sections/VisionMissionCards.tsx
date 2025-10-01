@@ -4,14 +4,14 @@ export const VisionMissionCards = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={ref} className="pb-6 bg-gray-100">
-      <div className="mx-2 md:mx-4">
-        <div className={`grid grid-cols-1 lg:grid-cols-2 items-stretch bg-white rounded-lg shadow-lg transform transition-all duration-700 ${
+    <section ref={ref} className="pb-4 sm:pb-6 bg-gray-100">
+      <div className="mx-2 sm:mx-4">
+        <div className={`grid grid-cols-1 lg:grid-cols-2 items-stretch bg-white rounded-lg shadow-lg transform transition-all duration-700 gap-4 sm:gap-6 lg:gap-10 p-4 sm:p-6 lg:p-10 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-        }`} style={{gap: '40px', padding: '40px'}}>
+        }`}>
           
           {/* Left Column - Our Vision */}
-          <div className="relative p-2 md:p-5 flex flex-col justify-center min-h-[250px] md:min-h-[400px] lg:min-h-[600px] rounded-lg overflow-hidden">
+          <div className="relative flex flex-col justify-center min-h-[200px] sm:min-h-[250px] md:min-h-[400px] lg:min-h-[500px] rounded-lg overflow-hidden">
             {/* Background Video */}
             <video
               autoPlay
@@ -28,19 +28,19 @@ export const VisionMissionCards = () => {
             <div className="absolute inset-0 bg-black bg-opacity-60"></div>
             
             {/* Top overlay */}
-            <div className="absolute top-0 left-0 right-0 bg-black bg-opacity-60 p-2 z-10" style={{minHeight: window.innerWidth < 768 ? '100px' : '120px'}}>
-              <div className="flex items-center mb-2 md:mb-3">
-                <span className="w-2 h-2 md:w-3 md:h-3 bg-red-500 rounded-full mr-2"></span>
-                <h3 className="text-white text-lg md:text-xl font-bold">Our Vision</h3>
+            <div className="absolute top-0 left-0 right-0 bg-black bg-opacity-70 p-3 sm:p-4 z-10">
+              <div className="flex items-center mb-2 sm:mb-3">
+                <span className="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full mr-2 sm:mr-3"></span>
+                <h3 className="text-white text-base sm:text-lg md:text-xl font-bold">Our Vision</h3>
               </div>
-              <p className="text-white text-sm md:text-base" style={{ lineHeight: '1.4' }}>
+              <p className="text-white text-xs sm:text-sm md:text-base leading-relaxed">
                 To lead with innovation and deliver digital solutions that don't just meet today's challenges but evolve to power tomorrow's opportunities.
               </p>
             </div>
           </div>
           
           {/* Right Column - Our Mission */}
-          <div className="relative p-2 md:p-5 flex flex-col justify-center min-h-[250px] md:min-h-[400px] lg:min-h-[600px] rounded-lg overflow-hidden">
+          <div className="relative flex flex-col justify-center min-h-[200px] sm:min-h-[250px] md:min-h-[400px] lg:min-h-[500px] rounded-lg overflow-hidden">
             {/* Background Video */}
             <video
               autoPlay
@@ -59,12 +59,12 @@ export const VisionMissionCards = () => {
             <div className="absolute inset-0 bg-black bg-opacity-20" style={{ zIndex: 2 }}></div>
             
             {/* Bottom overlay */}
-            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 p-2" style={{ zIndex: 3, minHeight: window.innerWidth < 768 ? '100px' : '120px' }}>
-              <div className="flex items-center mb-2 md:mb-3">
-                <span className="w-2 h-2 md:w-3 md:h-3 bg-red-500 rounded-full mr-2"></span>
-                <h3 className="text-white text-lg md:text-xl font-bold">Our Mission</h3>
+            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-3 sm:p-4" style={{ zIndex: 3 }}>
+              <div className="flex items-center mb-2 sm:mb-3">
+                <span className="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full mr-2 sm:mr-3"></span>
+                <h3 className="text-white text-base sm:text-lg md:text-xl font-bold">Our Mission</h3>
               </div>
-              <p className="text-white text-sm md:text-base" style={{ lineHeight: '1.4' }}>
+              <p className="text-white text-xs sm:text-sm md:text-base leading-relaxed">
                 We put clients first, delivering tailored digital solutions built on quality, innovation, and long-term value. Every project is crafted with precision and handled by experienced professionals to ensure measurable impact. 
                 As our clients grow, we grow- building lasting partnerships rooted in trust and customer satisfaction.
               </p>

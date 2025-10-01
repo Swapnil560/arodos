@@ -46,15 +46,15 @@ export const ContactCard = () => {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: placeholderStyle }} />
-      <section id="contact-us" className="min-h-screen flex flex-col bg-red-900 rounded-3xl mx-2 md:mx-4 mt-2 md:mt-4 mb-2 md:mb-4" style={{ backgroundColor: '#7c0A02' }}>
-      <div className="max-w-6xl mx-auto px-4 flex-1 flex items-center">
+      <section id="contact-us" className="min-h-screen flex flex-col bg-red-900 rounded-2xl sm:rounded-3xl mx-2 md:mx-4 mt-2 md:mt-4 mb-2 md:mb-4" style={{ backgroundColor: '#7c0A02' }}>
+      <div className="max-w-6xl mx-auto px-3 sm:px-4 flex-1 flex items-center">
         <div className="w-full" style={{ background: '#7c0A02' }}>
-          <div className="flex flex-col lg:flex-row min-h-[600px] md:min-h-[700px] p-6 md:p-8 lg:p-12">
+          <div className="flex flex-col lg:flex-row min-h-[500px] sm:min-h-[600px] md:min-h-[700px] p-4 sm:p-6 md:p-8 lg:p-12">
             {/* Left Section - Contact Info */}
-            <div className="lg:w-1/2 flex flex-col justify-between mb-6 lg:mb-0 py-4 lg:ml-24">
-              <div className="text-left max-w-md w-full">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6">Get in Touch</h2>
-                <p className="text-sm md:text-base lg:text-lg text-white mb-8 md:mb-12 leading-relaxed">
+            <div className="lg:w-1/2 flex flex-col justify-between mb-8 lg:mb-0 py-2 sm:py-4 lg:ml-24">
+              <div className="text-center lg:text-left max-w-md w-full mx-auto lg:mx-0">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4 md:mb-6">Get in Touch</h2>
+                <p className="text-sm sm:text-base md:text-lg text-white mb-6 sm:mb-8 md:mb-12 leading-relaxed">
                   Ready to transform your digital ideas into reality? 
                   Arodos is here to help you succeed!
                   Get in touch today, and let's start building 
@@ -62,35 +62,35 @@ export const ContactCard = () => {
                 </p>
               </div>
               
-              <div className="text-left max-w-md w-full mt-8">
-                <div className="space-y-4 md:space-y-5">
-                  <div className="text-white text-center lg:text-left">
+              <div className="text-center lg:text-left max-w-md w-full mx-auto lg:mx-0 mt-4 sm:mt-8">
+                <div className="space-y-3 sm:space-y-4 md:space-y-5">
+                  <div className="text-white">
                     <div className="flex items-center justify-center lg:justify-start mb-1">
-                      <img src="/images/phone.png" alt="Phone" className="w-5 h-5 md:w-6 md:h-6 mr-3 md:mr-4" />
-                      <span className="text-sm md:text-base font-semibold">Phone</span>
+                      <img src="/images/phone.png" alt="Phone" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3 md:mr-4" />
+                      <span className="text-sm sm:text-base font-semibold">Phone</span>
                     </div>
-                    <div className="text-sm md:text-base ml-8 md:ml-10 lg:ml-8">+919620861198</div>
+                    <div className="text-xs sm:text-sm md:text-base ml-6 sm:ml-8 md:ml-10 lg:ml-8">+919620861198</div>
                   </div>
-                  <div className="text-white text-center lg:text-left">
+                  <div className="text-white">
                     <div className="flex items-center justify-center lg:justify-start mb-1">
-                      <img src="/images/mess.png" alt="Email" className="w-5 h-5 md:w-6 md:h-6 mr-3 md:mr-4" />
-                      <span className="text-sm md:text-base font-semibold">Email</span>
+                      <img src="/images/mess.png" alt="Email" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3 md:mr-4" />
+                      <span className="text-sm sm:text-base font-semibold">Email</span>
                     </div>
-                    <div className="text-sm md:text-base ml-8 md:ml-10 lg:ml-8">contact@arodos.com</div>
+                    <div className="text-xs sm:text-sm md:text-base ml-6 sm:ml-8 md:ml-10 lg:ml-8">contact@arodos.com</div>
                   </div>
-                  <div className="text-white text-center lg:text-left">
+                  <div className="text-white">
                     <div className="flex items-center justify-center lg:justify-start mb-1">
-                      <img src="/images/arrow (2).png" alt="Website" className="w-5 h-5 md:w-6 md:h-6 mr-3 md:mr-4" />
-                      <span className="text-sm md:text-base font-semibold">Website</span>
+                      <img src="/images/arrow (2).png" alt="Website" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3 md:mr-4" />
+                      <span className="text-sm sm:text-base font-semibold">Website</span>
                     </div>
-                    <div className="text-sm md:text-base ml-8 md:ml-10 lg:ml-8">www.arodos.com</div>
+                    <div className="text-xs sm:text-sm md:text-base ml-6 sm:ml-8 md:ml-10 lg:ml-8">www.arodos.com</div>
                   </div>
-                  <div className="text-white text-center lg:text-left">
+                  <div className="text-white">
                     <div className="flex items-center justify-center lg:justify-start mb-1">
-                      <img src="/images/loca.png" alt="Location" className="w-5 h-5 md:w-6 md:h-6 mr-3 md:mr-4" />
-                      <span className="text-sm md:text-base font-semibold">Location</span>
+                      <img src="/images/loca.png" alt="Location" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3 md:mr-4" />
+                      <span className="text-sm sm:text-base font-semibold">Location</span>
                     </div>
-                    <div className="text-sm md:text-base ml-8 md:ml-10 lg:ml-8">Guwahati, Bangalore</div>
+                    <div className="text-xs sm:text-sm md:text-base ml-6 sm:ml-8 md:ml-10 lg:ml-8">Guwahati, Bangalore</div>
                   </div>
                 </div>
               </div>
@@ -98,42 +98,42 @@ export const ContactCard = () => {
 
             {/* Right Section - White Form Card */}
             <div className="lg:w-1/2 flex items-center justify-center lg:ml-8">
-              <Card className="p-6 md:p-8 w-full max-w-md" hover={false}>
-                <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3" style={{ color: '#000000' }}>Got a project in mind?</h3>
-                <p className="text-sm md:text-base mb-4 md:mb-6" style={{ color: '#333333' }}>
+              <Card className="p-4 sm:p-6 md:p-8 w-full max-w-md" hover={false}>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3" style={{ color: '#000000' }}>Got a project in mind?</h3>
+                <p className="text-xs sm:text-sm md:text-base mb-4 sm:mb-6" style={{ color: '#333333' }}>
                   Let us know what you need – our team will get in touch shortly.
                 </p>
 
-                <form onSubmit={handleSubmit} className="contact-form space-y-3 md:space-y-4">
+                <form onSubmit={handleSubmit} className="contact-form space-y-3 sm:space-y-4">
                   <div>
-                    <label className="block text-xs md:text-sm mb-1 md:mb-2" style={{ color: '#333333' }}>Full Name</label>
+                    <label className="block text-xs sm:text-sm mb-1 sm:mb-2" style={{ color: '#333333' }}>Full Name</label>
                     <input
                       type="text"
                       name="fullName"
                       value={formData.fullName}
                       onChange={handleChange}
                       placeholder="Please Enter your Full Name"
-                      className="w-full h-9 md:h-10 px-3 md:px-4 border rounded text-xs md:text-sm focus:outline-none"
+                      className="w-full h-8 sm:h-9 md:h-10 px-2 sm:px-3 md:px-4 border rounded text-xs sm:text-sm focus:outline-none"
                       style={{ backgroundColor: '#F5F5F5', color: '#000000', borderColor: '#CCCCCC' }}
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs md:text-sm mb-1 md:mb-2" style={{ color: '#333333' }}>Work Email</label>
+                    <label className="block text-xs sm:text-sm mb-1 sm:mb-2" style={{ color: '#333333' }}>Work Email</label>
                     <input
                       type="email"
                       name="workEmail"
                       value={formData.workEmail}
                       onChange={handleChange}
                       placeholder="Enter your Business email Address"
-                      className="w-full h-9 md:h-10 px-3 md:px-4 border rounded text-xs md:text-sm focus:outline-none"
+                      className="w-full h-8 sm:h-9 md:h-10 px-2 sm:px-3 md:px-4 border rounded text-xs sm:text-sm focus:outline-none"
                       style={{ backgroundColor: '#F5F5F5', color: '#000000', borderColor: '#CCCCCC' }}
                     />
                   </div>
 
                   <div>
-                    <div className="flex items-center justify-between mb-1 md:mb-2">
-                      <label className="block text-xs md:text-sm" style={{ color: '#333333' }}>Project Details</label>
+                    <div className="flex items-center justify-between mb-1 sm:mb-2">
+                      <label className="block text-xs sm:text-sm" style={{ color: '#333333' }}>Project Details</label>
                       <button
                         type="button"
                         onClick={handleGenerateTemplate}
@@ -144,14 +144,14 @@ export const ContactCard = () => {
                         {isGenerating ? (
                           <>
                             <div className="w-3 h-3 border border-white border-t-transparent rounded-full animate-spin"></div>
-                            <span>Generate</span>
+                            <span className="hidden sm:inline">Generate</span>
                           </>
                         ) : (
                           <>
                             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
-                            <span>Generate</span>
+                            <span className="hidden sm:inline">Generate</span>
                           </>
                         )}
                       </button>
@@ -161,25 +161,25 @@ export const ContactCard = () => {
                       value={formData.projectDetails}
                       onChange={handleChange}
                       placeholder="Briefly Describe your project goals or any specific requirements"
-                      rows={8}
-                      className="w-full px-3 md:px-4 py-2 md:py-3 border rounded text-xs md:text-sm resize-none focus:outline-none"
+                      rows={6}
+                      className="w-full px-2 sm:px-3 md:px-4 py-2 sm:py-3 border rounded text-xs sm:text-sm resize-none focus:outline-none"
                       style={{ backgroundColor: '#F5F5F5', color: '#000000', borderColor: '#CCCCCC' }}
                     />
                     {generatedImage && (
-                      <div className="mt-3 p-3 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">
+                      <div className="mt-2 sm:mt-3 p-2 sm:p-3 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">
                         <p className="text-xs text-blue-700 mb-2 font-medium">✨ Website Template Preview:</p>
                         <div className="relative group">
                           <img
                             src={generatedImage}
                             alt="Website Template"
-                            className="w-full h-32 object-cover rounded-lg"
+                            className="w-full h-24 sm:h-32 object-cover rounded-lg"
                           />
                           <button
                             onClick={() => setGeneratedImage(null)}
-                            className="absolute bottom-2 right-2 text-gray-500 hover:text-red-600 p-1.5 rounded-full hover:bg-gray-100 transition-all duration-300 hover:scale-110"
+                            className="absolute bottom-1 right-1 sm:bottom-2 sm:right-2 text-gray-500 hover:text-red-600 p-1 sm:p-1.5 rounded-full hover:bg-gray-100 transition-all duration-300 hover:scale-110"
                             title="Delete template"
                           >
-                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 24 24">
                               <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
                             </svg>
                           </button>
@@ -189,7 +189,7 @@ export const ContactCard = () => {
                     )}
                   </div>
 
-                  <div className="pt-3 md:pt-4">
+                  <div className="pt-2 sm:pt-3 md:pt-4">
                     <Button type="submit" variant="primary" fullWidth>
                       Submit Request
                     </Button>

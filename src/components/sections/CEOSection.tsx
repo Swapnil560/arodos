@@ -4,21 +4,21 @@ export const CEOSection = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={ref} className="py-2 md:py-3 bg-white">
-      <div className="mx-2 md:mx-4">
+    <section ref={ref} className="py-6 sm:py-8 md:py-12 bg-white">
+      <div className="mx-2 sm:mx-4">
         <div className={`transform transition-all duration-700 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
         }`}>
-          <div className="bg-white rounded-lg shadow-lg p-4">
+          <div className="bg-white rounded-lg shadow-lg p-3 sm:p-4 md:p-6">
             {/* Heading */}
-            <h3 className="mb-6" style={{fontFamily: 'Mona Sans Expanded', fontWeight: 500, fontStyle: 'italic', fontSize: '48px', lineHeight: '47px', letterSpacing: '-1%', textAlign: 'center', verticalAlign: 'middle'}}>
+            <h3 className="mb-4 sm:mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl" style={{fontFamily: 'Mona Sans Expanded', fontWeight: 500, fontStyle: 'italic', letterSpacing: '-1%', textAlign: 'center'}}>
               <span style={{fontWeight: 'bold'}}>From the</span> <span style={{color: '#F40202'}}>CEO's</span> <span style={{fontWeight: 'bold'}}>Desk</span>
             </h3>
             
-            <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4 items-stretch">
+            <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4 sm:gap-6 items-stretch">
               {/* Left Column - CEO Content */}
-              <div className="flex flex-col justify-center p-3 bg-gray-50 rounded-lg">
-                <div className="text-gray-700 space-y-2" style={{fontFamily: 'Jost', fontWeight: 300, fontSize: '16px', lineHeight: '20px', letterSpacing: '0%', verticalAlign: 'middle'}}>
+              <div className="flex flex-col justify-center p-3 sm:p-4 md:p-6 bg-gray-50 rounded-lg">
+                <div className="text-gray-700 space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg leading-relaxed" style={{fontFamily: 'Jost', fontWeight: 300}}>
                   <p>
                     With over 15 years of experience in the tech industry, I've always believed that quality should never be compromised for quantity. My journey has been shaped by a deep passion for innovation and scalability, whether it's designing resilient software architectures, securing cloud environments, or pushing the boundaries of AI and IoT.
                   </p>
@@ -33,19 +33,30 @@ export const CEOSection = () => {
                 </div>
                 
                 {/* CEO Info at bottom left */}
-                <div className="mt-4">
-                  <img 
-                    src="/images/sign.png" 
-                    alt="CEO Signature" 
-                    className="w-32 h-auto mb-2"
-                  />
-                  <p className="text-lg font-bold text-gray-800">Dhruba Sarma</p>
-                  <p className="text-gray-500 font-medium">Founder & CEO, Arodos Technologies</p>
+                <div className="mt-4 sm:mt-6">
+                  <div className="flex items-start gap-2 sm:block">
+                    <div className="w-24 h-24 sm:hidden bg-gray-200 rounded-full overflow-hidden flex-shrink-0">
+                      <img 
+                        src="/images/dhruva sir.png" 
+                        alt="Dhruba Sarma - CEO & Founder" 
+                        className="w-full h-full object-contain object-center"
+                      />
+                    </div>
+                    <div className="flex flex-col">
+                      <img 
+                        src="/images/sign.png" 
+                        alt="CEO Signature" 
+                        className="w-16 sm:w-32 h-auto mb-2"
+                      />
+                      <p className="text-sm sm:text-lg font-bold text-gray-800">Dhruba Sarma</p>
+                      <p className="text-xs sm:text-base text-gray-500 font-medium">Founder & CEO, Arodos Technologies</p>
+                    </div>
+                  </div>
                 </div>
               </div>
               
               {/* Right Column - CEO Image */}
-              <div className="bg-gray-50 rounded-lg overflow-hidden h-80">
+              <div className="hidden sm:block bg-gray-50 rounded-lg overflow-hidden h-64 sm:h-96 lg:h-[500px]">
                 <img 
                   src="/images/dhruva sir.png" 
                   alt="Dhruba Sarma - CEO & Founder" 
