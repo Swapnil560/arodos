@@ -20,7 +20,7 @@ export const CEOSection = () => {
               <div className="flex flex-col justify-center p-3 sm:p-4 md:p-6 bg-gray-50 rounded-lg">
                 <div className="text-gray-700 space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg leading-relaxed" style={{fontFamily: 'Jost', fontWeight: 300}}>
                   <p>
-                    With over 15 years of experience in the tech industry, I've always believed that quality should never be compromised for quantity. My journey has been shaped by a deep passion for <span style={{fontFamily: 'Montserrat', fontWeight: '800'}}>innovation</span> and scalability, whether it's designing resilient software architectures, securing cloud environments, or pushing the boundaries of AI and IoT.
+                    With over 15 years of experience in the tech industry, I've always believed that quality should never be compromised for quantity. My journey has been shaped by a deep passion for innovation and scalability, whether it's designing resilient software architectures, securing cloud environments, or pushing the boundaries of AI and IoT.
                   </p>
                   
                   <p>
