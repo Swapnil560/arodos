@@ -239,7 +239,7 @@ Let's turn your ideas into innovative solutions together`;
       {isOpen && (
         <div 
           ref={chatRef} 
-          className="fixed bottom-20 right-2 left-2 sm:bottom-24 sm:right-6 sm:left-auto w-auto sm:w-96 hologram neon-border rounded-2xl flex flex-col z-50 transition-all duration-500"
+          className="fixed bottom-20 right-2 left-2 sm:bottom-24 sm:right-6 sm:left-auto w-auto sm:w-[480px] hologram neon-border rounded-2xl flex flex-col z-50 transition-all duration-500"
           style={{ 
             top: '60px',
             maxHeight: 'calc(100vh - 140px)',
@@ -265,7 +265,7 @@ Let's turn your ideas into innovative solutions together`;
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div
-                  className={`max-w-[280px] sm:max-w-sm px-3 sm:px-4 py-2 sm:py-3 rounded-2xl text-xs sm:text-sm transition-all duration-300 hover:scale-105 font-jost whitespace-pre-line ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-2xl text-xs sm:text-sm transition-all duration-300 hover:scale-105 font-jost whitespace-pre-line break-words ${
                     message.isUser
                       ? 'bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-100 neon-border'
                       : 'bg-gradient-to-r from-gray-900/80 to-gray-800/80 text-gray-100 border border-purple-400/30'
