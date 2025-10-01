@@ -35,11 +35,11 @@ export const CEOSection = () => {
                 {/* CEO Info at bottom left */}
                 <div className="mt-4 sm:mt-6">
                   <div className="flex items-start gap-2 sm:block">
-                    <div className="w-24 h-24 sm:hidden bg-gray-200 rounded-lg overflow-hidden flex-shrink-0">
+                    <div className="w-24 h-24 sm:hidden bg-gray-200 rounded-lg overflow-hidden flex-shrink-0 cursor-pointer group">
                       <img 
                         src="/images/Screenshot 2025-10-01 141844.png" 
                         alt="Dhruba Sarma - CEO & Founder" 
-                        className="w-full h-full object-contain object-center grayscale rounded-lg"
+                        className="w-full h-full object-contain object-center grayscale rounded-lg group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                       />
                     </div>
                     <div className="flex flex-col">
@@ -52,11 +52,11 @@ export const CEOSection = () => {
               </div>
               
               {/* Right Column - CEO Image */}
-              <div className="hidden sm:block bg-gray-50 rounded-lg overflow-hidden h-64 sm:h-96 lg:h-[500px]">
+              <div className="hidden sm:block bg-gray-50 rounded-lg overflow-hidden h-64 sm:h-96 lg:h-[500px] cursor-pointer group">
                 <img 
                   src="/images/Screenshot 2025-10-01 141844.png" 
                   alt="Dhruba Sarma - CEO & Founder" 
-                  className="w-full h-full object-cover object-center grayscale"
+                  className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                 />
               </div>
             </div>
