@@ -48,7 +48,7 @@ export const Footer = () => {
             <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Contact Us</h4>
             <div className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
               <p>Guwahati, Assam, India</p>
-              <p>Call Us: +91 96269 6186</p>
+              <p>Call Us: +919620861198</p>
               <p>Email: contact@arodos.com</p>
             </div>
           </div>
@@ -61,18 +61,6 @@ export const Footer = () => {
                 <img src="/images/link.png" alt="LinkedIn" className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
                 <span className="text-gray-400 text-sm sm:text-base">LinkedIn</span>
               </a>
-              <a href="#" className="flex items-center hover:opacity-75 transition-opacity">
-                <img src="/images/insta.png" alt="Instagram" className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
-                <span className="text-gray-400 text-sm sm:text-base">Instagram</span>
-              </a>
-              <a href="#" className="flex items-center hover:opacity-75 transition-opacity">
-                <img src="/images/x.png" alt="Twitter" className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
-                <span className="text-gray-400 text-sm sm:text-base">Twitter</span>
-              </a>
-              <a href="#" className="flex items-center hover:opacity-75 transition-opacity">
-                <img src="/images/facebook.png" alt="Facebook" className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
-                <span className="text-gray-400 text-sm sm:text-base">Facebook</span>
-              </a>
             </div>
           </div>
         </div>
@@ -80,7 +68,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
           <p className="text-gray-400 text-sm sm:text-base text-center sm:text-left">
-            © 2025 www.arodos.com
+            © 2025 | www.arodos.com
           </p>
           <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
             <div className="flex items-center space-x-4 sm:space-x-6">

@@ -33,7 +33,7 @@ export const VisionMissionCards = () => {
                 <span className="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full mr-2 sm:mr-3"></span>
                 <h3 className="text-white text-base sm:text-lg md:text-xl font-bold">Our Vision</h3>
               </div>
-              <p className="text-white text-xs sm:text-sm md:text-base leading-relaxed">
+              <p className="text-white text-xs sm:text-sm md:text-base leading-relaxed font-jost">
                 To lead with innovation and deliver digital solutions built on quality and long-term value that don't just meet today's challenges but evolve to power tomorrow's opportunities.
               </p>
             </div>
@@ -64,7 +64,7 @@ export const VisionMissionCards = () => {
                 <span className="w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full mr-2 sm:mr-3"></span>
                 <h3 className="text-white text-base sm:text-lg md:text-xl font-bold">Our Mission</h3>
               </div>
-              <p className="text-white text-xs sm:text-sm md:text-base leading-relaxed">
+              <p className="text-white text-xs sm:text-sm md:text-base leading-relaxed font-jost">
                 We deliver tailored digital solutions crafted with precision and handled by experienced professionals to ensure measurable impact. As our clients grow, we grow- building lasting partnerships rooted in trust and customer satisfaction.
               </p>
             </div>

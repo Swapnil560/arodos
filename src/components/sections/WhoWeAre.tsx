@@ -16,7 +16,7 @@ export const WhoWeAre = () => {
               <span className="text-black"> We Are</span>
             </h2>
             
-            <div className="space-y-3 sm:space-y-4 text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed" style={{fontFamily: 'Jost', fontWeight: 300}}>
+            <div className="space-y-3 sm:space-y-4 text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed font-jost">
               <p>
                 Born in Assam, built with global ambition- Arodos Technologies was founded post-COVID to bring world-class digital solutions closer to home.
               </p>

@@ -59,7 +59,7 @@ export const CorePrinciples = () => {
         </div>
         
         {/* Interactive Slide Layout */}
-        <div className="hidden lg:flex h-[400px] xl:h-[500px] max-w-6xl mx-auto px-4">
+        <div className="hidden md:flex h-[300px] md:h-[400px] xl:h-[500px] max-w-6xl mx-auto px-4">
           {principles.map((principle) => (
             <div
               key={principle.number}
@@ -69,7 +69,7 @@ export const CorePrinciples = () => {
                   : 'w-1/8 bg-gray-100 hover:bg-gray-200 cursor-pointer flex items-center justify-center mx-1'
               }`}
               style={{
-                width: principle.number === activePrinciple ? '50%' : '12.5%'
+                width: principle.number === activePrinciple ? '40%' : '15%'
               }}
               onClick={() => setActivePrinciple(principle.number)}
             >
@@ -80,26 +80,34 @@ export const CorePrinciples = () => {
               )}
               {principle.number === activePrinciple ? (
                 <>
-                  <h2 className="text-xl xl:text-2xl font-bold mb-3 xl:mb-4">
+                  <h2 className="text-xl xl:text-2xl font-bold mb-3 xl:mb-4 font-jost">
                     {principle.number}. {principle.title}
                   </h2>
-                  <p className="text-base xl:text-lg leading-relaxed" style={{ lineHeight: '1.5' }}>
+                  <p className="text-base xl:text-lg leading-relaxed font-jost" style={{ lineHeight: '1.5' }}>
                     {principle.description}
                   </p>
                 </>
               ) : (
-                <div className="transform -rotate-90 whitespace-nowrap">
-                  <span className="text-black font-bold text-xs xl:text-sm">
-                    {principle.number}. {principle.title}
-                  </span>
+                <div className="flex flex-col items-center px-2 h-full">
+                  <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mt-4 mb-4">
+                    <img src={principle.icon} alt="principle icon" className="w-6 h-6 object-cover" />
+                  </div>
+                  <div className="flex-1 flex flex-col justify-center text-center">
+                    <span className="text-black font-bold text-lg xl:text-xl mb-2 block">
+                      {principle.number}
+                    </span>
+                    <span className="text-red-600 font-semibold text-xs xl:text-sm leading-tight tracking-wide font-jost" style={{wordBreak: 'break-word', hyphens: 'auto'}}>
+                      {principle.title}
+                    </span>
+                  </div>
                 </div>
               )}
             </div>
           ))}
         </div>
         
-        {/* Mobile & Tablet Layout */}
-        <div className="lg:hidden space-y-3 sm:space-y-4 px-4 max-w-4xl mx-auto">
+        {/* Mobile Layout */}
+        <div className="md:hidden space-y-3 sm:space-y-4 px-4 max-w-4xl mx-auto">
           {principles.map((principle) => (
             <div
               key={principle.number}
@@ -114,7 +122,7 @@ export const CorePrinciples = () => {
                 {principle.number === activePrinciple && (
                   <img src={principle.icon} alt="principle icon" className="w-12 h-12 sm:w-14 sm:h-14 object-cover rounded-full mr-3 sm:mr-4 transition-all duration-500" />
                 )}
-                <h3 className="text-base sm:text-lg md:text-xl font-bold flex-1">
+                <h3 className="text-base sm:text-lg md:text-xl font-bold flex-1 font-jost">
                   {principle.number}. {principle.title}
                 </h3>
                 <div className={`ml-2 transition-transform duration-300 ${
@@ -126,7 +134,7 @@ export const CorePrinciples = () => {
                 </div>
               </div>
               {principle.number === activePrinciple && (
-                <p className="text-sm sm:text-base leading-relaxed pl-15 sm:pl-18">
+                <p className="text-sm sm:text-base leading-relaxed pl-15 sm:pl-18 font-jost">
                   {principle.description}
                 </p>
               )}

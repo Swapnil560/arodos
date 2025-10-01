@@ -3,16 +3,16 @@
 const testimonials = [
   {
     quote: "Arodos delivered our MVP on time with exceptional quality. Their agile team truly understood our startup vision and executed flawlessly.",
-    client: "Deepankar Bhattacharjya\n- Co-Founder & COO, ZEMIDI",
+    client: "Deepankar Bhattacharjya\nCo-Founder & COO, ZEMIDI",
     logo: "Z",
-    rating: "★★★★★",
+    rating: "★★★★☆",
     image: "/images/clients/deepankar.png"
   },
   {
     quote: "Arodos built a robust backend for our vehicle tracking system — scalable, secure, and API-first. They're our go-to engineering partner now",
-    client: "David Pierce\n- Director NA Sales | POWWR",
+    client: "David Pierce\nDirector NA Sales | POWWR",
     logo: "P",
-    rating: "★★★★★",
+    rating: "★★★★☆",
     image: "/images/clients/david.png"
   }
 ];
@@ -52,13 +52,15 @@ export const TestimonialSlider = () => {
               )}
               
               {/* Quote */}
-              <blockquote className="text-sm sm:text-base md:text-lg text-gray-800 mb-3 sm:mb-4 leading-relaxed flex-1 flex items-center">
+              <blockquote className="text-sm sm:text-base md:text-lg text-gray-800 mb-3 sm:mb-4 leading-relaxed flex-1 flex items-center italic">
                 <span>{testimonial.quote}</span>
               </blockquote>
               
               {/* Client Name */}
-              <cite className="text-gray-800 font-medium text-sm sm:text-base md:text-lg whitespace-pre-line">
-                {testimonial.client}
+              <cite className="text-gray-900 whitespace-pre-line">
+                <span className="font-medium text-sm sm:text-base md:text-lg font-serif">{testimonial.client.split('\n')[0]}</span>
+                <br />
+                <span className="font-light text-xs sm:text-sm md:text-base">{testimonial.client.split('\n')[1]}</span>
               </cite>
             </div>
           </div>

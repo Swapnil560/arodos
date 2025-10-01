@@ -18,7 +18,7 @@ export const CEOSection = () => {
             <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4 sm:gap-6 items-stretch">
               {/* Left Column - CEO Content */}
               <div className="flex flex-col justify-center p-3 sm:p-4 md:p-6 bg-gray-50 rounded-lg">
-                <div className="text-gray-700 space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg leading-relaxed" style={{fontFamily: 'Jost', fontWeight: 300}}>
+                <div className="text-gray-700 space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg leading-relaxed font-jost">
                   <p>
                     With over 15 years of experience in the tech industry, I've always believed that quality should never be compromised for quantity. My journey has been shaped by a deep passion for innovation and scalability, whether it's designing resilient software architectures, securing cloud environments, or pushing the boundaries of AI and IoT.
                   </p>

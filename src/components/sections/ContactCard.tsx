@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';
 import { generateWebsiteTemplate } from '../ui/websiteGenerator';
 
@@ -46,60 +45,51 @@ export const ContactCard = () => {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: placeholderStyle }} />
-      <section id="contact-us" className="min-h-screen flex flex-col bg-red-900 rounded-2xl sm:rounded-3xl mx-2 md:mx-4 mt-2 md:mt-4 mb-2 md:mb-4" style={{ backgroundColor: '#7c0A02' }}>
+      <section id="contact-us" className="min-h-screen flex flex-col bg-gradient-to-br from-red-600 via-red-700 to-red-800 rounded-2xl sm:rounded-3xl mx-2 md:mx-4 mt-2 md:mt-4 mb-2 md:mb-4 shadow-2xl relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse"></div>
       <div className="max-w-6xl mx-auto px-3 sm:px-4 flex-1 flex items-center">
-        <div className="w-full" style={{ background: '#7c0A02' }}>
+        <div className="w-full bg-transparent">
           <div className="flex flex-col lg:flex-row min-h-[500px] sm:min-h-[600px] md:min-h-[700px] p-4 sm:p-6 md:p-8 lg:p-12">
             {/* Left Section - Contact Info */}
-            <div className="lg:w-1/2 flex flex-col justify-between mb-8 lg:mb-0 py-2 sm:py-4 lg:ml-24">
-              <div className="text-center lg:text-left max-w-md w-full mx-auto lg:mx-0">
+            <div className="lg:w-1/2 flex flex-col mb-8 lg:mb-0 py-2 sm:py-4 lg:mr-20 relative z-10">
+              <div className="text-left max-w-md w-full">
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4 md:mb-6">Get in Touch</h2>
-                <p className="text-sm sm:text-base md:text-lg text-white mb-6 sm:mb-8 md:mb-12 leading-relaxed">
+                <p className="text-sm sm:text-base md:text-lg text-white mb-6 sm:mb-8 leading-relaxed">
                   Ready to transform your digital ideas into reality? 
                   Arodos is here to help you succeed!
                   Get in touch today, and let's start building 
                   something exceptional.
                 </p>
-              </div>
-              
-              <div className="text-center lg:text-left max-w-md w-full mx-auto lg:mx-0 mt-4 sm:mt-8">
-                <div className="space-y-3 sm:space-y-4 md:space-y-5">
-                  <div className="text-white">
-                    <div className="flex items-center justify-center lg:justify-start mb-1">
-                      <img src="/images/phone.png" alt="Phone" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3 md:mr-4" />
-                      <span className="text-sm sm:text-base font-semibold">Phone</span>
-                    </div>
-                    <div className="text-xs sm:text-sm md:text-base ml-6 sm:ml-8 md:ml-10 lg:ml-8">+919620861198</div>
+                
+                <div className="space-y-3 sm:space-y-4">
+                  <div className="text-white flex items-center hover:bg-white/10 p-2 rounded-lg transition-all duration-300 hover:scale-105">
+                    <img src="/images/phone.png" alt="Phone" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3 md:mr-4" />
+                    <span className="text-sm sm:text-base font-semibold mr-2">Phone</span>
+                    <span className="text-xs sm:text-sm md:text-base">+919620861198</span>
                   </div>
-                  <div className="text-white">
-                    <div className="flex items-center justify-center lg:justify-start mb-1">
-                      <img src="/images/mess.png" alt="Email" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3 md:mr-4" />
-                      <span className="text-sm sm:text-base font-semibold">Email</span>
-                    </div>
-                    <div className="text-xs sm:text-sm md:text-base ml-6 sm:ml-8 md:ml-10 lg:ml-8">contact@arodos.com</div>
+                  <div className="text-white flex items-center hover:bg-white/10 p-2 rounded-lg transition-all duration-300 hover:scale-105">
+                    <img src="/images/mess.png" alt="Email" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3 md:mr-4" />
+                    <span className="text-sm sm:text-base font-semibold mr-2">Email</span>
+                    <a href="mailto:contact@arodos.com" className="text-xs sm:text-sm md:text-base hover:underline hover:text-yellow-300 transition-colors duration-300">contact@arodos.com</a>
                   </div>
-                  <div className="text-white">
-                    <div className="flex items-center justify-center lg:justify-start mb-1">
-                      <img src="/images/arrow (2).png" alt="Website" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3 md:mr-4" />
-                      <span className="text-sm sm:text-base font-semibold">Website</span>
-                    </div>
-                    <div className="text-xs sm:text-sm md:text-base ml-6 sm:ml-8 md:ml-10 lg:ml-8">www.arodos.com</div>
+                  <div className="text-white flex items-center hover:bg-white/10 p-2 rounded-lg transition-all duration-300 hover:scale-105">
+                    <img src="/images/arrow (2).png" alt="Website" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3 md:mr-4" />
+                    <span className="text-sm sm:text-base font-semibold mr-2">Website</span>
+                    <a href="http://www.arodos.com" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm md:text-base hover:underline hover:text-yellow-300 transition-colors duration-300">www.arodos.com</a>
                   </div>
-                  <div className="text-white">
-                    <div className="flex items-center justify-center lg:justify-start mb-1">
-                      <img src="/images/loca.png" alt="Location" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3 md:mr-4" />
-                      <span className="text-sm sm:text-base font-semibold">Location</span>
-                    </div>
-                    <div className="text-xs sm:text-sm md:text-base ml-6 sm:ml-8 md:ml-10 lg:ml-8">Guwahati, Bangalore</div>
+                  <div className="text-white flex items-center hover:bg-white/10 p-2 rounded-lg transition-all duration-300 hover:scale-105">
+                    <img src="/images/loca.png" alt="Location" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3 md:mr-4" />
+                    <span className="text-sm sm:text-base font-semibold mr-2">Location</span>
+                    <span className="text-xs sm:text-sm md:text-base">Guwahati, India</span>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Right Section - White Form Card */}
-            <div className="lg:w-1/2 flex items-center justify-center lg:ml-8">
-              <Card className="p-4 sm:p-6 md:p-8 w-full max-w-md" hover={false}>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3" style={{ color: '#000000' }}>Got a project in mind?</h3>
+            <div className="lg:w-1/2 flex items-center justify-center lg:ml-8 relative z-10">
+              <Card className="p-4 sm:p-6 md:p-8 w-full max-w-md transform hover:scale-105 transition-all duration-300 hover:shadow-xl" hover={false}>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent animate-pulse">Got a project in mind?</h3>
                 <p className="text-xs sm:text-sm md:text-base mb-4 sm:mb-6" style={{ color: '#333333' }}>
                   Let us know what you need – our team will get in touch shortly.
                 </p>
@@ -189,10 +179,26 @@ export const ContactCard = () => {
                     )}
                   </div>
 
-                  <div className="pt-2 sm:pt-3 md:pt-4">
-                    <Button type="submit" variant="primary" fullWidth>
-                      Submit Request
-                    </Button>
+                  <div className="pt-2 sm:pt-3 md:pt-4 flex justify-center">
+                    <button
+                      type="submit"
+                      className="bg-white font-jost px-6 py-3 rounded-lg transition-all duration-300 font-medium border border-gray-600"
+                      style={{ color: '#870000' }}
+                      onMouseDown={(e) => {
+                        const target = e.target as HTMLButtonElement;
+                        target.style.backgroundColor = '#F40202';
+                        target.style.color = 'white';
+                        target.style.transform = 'scale(0.95)';
+                      }}
+                      onMouseUp={(e) => {
+                        const target = e.target as HTMLButtonElement;
+                        target.style.backgroundColor = 'white';
+                        target.style.color = '#870000';
+                        target.style.transform = 'scale(1)';
+                      }}
+                    >
+                      Submit Request →
+                    </button>
                   </div>
                 </form>
               </Card>
