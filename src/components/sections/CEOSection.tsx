@@ -35,11 +35,11 @@ export const CEOSection = () => {
                 {/* CEO Info at bottom left */}
                 <div className="mt-4 sm:mt-6">
                   <div className="flex items-start gap-2 sm:block">
-                    <div className="w-24 h-24 sm:hidden bg-gray-200 rounded-full overflow-hidden flex-shrink-0">
+                    <div className="w-24 h-24 sm:hidden bg-gray-200 rounded-lg overflow-hidden flex-shrink-0">
                       <img 
                         src="/images/Screenshot 2025-10-01 141844.png" 
                         alt="Dhruba Sarma - CEO & Founder" 
-                        className="w-full h-full object-contain object-center"
+                        className="w-full h-full object-contain object-center grayscale rounded-lg"
                       />
                     </div>
                     <div className="flex flex-col">
@@ -56,7 +56,7 @@ export const CEOSection = () => {
                 <img 
                   src="/images/Screenshot 2025-10-01 141844.png" 
                   alt="Dhruba Sarma - CEO & Founder" 
-                  className="w-full h-full object-contain object-center"
+                  className="w-full h-full object-cover object-center grayscale"
                 />
               </div>
             </div>
