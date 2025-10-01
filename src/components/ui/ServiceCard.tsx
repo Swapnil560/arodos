@@ -22,13 +22,13 @@ export const ServiceCard = ({
   const BlueSection = (
     <div className="p-4 md:p-6 flex flex-col relative min-h-[250px] md:min-h-[350px]" style={{ backgroundColor: '#EAEAEA' }}>
       <div className="absolute top-3 left-3 md:top-4 md:left-4">
-        <span className="text-lg md:text-3xl font-bold drop-shadow-lg" style={{ color: '#F40202' }}>{number}</span>
+        <span className="drop-shadow-lg" style={{ color: '#F40202', fontFamily: 'Mona Sans Expanded', fontWeight: 300, fontStyle: 'Light', fontSize: '64px', lineHeight: '28px', letterSpacing: '-1%', verticalAlign: 'middle' }}>{number}</span>
       </div>
       <div className="flex-1 flex flex-col justify-center mt-2 md:mt-4 px-2 py-1">
-        <h3 className="text-black text-xs md:text-sm font-bold mb-1 md:mb-2 text-left leading-tight drop-shadow-md">
+        <h3 className="text-black mb-1 md:mb-2 text-left drop-shadow-md" style={{ fontFamily: 'Mona Sans Expanded', fontWeight: 600, fontStyle: 'SemiBold', fontSize: '26px', lineHeight: '28px', letterSpacing: '-1%', verticalAlign: 'middle' }}>
           {title}
         </h3>
-        <p className="text-black text-xs md:text-xs leading-snug text-left overflow-hidden drop-shadow-sm">
+        <p className="text-gray-600 text-xs md:text-sm lg:text-base text-left overflow-hidden drop-shadow-sm leading-relaxed">
           {description}
         </p>
       </div>

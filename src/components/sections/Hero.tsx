@@ -53,7 +53,7 @@ export const Hero = () => {
         <div className="mb-5 max-w-4xl">
           <h1 style={{fontFamily: 'Mona Sans Expanded', fontWeight: 800, fontSize: window.innerWidth < 768 ? '32px' : '80px', lineHeight: window.innerWidth < 768 ? '36px' : '74px', letterSpacing: '-1%', textAlign: 'center', verticalAlign: 'middle'}}>
             <span className="text-white">Build </span>
-            <span style={{color: '#F40202'}}>Innovative</span>
+            <span style={{color: '#F40202', fontWeight: 900, textShadow: '2px 2px 4px rgba(0,0,0,0.5), 1px 1px 2px rgba(244,2,2,0.3)', letterSpacing: '1px'}}>Innovative</span>
             <span className="text-white"> Solutions at Affordable Cost</span>
           </h1>
         </div>
@@ -68,7 +68,8 @@ export const Hero = () => {
         <div className="mb-8">
           <button 
             onClick={() => scrollToSection('services')}
-            className="bg-white text-red-500 font-jost px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors duration-300 font-medium"
+            className="bg-white font-jost px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors duration-300 font-medium"
+            style={{ color: '#870000' }}
           >
             Explore Our Expertise →
           </button>

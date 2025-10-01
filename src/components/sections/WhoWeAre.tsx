@@ -44,7 +44,7 @@ export const WhoWeAre = () => {
               playsInline
               className="w-full h-48 md:h-full rounded-lg shadow-lg object-cover"
             >
-              <source src="/videos/2.mp4" type="video/mp4" />
+              <source src="/videos/hand (1).mp4" type="video/mp4" />
             </video>
           </div>
         </div>

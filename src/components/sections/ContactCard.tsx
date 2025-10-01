@@ -46,21 +46,23 @@ export const ContactCard = () => {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: placeholderStyle }} />
-      <section id="contact-us" className="py-12 md:py-16" style={{ backgroundColor: '#7c0A02' }}>
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="rounded-lg overflow-hidden" style={{ background: '#7c0A02', boxShadow: '0 8px 24px rgba(224, 224, 224, 0.3)' }}>
+      <section id="contact-us" className="min-h-screen flex flex-col bg-red-900 rounded-3xl mx-2 md:mx-4 mt-2 md:mt-4 mb-2 md:mb-4" style={{ backgroundColor: '#7c0A02' }}>
+      <div className="max-w-6xl mx-auto px-4 flex-1 flex items-center">
+        <div className="w-full" style={{ background: '#7c0A02' }}>
           <div className="flex flex-col lg:flex-row min-h-[600px] md:min-h-[700px] p-6 md:p-8 lg:p-12">
             {/* Left Section - Contact Info */}
-            <div className="lg:w-1/2 flex items-center justify-center mb-6 lg:mb-0">
-              <div className="text-center lg:text-left max-w-md w-full">
+            <div className="lg:w-1/2 flex flex-col justify-between mb-6 lg:mb-0 py-4 lg:ml-24">
+              <div className="text-left max-w-md w-full">
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6">Get in Touch</h2>
-                <p className="text-sm md:text-base lg:text-lg text-white mb-6 md:mb-8 leading-relaxed">
+                <p className="text-sm md:text-base lg:text-lg text-white mb-8 md:mb-12 leading-relaxed">
                   Ready to transform your digital ideas into reality? 
                   Arodos is here to help you succeed!
                   Get in touch today, and let's start building 
                   something exceptional.
                 </p>
-                
+              </div>
+              
+              <div className="text-left max-w-md w-full mt-8">
                 <div className="space-y-4 md:space-y-5">
                   <div className="text-white text-center lg:text-left">
                     <div className="flex items-center justify-center lg:justify-start mb-1">
@@ -95,7 +97,7 @@ export const ContactCard = () => {
             </div>
 
             {/* Right Section - White Form Card */}
-            <div className="lg:w-1/2 flex items-center justify-center">
+            <div className="lg:w-1/2 flex items-center justify-center lg:ml-8">
               <Card className="p-6 md:p-8 w-full max-w-md" hover={false}>
                 <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3" style={{ color: '#000000' }}>Got a project in mind?</h3>
                 <p className="text-sm md:text-base mb-4 md:mb-6" style={{ color: '#333333' }}>
@@ -159,7 +161,7 @@ export const ContactCard = () => {
                       value={formData.projectDetails}
                       onChange={handleChange}
                       placeholder="Briefly Describe your project goals or any specific requirements"
-                      rows={3}
+                      rows={8}
                       className="w-full px-3 md:px-4 py-2 md:py-3 border rounded text-xs md:text-sm resize-none focus:outline-none"
                       style={{ backgroundColor: '#F5F5F5', color: '#000000', borderColor: '#CCCCCC' }}
                     />

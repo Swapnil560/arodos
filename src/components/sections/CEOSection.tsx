@@ -15,7 +15,7 @@ export const CEOSection = () => {
               <span style={{fontWeight: 'bold'}}>From the</span> <span style={{color: '#F40202'}}>CEO's</span> <span style={{fontWeight: 'bold'}}>Desk</span>
             </h3>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch">
+            <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-4 items-stretch">
               {/* Left Column - CEO Content */}
               <div className="flex flex-col justify-center p-3 bg-gray-50 rounded-lg">
                 <div className="text-gray-700 space-y-2" style={{fontFamily: 'Jost', fontWeight: 300, fontSize: '16px', lineHeight: '20px', letterSpacing: '0%', verticalAlign: 'middle'}}>
@@ -42,9 +42,9 @@ export const CEOSection = () => {
               {/* Right Column - CEO Image */}
               <div className="bg-gray-50 rounded-lg overflow-hidden h-80">
                 <img 
-                  src="/images/Ceo.jpg" 
+                  src="/images/dhruva sir.png" 
                   alt="Dhruba Sarma - CEO & Founder" 
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-contain object-center"
                 />
               </div>
             </div>

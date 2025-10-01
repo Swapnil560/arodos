@@ -6,9 +6,10 @@ export const ClientTestimonials = () => {
       <div className="max-w-6xl mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
-            <span className="text-black">What Our </span>
-            <span className="text-red-500 italic">Clients Say</span>
+          <h2 className="mb-4 md:mb-6" style={{ fontFamily: 'Mona Sans Expanded', fontWeight: 500, fontStyle: 'italic', fontSize: '48px', lineHeight: '47px', letterSpacing: '-1%', textAlign: 'center', verticalAlign: 'middle' }}>
+            <span className="text-black" style={{ fontWeight: 900, fontStyle: 'normal' }}>What Our </span>
+            <span className="text-red-500">Clients</span>
+            <span className="text-black" style={{ fontWeight: 900, fontStyle: 'normal' }}> Say</span>
           </h2>
           <p className="text-gray-600 text-sm md:text-base lg:text-lg max-w-4xl mx-auto leading-relaxed px-4">
             Transforming visionary ideas into powerful, user-centric digital solutions that drive innovation, 

@@ -24,12 +24,11 @@ export const OurServices = () => {
         </div>
 
         {/* Service Cards */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 gap-6">
           <ServiceCard
             number="01"
             title="Custom Websites & Mobile Apps"
-            description="We don't just build apps- we craft user-centric, performance-driven digital experiences designed to engage, convert, and scale. 
-            Every solution we create is tailored, intuitive, and built for impact, ensuring your brand stands out in the digital landscape."
+            description="We don't just build apps- we craft user-centric, performance-driven digital experiences designed to engage, convert, and scale. Every solution we create is tailored, intuitive, and built for impact, ensuring your brand stands out in the digital landscape."
             imagePlaceholder="💻"
             imageDescription="Laptop displaying webpage with hands on keyboard"
             layout="blue-left"
@@ -39,8 +38,7 @@ export const OurServices = () => {
           <ServiceCard
             number="02"
             title="ERP, CRM & AI Solutions"
-            description="Our approach to ERP, CRM, and AI is truly unique. We don't just automate workflows- we reimagine them, combining intelligence, efficiency, and security to deliver systems that think, adapt, and grow with your business. 
-            Unlike conventional solutions, ours are engineered for seamless scalability and actionable insights."
+            description="Our approach to ERP, CRM, and AI is truly unique. We don't just automate workflows- we reimagine them, combining intelligence, efficiency, and security to deliver systems that think, adapt, and grow with your business. Unlike conventional solutions, ours are engineered for seamless scalability and actionable insights."
             imagePlaceholder="⌨️"
             imageDescription="Workspace with code monitor"
             layout="blue-right"
@@ -50,8 +48,7 @@ export const OurServices = () => {
           <ServiceCard
             number="03"
             title="Technology Assessment"
-            description="We go beyond standard audits. Our deep-dive technology assessment uncovers hidden inefficiencies, identifies untapped opportunities, and charts a future-ready roadmap. 
-            With Arodos Technologies, your tech stack becomes a strategic advantage, not just infrastructure."
+            description="We go beyond standard audits. Our deep-dive technology assessment uncovers hidden inefficiencies, identifies untapped opportunities, and charts a future-ready roadmap. With Arodos Technologies, your tech stack becomes a strategic advantage, not just infrastructure."
             imagePlaceholder="💻"
             imageDescription="Laptop on wooden desk with water glass"
             layout="blue-left"
@@ -61,9 +58,7 @@ export const OurServices = () => {
           <ServiceCard
             number="04"
             title="Strategic IT Planning"
-            description="We create IT strategies tailored specifically to your business- no generic solutions, only plans that fit your unique goals. 
-            We align technology with your vision in a way no one else does- crafting plans that accelerate growth, drive innovation, and maximize ROI. 
-            Every recommendation is precise, actionable, and tailored to your unique business context."
+            description="We create IT strategies tailored specifically to your business- no generic solutions, only plans that fit your unique goals. We align technology with your vision in a way no one else does- crafting plans that accelerate growth, drive innovation, and maximize ROI. Every recommendation is precise, actionable, and tailored to your unique business context."
             imagePlaceholder="⌨️"
             imageDescription="Workspace with code monitor and professional setup"
             layout="blue-right"

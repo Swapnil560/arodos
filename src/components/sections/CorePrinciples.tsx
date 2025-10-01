@@ -16,25 +16,25 @@ export const CorePrinciples = () => {
       number: 2,
       title: "Professional Excellence",
       description: "Every solution is crafted by skilled professionals, combining creativity, precision, and technical expertise.",
-      icon: "/images/hands.png"
+      icon: "/images/services/icons/1.png"
     },
     {
       number: 3,
       title: "Innovation & Impact",
       description: "We transform challenges into opportunities, delivering smarter, faster, and innovative solutions.",
-      icon: "/images/hands.png"
+      icon: "/images/services/icons/2.png"
     },
     {
       number: 4,
       title: "Quality Assurance",
       description: "Each project is built to be secure, scalable, and future-ready, maintaining the highest quality standards.",
-      icon: "/images/hands.png"
+      icon: "/images/services/icons/3.png"
     },
     {
       number: 5,
       title: "Affordability, Transparency & Trust",
       description: "We deliver high-performance digital solutions without compromising on cost or clarity, making technology accessible for all.",
-      icon: "/images/hands.png"
+      icon: "/images/services/icons/4.png"
     }
   ];
 
@@ -68,7 +68,7 @@ export const CorePrinciples = () => {
               className={`transition-all duration-500 ease-in-out ${
                 principle.number === activePrinciple
                   ? 'w-1/2 bg-red-600 text-white rounded-lg shadow-lg p-8 flex flex-col justify-center'
-                  : 'w-1/8 bg-gray-100 hover:bg-gray-200 cursor-pointer flex items-center justify-center'
+                  : 'w-1/8 bg-gray-100 hover:bg-gray-200 cursor-pointer flex items-center justify-center mx-1'
               }`}
               style={{
                 width: principle.number === activePrinciple ? '50%' : '12.5%'
@@ -77,7 +77,7 @@ export const CorePrinciples = () => {
             >
               <div className="flex items-center mb-6">
                 <img src={principle.icon} alt="hands" className={`object-cover rounded-full mr-4 transition-all duration-500 ${
-                  principle.number === activePrinciple ? 'w-24 h-24' : 'w-0 h-0 opacity-0'
+                  principle.number === activePrinciple ? 'w-28 h-28' : 'w-0 h-0 opacity-0'
                 }`} />
               </div>
               {principle.number === activePrinciple ? (
@@ -113,7 +113,7 @@ export const CorePrinciples = () => {
               onClick={() => setActivePrinciple(principle.number)}
             >
               <div className="flex items-center mb-4">
-                <img src={principle.icon} alt="hands" className="w-12 h-12 object-cover rounded-full mr-4 transition-all duration-500" />
+                <img src={principle.icon} alt="hands" className="w-14 h-14 object-cover rounded-full mr-4 transition-all duration-500" />
                 <h3 className="text-lg font-bold">
                   {principle.number}. {principle.title}
                 </h3>
