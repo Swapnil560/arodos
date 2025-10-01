@@ -20,7 +20,7 @@ export const CEOSection = () => {
               <div className="flex flex-col justify-center p-3 sm:p-4 md:p-6 bg-gray-50 rounded-lg">
                 <div className="text-gray-700 space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg leading-relaxed" style={{fontFamily: 'Jost', fontWeight: 300}}>
                   <p>
-                    With over 15 years of experience in the tech industry, I've always believed that quality should never be compromised for quantity. My journey has been shaped by a deep passion for innovation and scalability, whether it's designing resilient software architectures, securing cloud environments, or pushing the boundaries of AI and IoT.
+                    With over 15 years of experience in the tech industry, I've always believed that quality should never be compromised for quantity. My journey has been shaped by a deep passion for <span style={{fontFamily: 'Montserrat', fontWeight: '800'}}>innovation</span> and scalability, whether it's designing resilient software architectures, securing cloud environments, or pushing the boundaries of AI and IoT.
                   </p>
                   
                   <p>
@@ -37,9 +37,9 @@ export const CEOSection = () => {
                   <div className="flex items-start gap-2 sm:block">
                     <div className="w-24 h-24 sm:hidden bg-gray-200 rounded-full overflow-hidden flex-shrink-0">
                       <img 
-                        src="/images/dhruva sir.png" 
+                        src="/images/ceo (2).png" 
                         alt="Dhruba Sarma - CEO & Founder" 
-                        className="w-full h-full object-contain object-center"
+                        className="w-full h-full object-contain object-center grayscale"
                       />
                     </div>
                     <div className="flex flex-col">
@@ -58,9 +58,9 @@ export const CEOSection = () => {
               {/* Right Column - CEO Image */}
               <div className="hidden sm:block bg-gray-50 rounded-lg overflow-hidden h-64 sm:h-96 lg:h-[500px]">
                 <img 
-                  src="/images/dhruva sir.png" 
+                  src="/images/ceo (2).png" 
                   alt="Dhruba Sarma - CEO & Founder" 
-                  className="w-full h-full object-contain object-center"
+                  className="w-full h-full object-contain object-center grayscale"
                 />
               </div>
             </div>
