@@ -14,7 +14,15 @@ export const Chatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: 'Hello there!\n\nI\'m Aro, your digital guide here at Arodos Technologies.\n\nGot a question or need help exploring our services?\n\nJust ask and I\'m here to make your experience smooth and easy.\n\nLet\'s turn your ideas into innovative solutions together',
+      text: `Hello there!
+
+I'm Aro, your digital guide here at Arodos Technologies.
+
+Got a question or need help exploring our services?
+
+Just ask and I'm here to make your experience smooth and easy.
+
+Let's turn your ideas into innovative solutions together`,
       isUser: false,
       timestamp: new Date()
     }
@@ -106,7 +114,15 @@ export const Chatbot = () => {
       return { text: 'Here is a video presentation showcasing our company and services!', hasVideo: true, videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&mute=1' };
     }
     
-    return 'Hello there!\n\nI\'m Aro, your digital guide here at Arodos Technologies.\n\nGot a question or need help exploring our services?\n\nJust ask and I\'m here to make your experience smooth and easy.\n\nLet\'s turn your ideas into innovative solutions together';
+    return `Hello there!
+
+I'm Aro, your digital guide here at Arodos Technologies.
+
+Got a question or need help exploring our services?
+
+Just ask and I'm here to make your experience smooth and easy.
+
+Let's turn your ideas into innovative solutions together`;
   };
 
   const handleSendMessage = async () => {
@@ -249,7 +265,7 @@ export const Chatbot = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div
-                  className={`max-w-[280px] sm:max-w-sm px-3 sm:px-4 py-2 sm:py-3 rounded-2xl text-xs sm:text-sm transition-all duration-300 hover:scale-105 font-jost ${
+                  className={`max-w-[280px] sm:max-w-sm px-3 sm:px-4 py-2 sm:py-3 rounded-2xl text-xs sm:text-sm transition-all duration-300 hover:scale-105 font-jost whitespace-pre-line ${
                     message.isUser
                       ? 'bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-100 neon-border'
                       : 'bg-gradient-to-r from-gray-900/80 to-gray-800/80 text-gray-100 border border-purple-400/30'
