@@ -34,7 +34,7 @@ export const VisionMissionCards = () => {
                 <h3 className="text-white text-base sm:text-lg md:text-xl font-bold">Our Vision</h3>
               </div>
               <p className="text-white text-xs sm:text-sm md:text-base leading-relaxed">
-                To lead with innovation and deliver digital solutions that don't just meet today's challenges but evolve to power tomorrow's opportunities.
+                To lead with innovation and deliver digital solutions built on quality and long-term value that don't just meet today's challenges but evolve to power tomorrow's opportunities.
               </p>
             </div>
           </div>
