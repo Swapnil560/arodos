@@ -80,7 +80,7 @@ export const ContactCard = () => {
                   <div className="text-white flex items-center hover:bg-white/10 p-2 rounded-lg transition-all duration-300 hover:scale-105">
                     <img src="/images/loca.png" alt="Location" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3 md:mr-4" />
                     <span className="text-sm sm:text-base font-semibold mr-2">Location</span>
-                    <span className="text-xs sm:text-sm md:text-base">Guwahati, India</span>
+                    <span className="text-xs sm:text-sm md:text-base">Guwahati, Bangalore</span>
                   </div>
                 </div>
               </div>
@@ -184,6 +184,16 @@ export const ContactCard = () => {
                       type="submit"
                       className="bg-white font-jost px-6 py-3 rounded-lg transition-all duration-300 font-medium border border-gray-600"
                       style={{ color: '#870000' }}
+                      onMouseEnter={(e) => {
+                        const target = e.target as HTMLButtonElement;
+                        target.style.backgroundColor = '#F40202';
+                        target.style.color = 'white';
+                      }}
+                      onMouseLeave={(e) => {
+                        const target = e.target as HTMLButtonElement;
+                        target.style.backgroundColor = 'white';
+                        target.style.color = '#870000';
+                      }}
                       onMouseDown={(e) => {
                         const target = e.target as HTMLButtonElement;
                         target.style.backgroundColor = '#F40202';
@@ -192,8 +202,8 @@ export const ContactCard = () => {
                       }}
                       onMouseUp={(e) => {
                         const target = e.target as HTMLButtonElement;
-                        target.style.backgroundColor = 'white';
-                        target.style.color = '#870000';
+                        target.style.backgroundColor = '#F40202';
+                        target.style.color = 'white';
                         target.style.transform = 'scale(1)';
                       }}
                     >

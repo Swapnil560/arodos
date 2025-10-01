@@ -10,15 +10,15 @@ export const Footer = () => {
   return (
     <footer className="bg-black text-white py-8 sm:py-12">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
           {/* Navigation */}
-          <div className="text-center sm:text-left">
-            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Navigation</h4>
-            <ul className="space-y-1 sm:space-y-2">
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-white">Navigation</h4>
+            <ul className="space-y-2">
               <li>
                 <button 
                   onClick={scrollToTop}
-                  className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
+                  className="text-gray-400 hover:text-white transition-colors text-base block"
                 >
                   Home
                 </button>
@@ -26,40 +26,42 @@ export const Footer = () => {
               <li>
                 <button 
                   onClick={() => scrollToSection('services')}
-                  className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base"
+                  className="text-gray-400 hover:text-white transition-colors text-base block"
                 >
                   Services
                 </button>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base">Why Us?</a>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors text-base block">Why Us?</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base">About Us</a>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors text-base block">About Us</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base">Contact Us</a>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors text-base block">Contact Us</a>
               </li>
             </ul>
           </div>
           
           {/* Contact */}
-          <div className="text-center sm:text-left">
-            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Contact Us</h4>
-            <div className="space-y-1 sm:space-y-2 text-gray-400 text-sm sm:text-base">
-              <p>Guwahati, Assam, India</p>
+          <div className="flex flex-col items-center">
+            <div className="text-left">
+              <h4 className="text-lg font-semibold mb-4 text-white">Contact Us</h4>
+              <div className="space-y-2 text-gray-400 text-base">
+              <p>Guwahati, Bangalore</p>
               <p>Call Us: +919620861198</p>
               <p>Email: contact@arodos.com</p>
+              </div>
             </div>
           </div>
           
           {/* Socials */}
-          <div className="text-center sm:text-left sm:col-span-2 lg:col-span-1">
-            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Socials</h4>
-            <div className="flex flex-wrap justify-center sm:justify-start gap-4 sm:flex-col sm:space-y-2 sm:gap-0">
-              <a href="#" className="flex items-center hover:opacity-75 transition-opacity">
-                <img src="/images/link.png" alt="LinkedIn" className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
-                <span className="text-gray-400 text-sm sm:text-base">LinkedIn</span>
+          <div className="text-right">
+            <h4 className="text-lg font-semibold mb-4 text-white">Socials</h4>
+            <div className="flex justify-end">
+              <a href="#" className="flex items-center hover:opacity-75 transition-opacity text-gray-400 hover:text-white">
+                <img src="/images/link.png" alt="LinkedIn" className="w-6 h-6 mr-3" />
+                <span className="text-base">LinkedIn</span>
               </a>
             </div>
           </div>

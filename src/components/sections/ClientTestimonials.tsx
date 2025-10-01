@@ -11,9 +11,9 @@ export const ClientTestimonials = () => {
             <span className="text-red-500">Clients</span>
             <span className="text-black" style={{ fontWeight: 900, fontStyle: 'normal' }}> Say</span>
           </h2>
-          <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-4xl mx-auto leading-relaxed px-2 sm:px-4 font-jost bg-gray-200 py-2 px-4 rounded-lg inline-block">
-            Transforming visionary ideas into powerful, user-centric digital solutions<br className="hidden md:block" />
-            that drive innovation, enhance operational efficiency, and accelerate sustainable business growth in an ever-evolving digital landscape.
+          <p className="text-gray-600 text-sm md:text-base max-w-5xl mx-auto leading-relaxed px-4 font-jost bg-gray-200 py-2 px-4 rounded-lg inline-block">
+            Transforming visionary ideas into powerful, user-centric digital solutions that drive innovation,<br className="hidden md:block" />
+            enhance operational efficiency, and accelerate sustainable business growth in an ever-evolving digital landscape.
           </p>
         </div>
         

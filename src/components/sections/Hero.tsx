@@ -85,6 +85,16 @@ export const Hero = () => {
           <button
             className="bg-white font-jost px-6 py-3 rounded-lg transition-all duration-300 font-medium active:text-white"
             style={{ color: '#870000' }}
+            onMouseEnter={(e) => {
+              const target = e.target as HTMLButtonElement;
+              target.style.backgroundColor = '#F40202';
+              target.style.color = 'white';
+            }}
+            onMouseLeave={(e) => {
+              const target = e.target as HTMLButtonElement;
+              target.style.backgroundColor = 'white';
+              target.style.color = '#870000';
+            }}
             onMouseDown={(e) => {
               const target = e.target as HTMLButtonElement;
               target.style.backgroundColor = '#F40202';
@@ -93,8 +103,8 @@ export const Hero = () => {
             }}
             onMouseUp={(e) => {
               const target = e.target as HTMLButtonElement;
-              target.style.backgroundColor = 'white';
-              target.style.color = '#870000';
+              target.style.backgroundColor = '#F40202';
+              target.style.color = 'white';
               target.style.transform = 'scale(1)';
             }}
           >
