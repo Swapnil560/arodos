@@ -65,8 +65,7 @@ export const VisionMissionCards = () => {
                 <h3 className="text-white text-base sm:text-lg md:text-xl font-bold">Our Mission</h3>
               </div>
               <p className="text-white text-xs sm:text-sm md:text-base leading-relaxed">
-                We put clients first, delivering tailored digital solutions built on quality, innovation, and long-term value. Every project is crafted with precision and handled by experienced professionals to ensure measurable impact. 
-                As our clients grow, we grow- building lasting partnerships rooted in trust and customer satisfaction.
+                We deliver tailored digital solutions crafted with precision and handled by experienced professionals to ensure measurable impact. As our clients grow, we grow- building lasting partnerships rooted in trust and customer satisfaction.
               </p>
             </div>
           </div>
