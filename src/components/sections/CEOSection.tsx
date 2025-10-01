@@ -34,6 +34,11 @@ export const CEOSection = () => {
                 
                 {/* CEO Info at bottom left */}
                 <div className="mt-4">
+                  <img 
+                    src="/images/sign.png" 
+                    alt="CEO Signature" 
+                    className="w-32 h-auto mb-2"
+                  />
                   <p className="text-lg font-bold text-gray-800">Dhruba Sarma</p>
                   <p className="text-gray-500 font-medium">Founder & CEO, Arodos Technologies</p>
                 </div>
