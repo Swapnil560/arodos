@@ -17,7 +17,7 @@ export const Navigation = () => {
       <nav className="hidden md:flex space-x-6">
         <button onClick={() => handleNavClick('hero')} className="text-white hover:text-red-500 transition-colors">Home</button>
         <button onClick={() => handleNavClick('services')} className="text-white hover:text-red-500 transition-colors">Services</button>
-        <button onClick={() => handleNavClick('agile-approach')} className="text-white hover:text-red-500 transition-colors">Why Us?</button>
+        <button onClick={() => handleNavClick('core-principles')} className="text-white hover:text-red-500 transition-colors">Why Us?</button>
         <button onClick={() => handleNavClick('who-we-are')} className="text-white hover:text-red-500 transition-colors">About Us</button>
         <button onClick={() => handleNavClick('contact-us')} className="text-white hover:text-red-500 transition-colors">Contact Us</button>
       </nav>
@@ -57,7 +57,7 @@ export const Navigation = () => {
                   Services
                 </button>
                 <button 
-                  onClick={() => handleNavClick('agile-approach')} 
+                  onClick={() => handleNavClick('core-principles')} 
                   className="text-white text-sm font-medium hover:text-red-500 transition-all duration-300 text-left py-2 px-2 rounded hover:bg-white hover:bg-opacity-10 relative"
                   style={{ zIndex: 1000001 }}
                 >

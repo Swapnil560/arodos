@@ -67,10 +67,10 @@ export const Hero = () => {
         {/* Headline */}
         <div className="mb-5 max-w-4xl">
           <h1 className="font-jost" style={{fontWeight: 800, fontSize: window.innerWidth < 768 ? '28px' : '60px', lineHeight: window.innerWidth < 768 ? '32px' : '56px', letterSpacing: '-1%', textAlign: 'center', verticalAlign: 'middle'}}>
-            <span style={{color: '#F40202', fontWeight: 900, textShadow: '2px 2px 4px rgba(0,0,0,0.5), 1px 1px 2px rgba(244,2,2,0.3)', letterSpacing: '1px'}}>Build </span>
+            <span className="text-white" style={{fontWeight: 900, textShadow: '2px 2px 4px rgba(0,0,0,0.5)', letterSpacing: '1px'}}>Build </span>
             <span style={{color: '#F40202', fontWeight: 900, textShadow: '2px 2px 4px rgba(0,0,0,0.5), 1px 1px 2px rgba(244,2,2,0.3)', letterSpacing: '1px'}}>Innovative</span>
             <span className="text-white"> Solutions at </span>
-            <span className="text-white cursor-pointer transition-all duration-300" style={{fontWeight: 900}} onMouseEnter={(e) => {const target = e.target as HTMLSpanElement; target.style.color = '#F40202'; target.style.transform = 'scale(1.05)';}} onMouseLeave={(e) => {const target = e.target as HTMLSpanElement; target.style.color = 'white'; target.style.transform = 'scale(1)';}}>Affordable Cost</span>
+            <span style={{color: '#F40202', fontWeight: 900, textShadow: '2px 2px 4px rgba(0,0,0,0.5), 1px 1px 2px rgba(244,2,2,0.3)', letterSpacing: '1px'}}>Affordable Cost</span>
           </h1>
         </div>
         

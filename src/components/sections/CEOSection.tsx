@@ -34,16 +34,15 @@ export const CEOSection = () => {
                 
                 {/* CEO Info at bottom left */}
                 <div className="mt-4 sm:mt-6">
-                  <div className="flex items-start gap-2 sm:block">
-                    <div className="w-24 h-24 sm:hidden bg-gray-200 rounded-lg overflow-hidden flex-shrink-0 cursor-pointer group">
+                  <div className="flex items-end gap-2 sm:block">
+                    <div className="w-24 h-24 sm:hidden bg-gray-200 rounded-full overflow-hidden flex-shrink-0 cursor-pointer group">
                       <img 
                         src="/images/Screenshot 2025-10-01 141844.png" 
                         alt="Dhruba Sarma - CEO & Founder" 
-                        className="w-full h-full object-contain object-center grayscale rounded-lg group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                        className="w-full h-full object-cover object-center grayscale rounded-full group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                       />
                     </div>
-                    <div className="flex flex-col">
-
+                    <div className="flex flex-col justify-end">
                       <p className="text-sm sm:text-lg font-bold text-gray-800">Dhruba Sarma</p>
                       <p className="text-xs sm:text-base text-gray-500 font-medium">Founder & CEO, Arodos Technologies</p>
                     </div>

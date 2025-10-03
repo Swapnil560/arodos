@@ -39,7 +39,7 @@ export const CorePrinciples = () => {
   ];
 
   return (
-    <section ref={ref} className="py-8 sm:py-12 md:py-16 bg-white">
+    <section id="core-principles" ref={ref} className="py-8 sm:py-12 md:py-16 bg-white">
       <div className={`transform transition-all duration-700 ${
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
       }`}>
@@ -88,15 +88,15 @@ export const CorePrinciples = () => {
                   </p>
                 </>
               ) : (
-                <div className="flex flex-col items-center px-2 h-full">
+                <div className="flex flex-col items-center justify-center px-2 h-full text-center">
                   <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mt-4 mb-4">
                     <img src={principle.icon} alt="principle icon" className="w-6 h-6 object-cover" />
                   </div>
                   <div className="flex-1 flex flex-col justify-center text-center">
-                    <span className="text-black font-bold text-lg xl:text-xl mb-2 block">
+                    <span className="text-black font-bold text-3xl xl:text-4xl mb-1 block text-center -mt-2" style={{ fontFamily: 'Mona Sans Expanded', fontWeight: '900', textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>
                       {principle.number}
                     </span>
-                    <span className="text-red-600 font-semibold text-xs xl:text-sm leading-tight tracking-wide font-jost" style={{wordBreak: 'break-word', hyphens: 'auto'}}>
+                    <span className="text-red-600 font-semibold text-xs xl:text-sm leading-tight tracking-wide font-jost text-center" style={{wordBreak: 'break-word', hyphens: 'auto', lineHeight: '1.2'}}>
                       {principle.title}
                     </span>
                   </div>

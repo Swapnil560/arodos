@@ -30,7 +30,7 @@ export const OurServices = () => {
             imagePlaceholder="💻"
             imageDescription="Laptop displaying webpage with hands on keyboard"
             layout="blue-left"
-            imageUrl="/images/services/s1.jpg"
+            imageUrl="/images/services/1.webp"
           />
           
           <ServiceCard
@@ -40,7 +40,7 @@ export const OurServices = () => {
             imagePlaceholder="⌨️"
             imageDescription="Workspace with code monitor"
             layout="blue-right"
-            imageUrl="/images/services/s2.jpg"
+            imageUrl="/images/services/2.png"
           />
           
           <ServiceCard
@@ -50,7 +50,7 @@ export const OurServices = () => {
             imagePlaceholder="💻"
             imageDescription="Laptop on wooden desk with water glass"
             layout="blue-left"
-            imageUrl="/images/services/s3.jpg"
+            imageUrl="/images/services/3.jpg"
           />
           
           <ServiceCard

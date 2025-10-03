@@ -42,9 +42,9 @@ export const WhoWeAre = () => {
               muted
               loop
               playsInline
-              className="w-full h-40 sm:h-48 md:h-64 lg:h-full rounded-lg shadow-lg object-cover"
+              className="w-full h-40 sm:h-48 md:h-64 lg:h-full rounded-lg shadow-lg object-cover transition-all duration-300 md:hover:scale-105 md:hover:shadow-xl md:cursor-pointer"
             >
-              <source src="/videos/hand (1).mp4" type="video/mp4" />
+              <source src="/videos/work.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
