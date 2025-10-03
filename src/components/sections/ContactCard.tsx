@@ -8,6 +8,12 @@ export const ContactCard = () => {
     .contact-form textarea::placeholder {
       color: #808080 !important;
     }
+    @media (hover: none) and (pointer: coarse) {
+      .contact-info-item:hover {
+        background-color: transparent !important;
+        transform: none !important;
+      }
+    }
   `;
   const [formData, setFormData] = useState({
     fullName: '',
@@ -69,22 +75,22 @@ export const ContactCard = () => {
                 </p>
                 
                 <div className="space-y-3 sm:space-y-4">
-                  <div className="text-white flex items-center hover:bg-white/10 p-2 rounded-lg transition-all duration-300 hover:scale-105">
+                  <div className="text-white flex items-center md:hover:bg-white/10 p-2 rounded-lg transition-all duration-300 md:hover:scale-105 contact-info-item">
                     <img src="/images/phone.png" alt="Phone" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3 md:mr-4" />
                     <span className="text-sm sm:text-base font-semibold mr-2">Phone</span>
                     <span className="text-xs sm:text-sm md:text-base">+919620861198</span>
                   </div>
-                  <div className="text-white flex items-center hover:bg-white/10 p-2 rounded-lg transition-all duration-300 hover:scale-105">
+                  <div className="text-white flex items-center md:hover:bg-white/10 p-2 rounded-lg transition-all duration-300 md:hover:scale-105 contact-info-item">
                     <img src="/images/mess.png" alt="Email" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3 md:mr-4" />
                     <span className="text-sm sm:text-base font-semibold mr-2">Email</span>
-                    <a href="mailto:contact@arodos.com" className="text-xs sm:text-sm md:text-base hover:underline hover:text-yellow-300 transition-colors duration-300">contact@arodos.com</a>
+                    <a href="mailto:contact@arodos.com" className="text-xs sm:text-sm md:text-base md:hover:underline md:hover:text-yellow-300 transition-colors duration-300">contact@arodos.com</a>
                   </div>
-                  <div className="text-white flex items-center hover:bg-white/10 p-2 rounded-lg transition-all duration-300 hover:scale-105">
+                  <div className="text-white flex items-center md:hover:bg-white/10 p-2 rounded-lg transition-all duration-300 md:hover:scale-105 contact-info-item">
                     <img src="/images/arrow (2).png" alt="Website" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3 md:mr-4" />
                     <span className="text-sm sm:text-base font-semibold mr-2">Website</span>
-                    <a href="http://www.arodos.com" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm md:text-base hover:underline hover:text-yellow-300 transition-colors duration-300">www.arodos.com</a>
+                    <a href="http://www.arodos.com" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm md:text-base md:hover:underline md:hover:text-yellow-300 transition-colors duration-300">www.arodos.com</a>
                   </div>
-                  <div className="text-white flex items-center hover:bg-white/10 p-2 rounded-lg transition-all duration-300 hover:scale-105">
+                  <div className="text-white flex items-center md:hover:bg-white/10 p-2 rounded-lg transition-all duration-300 md:hover:scale-105 contact-info-item">
                     <img src="/images/loca.png" alt="Location" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3 md:mr-4" />
                     <span className="text-sm sm:text-base font-semibold mr-2">Location</span>
                     <span className="text-xs sm:text-sm md:text-base">Guwahati, Bangalore</span>

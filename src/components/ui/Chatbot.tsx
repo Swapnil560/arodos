@@ -228,6 +228,12 @@ Let's turn your ideas into innovative solutions together`;
         video::-webkit-media-controls {
           display: none !important;
         }
+        @media (max-width: 768px) {
+          .chat-input {
+            color: white !important;
+            -webkit-text-fill-color: white !important;
+          }
+        }
       `}</style>
 
       {/* Toggle Button */}
@@ -332,7 +338,7 @@ Let's turn your ideas into innovative solutions together`;
                 onChange={(e) => setInputText(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="Type your message..."
-                className="flex-1 px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-gray-100 placeholder-gray-400 font-mono neon-border rounded-xl transition-all duration-300 focus:cyber-glow glass-effect backdrop-blur-md"
+                className="flex-1 px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-gray-100 placeholder-gray-400 font-mono neon-border rounded-xl transition-all duration-300 focus:cyber-glow glass-effect backdrop-blur-md chat-input"
                 style={{
                   background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(30, 30, 40, 0.6))',
                   backdropFilter: 'blur(15px)',
