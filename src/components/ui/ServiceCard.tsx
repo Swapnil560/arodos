@@ -6,6 +6,7 @@ interface ServiceCardProps {
   imageDescription: string;
   layout: 'blue-left' | 'blue-right';
   imageUrl?: string;
+  blurAmount?: number;
 }
 
 export const ServiceCard = ({ 
@@ -15,7 +16,8 @@ export const ServiceCard = ({
   imagePlaceholder, 
   imageDescription, 
   layout,
-  imageUrl 
+  imageUrl,
+  blurAmount = 0.8
 }: ServiceCardProps) => {
   const isBlueLeft = layout === 'blue-left';
   
@@ -40,7 +42,7 @@ export const ServiceCard = ({
       backgroundImage: imageUrl ? `url("${imageUrl}")` : 'none',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      filter: 'blur(0.8px)'
+      filter: `blur(${blurAmount}px)`
     }}>
       <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent"></div>
       {!imageUrl && (

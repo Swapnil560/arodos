@@ -1,5 +1,6 @@
 import { HeroNavbar } from '../components/ui/HeroNavbar';
 import { Chatbot } from '../components/ui/Chatbot';
+import { Footer } from '../components/sections/Footer';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export const TermsOfUse = () => {
@@ -134,6 +135,7 @@ export const TermsOfUse = () => {
           </div>
         </div>
       </div>
+      <Footer />
       <Chatbot />
     </div>
   );
