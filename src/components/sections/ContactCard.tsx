@@ -206,6 +206,18 @@ export const ContactCard = () => {
                         target.style.color = 'white';
                         target.style.transform = 'scale(1)';
                       }}
+                      onTouchStart={(e) => {
+                        const target = e.target as HTMLButtonElement;
+                        target.style.backgroundColor = '#F40202';
+                        target.style.color = 'white';
+                        target.style.transform = 'scale(0.95)';
+                      }}
+                      onTouchEnd={(e) => {
+                        const target = e.target as HTMLButtonElement;
+                        target.style.backgroundColor = 'white';
+                        target.style.color = '#870000';
+                        target.style.transform = 'scale(1)';
+                      }}
                     >
                       Submit Request →
                     </button>
