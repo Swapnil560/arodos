@@ -39,7 +39,8 @@ export const ServiceCard = ({
     <div className="bg-white/30 backdrop-blur-sm flex items-center justify-center p-2 sm:p-3 md:p-6 min-h-[120px] sm:min-h-[150px] md:min-h-[350px] relative overflow-hidden transition-transform duration-500 hover:scale-110 cursor-pointer" style={{
       backgroundImage: imageUrl ? `url("${imageUrl}")` : 'none',
       backgroundSize: 'cover',
-      backgroundPosition: 'center'
+      backgroundPosition: 'center',
+      filter: 'blur(0.8px)'
     }}>
       <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent"></div>
       {!imageUrl && (

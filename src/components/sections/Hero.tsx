@@ -67,10 +67,18 @@ export const Hero = () => {
         {/* Headline */}
         <div className="mb-5 max-w-4xl">
           <h1 className="font-jost" style={{fontWeight: 800, fontSize: window.innerWidth < 768 ? '28px' : '60px', lineHeight: window.innerWidth < 768 ? '32px' : '56px', letterSpacing: '-1%', textAlign: 'center', verticalAlign: 'middle'}}>
-            <span className="text-white" style={{fontWeight: 900, textShadow: '2px 2px 4px rgba(0,0,0,0.5)', letterSpacing: '1px'}}>Build </span>
-            <span style={{color: '#F40202', fontWeight: 900, textShadow: '2px 2px 4px rgba(0,0,0,0.5), 1px 1px 2px rgba(244,2,2,0.3)', letterSpacing: '1px'}}>Innovative</span>
-            <span className="text-white"> Solutions at </span>
-            <span style={{color: '#F40202', fontWeight: 900, textShadow: '2px 2px 4px rgba(0,0,0,0.5), 1px 1px 2px rgba(244,2,2,0.3)', letterSpacing: '1px'}}>Affordable Cost</span>
+            <span className="text-white" style={{fontWeight: 400, textShadow: '2px 2px 4px rgba(0,0,0,0.5)', letterSpacing: '1px'}}>Build </span>
+            <span 
+              style={{color: '#F40202', fontWeight: 400, textShadow: '2px 2px 4px rgba(0,0,0,0.5), 1px 1px 2px rgba(244,2,2,0.3)', letterSpacing: '1px', transition: 'transform 0.3s ease', cursor: 'pointer', display: 'inline-block'}}
+              onMouseEnter={(e) => (e.target as HTMLSpanElement).style.transform = 'scale(1.1)'}
+              onMouseLeave={(e) => (e.target as HTMLSpanElement).style.transform = 'scale(1)'}
+            >Innovative</span>
+            <span className="text-white" style={{fontWeight: 400, textShadow: '2px 2px 4px rgba(0,0,0,0.5)', letterSpacing: '1px'}}> Solutions at </span>
+            <span 
+              style={{color: '#F40202', fontWeight: 900, textShadow: '2px 2px 4px rgba(0,0,0,0.5), 1px 1px 2px rgba(244,2,2,0.3)', letterSpacing: '1px', transition: 'transform 0.3s ease', cursor: 'pointer', display: 'inline-block'}}
+              onMouseEnter={(e) => (e.target as HTMLSpanElement).style.transform = 'scale(1.1)'}
+              onMouseLeave={(e) => (e.target as HTMLSpanElement).style.transform = 'scale(1)'}
+            >Affordable Cost</span>
           </h1>
         </div>
         
@@ -80,9 +88,10 @@ export const Hero = () => {
           Development- Delivered on Time, Within budget, & Built to Last.
         </p>
         
-        {/* CTA Button */}
-        <div className="mb-8">
+        {/* CTA Button - Commented out for now */}
+        {/* <div className="mb-8">
           <button
+            onClick={handleExploreExpertise}
             className="bg-white font-jost px-6 py-3 rounded-lg transition-all duration-300 font-medium active:text-white"
             style={{ color: '#870000' }}
             onMouseEnter={(e) => {
@@ -122,7 +131,7 @@ export const Hero = () => {
           >
             Explore Our Expertise →
           </button>
-        </div>
+        </div> */}
         
         {/* Statistics */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 mt-5 w-full max-w-2xl px-4">

@@ -26,13 +26,13 @@ export const CorePrinciples = () => {
     },
     {
       number: 4,
-      title: "Quality Assurance",
+      title: "Quality & Assurance",
       description: "Each project is built to be secure, scalable, and future-ready, maintaining the highest quality standards.",
       icon: "/images/services/icons/3.png"
     },
     {
       number: 5,
-      title: "Affordability, Transparency & Trust",
+      title: "Affordable & Transparent",
       description: "We deliver high-performance digital solutions without compromising on cost or clarity, making technology accessible for all.",
       icon: "/images/services/icons/4.png"
     }
@@ -93,7 +93,7 @@ export const CorePrinciples = () => {
                     <img src={principle.icon} alt="principle icon" className="w-6 h-6 object-cover" />
                   </div>
                   <div className="flex-1 flex flex-col justify-center text-center">
-                    <span className="text-black font-bold text-3xl xl:text-4xl mb-1 block text-center -mt-2" style={{ fontFamily: 'Mona Sans Expanded', fontWeight: '900', textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>
+                    <span className="text-gray-600 font-bold text-5xl xl:text-6xl mb-1 block text-center -mt-2 hover:scale-110 transition-all duration-300 cursor-pointer" style={{ fontFamily: 'Mona Sans Expanded', fontWeight: '900', textShadow: '3px 3px 6px rgba(75,85,99,0.2)', filter: 'drop-shadow(0 0 8px rgba(75,85,99,0.1))' }}>
                       {principle.number}
                     </span>
                     <span className="text-red-600 font-semibold text-xs xl:text-sm leading-tight tracking-wide font-jost text-center" style={{wordBreak: 'break-word', hyphens: 'auto', lineHeight: '1.2'}}>
