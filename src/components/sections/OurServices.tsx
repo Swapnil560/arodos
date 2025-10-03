@@ -16,8 +16,9 @@ export const OurServices = () => {
             <span style={{ color: 'black', fontWeight: 'bold' }}>Our </span>
             <span style={{ color: '#F40202' }}>Services</span>
           </h2>
-          <p className="text-gray-600 text-sm md:text-base max-w-3xl mx-auto leading-relaxed px-4 font-jost py-2 px-4 rounded-lg inline-block" style={{backgroundColor: '#fff0f0'}}>
-            Turning your ideas into scalable, innovative digital products that deliver measurable ROI for your business.
+          <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto leading-relaxed px-4 font-jost">
+            Turning your ideas into scalable, innovative digital products that deliver<br />
+            measurable ROI for your business.
           </p>
         </div>
 

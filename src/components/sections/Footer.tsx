@@ -68,15 +68,15 @@ export const Footer = () => {
             <h4 className="text-lg font-semibold mb-4 text-white text-left md:text-right">Socials</h4>
             <div className="flex flex-col items-start md:items-end space-y-2">
               <a href="https://www.linkedin.com/company/arodos-technologies/" target="_blank" rel="noopener noreferrer" className="flex items-center hover:opacity-75 transition-opacity text-gray-400 hover:text-white">
-                <img src="/images/link.png" alt="LinkedIn" className="w-6 h-6 mr-3" />
+                <img src="/images/in.png" alt="LinkedIn" className="w-6 h-6 mr-3" />
                 <span className="text-base">LinkedIn</span>
               </a>
               <a href="https://www.instagram.com/arodos_technologies/" target="_blank" rel="noopener noreferrer" className="flex items-center hover:opacity-75 transition-opacity text-gray-400 hover:text-white">
-                <img src="/images/insta.png" alt="Instagram" className="w-6 h-6 mr-3" />
+                <img src="/images/ins.png" alt="Instagram" className="w-6 h-6 mr-3" />
                 <span className="text-base">Instagram</span>
               </a>
               <a href="https://www.facebook.com/arodos.technologies" target="_blank" rel="noopener noreferrer" className="flex items-center hover:opacity-75 transition-opacity text-gray-400 hover:text-white">
-                <img src="/images/facebook.png" alt="Facebook" className="w-6 h-6 mr-3" />
+                <img src="/images/face.png" alt="Facebook" className="w-6 h-6 mr-3" />
                 <span className="text-base">Facebook</span>
               </a>
             </div>

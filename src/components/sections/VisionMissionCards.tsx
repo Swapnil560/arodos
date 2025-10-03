@@ -6,7 +6,7 @@ export const VisionMissionCards = () => {
   return (
     <section ref={ref} className="pb-4 sm:pb-6 bg-gray-100">
       <div className="mx-2 sm:mx-4">
-        <div className={`grid grid-cols-1 lg:grid-cols-2 items-stretch bg-white rounded-lg shadow-lg transform transition-all duration-700 gap-4 sm:gap-6 lg:gap-10 p-4 sm:p-6 lg:p-10 ${
+        <div className={`grid grid-cols-1 lg:grid-cols-2 items-stretch bg-white rounded-3xl transform transition-all duration-700 gap-2 sm:gap-4 lg:gap-6 p-2 sm:p-4 lg:p-6 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
         }`}>
           

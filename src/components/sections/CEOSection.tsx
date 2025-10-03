@@ -9,7 +9,7 @@ export const CEOSection = () => {
         <div className={`transform transition-all duration-700 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
         }`}>
-          <div className="bg-white rounded-lg shadow-lg p-3 sm:p-4 md:p-6">
+          <div className="bg-white rounded-3xl p-3 sm:p-4 md:p-6">
             {/* Heading */}
             <h3 className="mb-4 sm:mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl" style={{fontFamily: 'Mona Sans Expanded', fontWeight: 500, fontStyle: 'italic', letterSpacing: '-1%', textAlign: 'center'}}>
               <span style={{fontWeight: 'bold'}}>From the</span> <span style={{color: '#F40202'}}>CEO's</span> <span style={{fontWeight: 'bold'}}>Desk</span>
@@ -35,31 +35,26 @@ export const CEOSection = () => {
                 {/* CEO Info at bottom left */}
                 <div className="mt-4 sm:mt-6">
                   <div className="flex items-end gap-2 sm:block">
-                    <div className="w-24 h-24 sm:hidden bg-gray-200 rounded-full overflow-hidden flex-shrink-0 cursor-pointer group">
+                    <div className="w-24 h-24 sm:hidden bg-gray-200 rounded-full overflow-hidden flex-shrink-0">
                       <img 
                         src="/images/Screenshot 2025-10-01 141844.png" 
                         alt="Dhruba Sarma - CEO & Founder" 
-                        className="w-full h-full object-cover object-center sm:grayscale rounded-full group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
-                        onTouchEnd={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.style.filter = 'grayscale(100%)';
-                          target.style.transform = 'scale(1)';
-                        }}
+                        className="w-full h-full object-cover object-center rounded-full"
                       />
                     </div>
                     <div className="flex flex-col justify-end">
                       <p className="text-sm sm:text-lg font-bold text-gray-800">Dhruba Sarma</p>
                       <p className="text-xs sm:text-base text-gray-500 font-medium">Founder & CEO, Arodos Technologies</p>
                       <p className="text-xs sm:text-sm md:text-base text-gray-700 font-semibold mt-2 sm:mt-3">Let's Connect :</p>
-                      <div className="flex gap-2 sm:gap-3 md:gap-4 mt-1 sm:mt-2">
-                        <a href="https://www.linkedin.com/in/dhrubasarma/" target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 transition-all duration-300 hover:shadow-lg">
-                          <img src="/images/link.png" alt="LinkedIn" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-md sm:rounded-lg grayscale hover:grayscale-0 hover:brightness-110" />
+                      <div className="flex gap-1 sm:gap-2 md:gap-3 mt-1 sm:mt-2">
+                        <a href="https://www.linkedin.com/in/dhrubasarma/" target="_blank" rel="noopener noreferrer">
+                          <img src="/images/in.png" alt="LinkedIn" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-md sm:rounded-lg" />
                         </a>
-                        <a href="https://www.instagram.com/dhruba2605/" target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 transition-all duration-300 hover:shadow-lg">
-                          <img src="/images/instagram (1).png" alt="Instagram" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-md sm:rounded-lg grayscale hover:grayscale-0 hover:brightness-110" />
+                        <a href="https://www.instagram.com/dhruba2605/" target="_blank" rel="noopener noreferrer">
+                          <img src="/images/ins.png" alt="Instagram" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-md sm:rounded-lg" />
                         </a>
-                        <a href="https://www.facebook.com/sarma.jyoti.dhruba" target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 transition-all duration-300 hover:shadow-lg -mt-1">
-                          <img src="/images/Fb.png" alt="Facebook" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-md sm:rounded-lg grayscale hover:grayscale-0 hover:brightness-110" />
+                        <a href="https://www.facebook.com/sarma.jyoti.dhruba" target="_blank" rel="noopener noreferrer" className="-ml-1">
+                          <img src="/images/face.png" alt="Facebook" className="w-5 h-5 sm:w-7 sm:h-7 md:w-9 md:h-9 rounded-md sm:rounded-lg" />
                         </a>
                       </div>
                     </div>
@@ -68,16 +63,11 @@ export const CEOSection = () => {
               </div>
               
               {/* Right Column - CEO Image */}
-              <div className="hidden sm:block bg-gray-50 rounded-lg overflow-hidden h-64 sm:h-96 lg:h-[500px] cursor-pointer group">
+              <div className="hidden sm:block bg-gray-50 rounded-lg overflow-hidden h-64 sm:h-96 lg:h-[500px]">
                 <img 
                   src="/images/Screenshot 2025-10-01 141844.png" 
                   alt="Dhruba Sarma - CEO & Founder" 
-                  className="w-full h-full object-cover object-center sm:grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
-                  onTouchEnd={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.style.filter = 'grayscale(100%)';
-                    target.style.transform = 'scale(1)';
-                  }}
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
             </div>

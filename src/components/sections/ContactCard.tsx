@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Card } from '../ui/Card';
 import { generateWebsiteTemplate } from '../ui/websiteGenerator';
+import { sendContactFormEmail } from '../../services/emailService';
 
 export const ContactCard = () => {
   const placeholderStyle = `
@@ -23,22 +24,56 @@ export const ContactCard = () => {
   `;
   const [formData, setFormData] = useState({
     fullName: '',
+    phone: '',
     workEmail: '',
     projectDetails: ''
   });
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
   const [isGenerating, setIsGenerating] = useState(false);
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+  const [showValidationPopup, setShowValidationPopup] = useState(false);
+  const [validationMessage, setValidationMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Clear form fields immediately
-    setFormData({
-      fullName: '',
-      workEmail: '',
-      projectDetails: ''
-    });
-    setGeneratedImage(null);
+    // Validate required fields
+    if (!formData.fullName.trim() || !formData.phone.trim() || !formData.workEmail.trim()) {
+      setValidationMessage('Please fill in all required fields (Full Name, Phone, and Work Email).');
+      setShowValidationPopup(true);
+      setTimeout(() => setShowValidationPopup(false), 2000);
+      return;
+    }
+    
+    try {
+      // Send email with form data including generated image
+      await sendContactFormEmail({
+        ...formData,
+        generatedImage: generatedImage || undefined
+      });
+      
+      // Clear form fields after successful submission
+      setFormData({
+        fullName: '',
+        phone: '',
+        workEmail: '',
+        projectDetails: ''
+      });
+      setGeneratedImage(null);
+      
+      // Show success popup
+      setShowSuccessPopup(true);
+      
+      // Refresh page after 3 seconds
+      setTimeout(() => {
+        window.location.reload();
+      }, 3000);
+    } catch (error) {
+      console.error('Failed to send enquiry:', error);
+      setValidationMessage('Sorry, there was an error sending your enquiry. Please try again.');
+      setShowValidationPopup(true);
+      setTimeout(() => setShowValidationPopup(false), 2000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -128,6 +163,23 @@ export const ContactCard = () => {
                   </div>
 
                   <div>
+                    <label className="block text-xs sm:text-sm mb-1 sm:mb-2" style={{ color: '#333333' }}>Phone</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      onInput={(e) => {
+                        const target = e.target as HTMLInputElement;
+                        target.value = target.value.replace(/[^0-9]/g, '');
+                      }}
+                      placeholder="Enter your Phone Number"
+                      className="w-full h-8 sm:h-9 md:h-10 px-2 sm:px-3 md:px-4 border rounded text-xs sm:text-sm focus:outline-none"
+                      style={{ backgroundColor: '#F5F5F5', color: '#000000', borderColor: '#CCCCCC' }}
+                    />
+                  </div>
+
+                  <div>
                     <label className="block text-xs sm:text-sm mb-1 sm:mb-2" style={{ color: '#333333' }}>Work Email</label>
                     <input
                       type="email"
@@ -200,11 +252,7 @@ export const ContactCard = () => {
 
                   <div className="pt-2 sm:pt-3 md:pt-4 flex justify-center">
                     <button
-                      type="button"
-                      onClick={() => {
-                        setFormData({ fullName: '', workEmail: '', projectDetails: '' });
-                        setGeneratedImage(null);
-                      }}
+                      type="submit"
                       className="bg-white font-jost px-6 py-3 rounded-lg transition-all duration-300 font-medium border border-gray-600"
                       style={{ color: '#870000' }}
                       onMouseEnter={(e) => {
@@ -255,6 +303,65 @@ export const ContactCard = () => {
       </div>
     </section>
     
+    {/* Validation Warning Popup */}
+    {showValidationPopup && (
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm" onClick={() => setShowValidationPopup(false)}></div>
+        <div className="relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 w-full max-w-xs sm:max-w-md shadow-2xl">
+          <div className="flex justify-center mb-4 sm:mb-6">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-red-100 rounded-full flex items-center justify-center">
+              <svg className="w-6 h-6 sm:w-8 sm:h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+            </div>
+          </div>
+          <div className="text-center">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-2">Warning!</h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">{validationMessage}</p>
+            <button
+              onClick={() => setShowValidationPopup(false)}
+              className="bg-red-500 text-white px-4 sm:px-6 py-2 rounded-lg hover:bg-red-600 transition-colors text-sm sm:text-base"
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      </div>
+    )}
+
+    {/* Success Popup Modal */}
+    {showSuccessPopup && (
+      <div className="fixed inset-0 z-50 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
+        
+        {/* Modal */}
+        <div className="relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 mx-4 max-w-xs sm:max-w-md w-full shadow-2xl transform animate-bounce">
+          {/* Success Icon */}
+          <div className="flex justify-center mb-4 sm:mb-6">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-100 rounded-full flex items-center justify-center">
+              <svg className="w-6 h-6 sm:w-8 sm:h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+          </div>
+          
+          {/* Message */}
+          <div className="text-center">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-4">
+              Your enquiry has been sent successfully. Our team will get back to you shortly.
+            </p>
+            <div className="flex items-center justify-center text-xs sm:text-sm text-gray-500">
+              <svg className="w-4 h-4 mr-1 animate-spin" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              Refreshing page...
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
 
     </>
   );

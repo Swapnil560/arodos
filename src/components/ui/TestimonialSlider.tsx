@@ -46,8 +46,27 @@ export const TestimonialSlider = () => {
               
               {/* Rating */}
               {testimonial.rating && (
-                <div className="text-yellow-400 text-sm sm:text-base md:text-lg mb-2 sm:mb-3 ml-2 sm:ml-4">
-                  {testimonial.rating}
+                <div className="flex items-center text-sm sm:text-base md:text-lg mb-2 sm:mb-3 ml-2 sm:ml-4">
+                  {testimonial.client.includes('Deepankar') ? (
+                    <>
+                      {[1,2,3,4].map(star => (
+                        <span key={star} className="text-yellow-400">★</span>
+                      ))}
+                      <span 
+                        className="relative inline-block"
+                        style={{
+                          background: 'linear-gradient(90deg, #fbbf24 50%, #d1d5db 50%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          backgroundClip: 'text'
+                        }}
+                      >
+                        ★
+                      </span>
+                    </>
+                  ) : (
+                    <span className="text-yellow-400">{testimonial.rating}</span>
+                  )}
                 </div>
               )}
               

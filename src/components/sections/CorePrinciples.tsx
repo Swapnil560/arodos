@@ -39,7 +39,7 @@ export const CorePrinciples = () => {
   ];
 
   return (
-    <section id="core-principles" ref={ref} className="py-8 sm:py-12 md:py-16 bg-white">
+    <section id="core-principles" ref={ref} className="py-8 sm:py-12 md:py-16 bg-white mx-2 sm:mx-4 rounded-3xl shadow-sm mb-2 md:mb-4">
       <div className={`transform transition-all duration-700 ${
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
       }`}>
