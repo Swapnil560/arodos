@@ -98,6 +98,16 @@ Let's turn your ideas into innovative solutions together`,
       return '📞 Get in Touch - Ready to transform your digital ideas into reality? 📱 Phone: +919620861198 📧 Email: contact@arodos.com 🌐 Website: www.arodos.com 📍 Locations: Guwahati & Bangalore, India 🌍 Global Presence: Serving India, US, Canada, and worldwide. Available for phone, email, website contact form, or video calls. Our team is ready for consultations and project planning. Let\'s start building something exceptional!';
     }
     
+    // Privacy Policy
+    if (q.includes('privacy') || q.includes('privacy policy') || q.includes('data protection') || q.includes('personal information')) {
+      return '🔒 Privacy Policy: We collect minimal personal information (name, email, phone) only when you contact us or use our services. We use this data solely to provide services, communicate with you, and improve our offerings. We never sell or share your data with third parties without consent. Your data is stored securely and you can request deletion anytime. We use cookies for website functionality and analytics. For complete details, visit our Privacy Policy page.';
+    }
+    
+    // Terms of Use
+    if (q.includes('terms') || q.includes('terms of use') || q.includes('terms and conditions') || q.includes('legal') || q.includes('agreement')) {
+      return '📋 Terms of Use: By using Arodos Technologies services, you agree to: 1️⃣ Use our services lawfully and respectfully 2️⃣ Provide accurate information when requested 3️⃣ Respect our intellectual property rights 4️⃣ Not misuse or attempt to harm our systems 5️⃣ Accept that services are provided "as is" 6️⃣ Resolve disputes through proper legal channels. We reserve the right to modify terms and terminate services if misused. For complete terms, visit our Terms of Use page.';
+    }
+    
     // Vision Mission specific
     if (q.includes('vision') || q.includes('mission') || q.includes('goal') || q.includes('purpose')) {
       return '🎯 Our Vision: To lead with innovation and deliver digital solutions that don\'t just meet today\'s challenges but evolve to power tomorrow\'s opportunities. 🎯 Our Mission: We put clients first, delivering tailored digital solutions built on quality, innovation, and long-term value. Every project is crafted with precision and handled by experienced professionals to ensure measurable impact. As our clients grow, we grow—building lasting partnerships rooted in trust and customer satisfaction.';
