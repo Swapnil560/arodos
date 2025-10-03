@@ -13,6 +13,12 @@ export const ContactCard = () => {
         background-color: transparent !important;
         transform: none !important;
       }
+      /* Reset button hover states on mobile */
+      button:hover {
+        background-color: initial !important;
+        color: initial !important;
+        transform: none !important;
+      }
     }
   `;
   const [formData, setFormData] = useState({

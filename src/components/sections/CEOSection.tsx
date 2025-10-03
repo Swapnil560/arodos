@@ -40,6 +40,11 @@ export const CEOSection = () => {
                         src="/images/Screenshot 2025-10-01 141844.png" 
                         alt="Dhruba Sarma - CEO & Founder" 
                         className="w-full h-full object-cover object-center grayscale rounded-full group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                        onTouchEnd={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.style.filter = 'grayscale(100%)';
+                          target.style.transform = 'scale(1)';
+                        }}
                       />
                     </div>
                     <div className="flex flex-col justify-end">
@@ -68,6 +73,11 @@ export const CEOSection = () => {
                   src="/images/Screenshot 2025-10-01 141844.png" 
                   alt="Dhruba Sarma - CEO & Founder" 
                   className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                  onTouchEnd={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.filter = 'grayscale(100%)';
+                    target.style.transform = 'scale(1)';
+                  }}
                 />
               </div>
             </div>

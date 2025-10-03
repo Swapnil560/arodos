@@ -48,6 +48,7 @@ export const Hero = () => {
               style={{color: '#F40202', fontWeight: 400, textShadow: '2px 2px 4px rgba(0,0,0,0.5), 1px 1px 2px rgba(244,2,2,0.3)', letterSpacing: '1px', transition: 'transform 0.3s ease', cursor: 'pointer', display: 'inline-block'}}
               onMouseEnter={(e) => (e.target as HTMLSpanElement).style.transform = 'scale(1.1)'}
               onMouseLeave={(e) => (e.target as HTMLSpanElement).style.transform = 'scale(1)'}
+              onTouchEnd={(e) => (e.target as HTMLSpanElement).style.transform = 'scale(1)'}
             >Innovative</span>
             <span className="text-white" style={{fontWeight: 400, textShadow: '2px 2px 4px rgba(0,0,0,0.5)', letterSpacing: '1px'}}> Solutions at </span>
             <span 
@@ -58,6 +59,11 @@ export const Hero = () => {
                 target.style.transform = 'scale(1.1)';
               }}
               onMouseLeave={(e) => {
+                const target = e.target as HTMLSpanElement;
+                target.style.color = 'white';
+                target.style.transform = 'scale(1)';
+              }}
+              onTouchEnd={(e) => {
                 const target = e.target as HTMLSpanElement;
                 target.style.color = 'white';
                 target.style.transform = 'scale(1)';
@@ -120,16 +126,16 @@ export const Hero = () => {
         {/* Statistics */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 mt-5 w-full max-w-2xl px-4">
           <div className="text-center cursor-pointer">
-            <div className="text-white text-3xl sm:text-4xl font-bold transition-colors duration-300 font-jost" onMouseEnter={(e) => (e.target as HTMLDivElement).style.color = '#F40202'} onMouseLeave={(e) => (e.target as HTMLDivElement).style.color = 'white'}>98%</div>
-            <div className="text-gray-300 text-base sm:text-lg font-bold transition-colors duration-300 font-jost" onMouseEnter={(e) => (e.target as HTMLDivElement).style.color = '#F40202'} onMouseLeave={(e) => (e.target as HTMLDivElement).style.color = '#d1d5db'}>On-Time Delivery</div>
+            <div className="text-white text-3xl sm:text-4xl font-bold transition-colors duration-300 font-jost" onMouseEnter={(e) => (e.target as HTMLDivElement).style.color = '#F40202'} onMouseLeave={(e) => (e.target as HTMLDivElement).style.color = 'white'} onTouchEnd={(e) => (e.target as HTMLDivElement).style.color = 'white'}>98%</div>
+            <div className="text-gray-300 text-base sm:text-lg font-bold transition-colors duration-300 font-jost" onMouseEnter={(e) => (e.target as HTMLDivElement).style.color = '#F40202'} onMouseLeave={(e) => (e.target as HTMLDivElement).style.color = '#d1d5db'} onTouchEnd={(e) => (e.target as HTMLDivElement).style.color = '#d1d5db'}>On-Time Delivery</div>
           </div>
           <div className="text-center cursor-pointer">
-            <div className="text-white text-3xl sm:text-4xl font-bold transition-colors duration-300 font-jost" onMouseEnter={(e) => (e.target as HTMLDivElement).style.color = '#F40202'} onMouseLeave={(e) => (e.target as HTMLDivElement).style.color = 'white'}>75</div>
-            <div className="text-gray-300 text-base sm:text-lg font-bold transition-colors duration-300 font-jost" onMouseEnter={(e) => (e.target as HTMLDivElement).style.color = '#F40202'} onMouseLeave={(e) => (e.target as HTMLDivElement).style.color = '#d1d5db'}>Apps Launched</div>
+            <div className="text-white text-3xl sm:text-4xl font-bold transition-colors duration-300 font-jost" onMouseEnter={(e) => (e.target as HTMLDivElement).style.color = '#F40202'} onMouseLeave={(e) => (e.target as HTMLDivElement).style.color = 'white'} onTouchEnd={(e) => (e.target as HTMLDivElement).style.color = 'white'}>75</div>
+            <div className="text-gray-300 text-base sm:text-lg font-bold transition-colors duration-300 font-jost" onMouseEnter={(e) => (e.target as HTMLDivElement).style.color = '#F40202'} onMouseLeave={(e) => (e.target as HTMLDivElement).style.color = '#d1d5db'} onTouchEnd={(e) => (e.target as HTMLDivElement).style.color = '#d1d5db'}>Apps Launched</div>
           </div>
           <div className="text-center cursor-pointer">
-            <div className="text-white text-3xl sm:text-4xl font-bold transition-colors duration-300 font-jost" onMouseEnter={(e) => (e.target as HTMLDivElement).style.color = '#F40202'} onMouseLeave={(e) => (e.target as HTMLDivElement).style.color = 'white'}>120+</div>
-            <div className="text-gray-300 text-base sm:text-lg font-bold transition-colors duration-300 font-jost" onMouseEnter={(e) => (e.target as HTMLDivElement).style.color = '#F40202'} onMouseLeave={(e) => (e.target as HTMLDivElement).style.color = '#d1d5db'}>Projects Completed</div>
+            <div className="text-white text-3xl sm:text-4xl font-bold transition-colors duration-300 font-jost" onMouseEnter={(e) => (e.target as HTMLDivElement).style.color = '#F40202'} onMouseLeave={(e) => (e.target as HTMLDivElement).style.color = 'white'} onTouchEnd={(e) => (e.target as HTMLDivElement).style.color = 'white'}>120+</div>
+            <div className="text-gray-300 text-base sm:text-lg font-bold transition-colors duration-300 font-jost" onMouseEnter={(e) => (e.target as HTMLDivElement).style.color = '#F40202'} onMouseLeave={(e) => (e.target as HTMLDivElement).style.color = '#d1d5db'} onTouchEnd={(e) => (e.target as HTMLDivElement).style.color = '#d1d5db'}>Projects Completed</div>
           </div>
         </div>
       </div>
