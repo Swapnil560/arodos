@@ -75,9 +75,17 @@ export const Hero = () => {
             >Innovative</span>
             <span className="text-white" style={{fontWeight: 400, textShadow: '2px 2px 4px rgba(0,0,0,0.5)', letterSpacing: '1px'}}> Solutions at </span>
             <span 
-              style={{color: '#F40202', fontWeight: 900, textShadow: '2px 2px 4px rgba(0,0,0,0.5), 1px 1px 2px rgba(244,2,2,0.3)', letterSpacing: '1px', transition: 'transform 0.3s ease', cursor: 'pointer', display: 'inline-block'}}
-              onMouseEnter={(e) => (e.target as HTMLSpanElement).style.transform = 'scale(1.1)'}
-              onMouseLeave={(e) => (e.target as HTMLSpanElement).style.transform = 'scale(1)'}
+              style={{color: 'white', fontWeight: 900, textShadow: '2px 2px 4px rgba(0,0,0,0.5)', letterSpacing: '1px', transition: 'all 0.3s ease', cursor: 'pointer', display: 'inline-block'}}
+              onMouseEnter={(e) => {
+                const target = e.target as HTMLSpanElement;
+                target.style.color = '#F40202';
+                target.style.transform = 'scale(1.1)';
+              }}
+              onMouseLeave={(e) => {
+                const target = e.target as HTMLSpanElement;
+                target.style.color = 'white';
+                target.style.transform = 'scale(1)';
+              }}
             >Affordable Cost</span>
           </h1>
         </div>
