@@ -10,7 +10,7 @@ export const Footer = () => {
   return (
     <footer className="bg-black text-white py-8 sm:py-12">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 mb-8">
           {/* Navigation */}
           <div>
             <h4 className="text-lg font-semibold mb-4 text-white">Navigation</h4>
@@ -44,8 +44,8 @@ export const Footer = () => {
           </div>
           
           {/* Contact */}
-          <div className="flex flex-col items-center">
-            <div className="text-left">
+          <div className="md:flex md:flex-col md:items-center">
+            <div className="text-left md:text-center">
               <h4 className="text-lg font-semibold mb-4 text-white">Contact Us</h4>
               <div className="space-y-2 text-gray-400 text-base">
               <p>Guwahati, Bangalore</p>
@@ -56,9 +56,9 @@ export const Footer = () => {
           </div>
           
           {/* Socials */}
-          <div className="text-right">
-            <h4 className="text-lg font-semibold mb-4 text-white text-right">Socials</h4>
-            <div className="flex flex-col items-end space-y-2">
+          <div className="text-left md:text-right">
+            <h4 className="text-lg font-semibold mb-4 text-white text-left md:text-right">Socials</h4>
+            <div className="flex flex-col items-start md:items-end space-y-2">
               <a href="https://www.linkedin.com/company/arodos-technologies/" target="_blank" rel="noopener noreferrer" className="flex items-center hover:opacity-75 transition-opacity text-gray-400 hover:text-white">
                 <img src="/images/link.png" alt="LinkedIn" className="w-6 h-6 mr-3" />
                 <span className="text-base">LinkedIn</span>
