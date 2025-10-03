@@ -29,6 +29,7 @@ Let's turn your ideas into innovative solutions together`,
   ]);
   const [inputText, setInputText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const chatRef = useRef<HTMLDivElement>(null);
@@ -258,8 +259,11 @@ Let's turn your ideas into innovative solutions together`;
       {isOpen && (
         <div 
           ref={chatRef} 
-          className="fixed bottom-20 right-2 left-2 sm:bottom-24 sm:right-6 sm:left-auto w-auto sm:w-[480px] hologram neon-border rounded-2xl flex flex-col z-50 transition-all duration-500"
+          className="fixed w-auto sm:w-[480px] hologram neon-border rounded-2xl flex flex-col z-50 transition-all duration-500"
           style={{ 
+            bottom: '100px',
+            right: '24px',
+            left: 'auto',
             top: '60px',
             maxHeight: 'calc(100vh - 140px)',
             height: 'auto',

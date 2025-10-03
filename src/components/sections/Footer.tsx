@@ -7,6 +7,14 @@ export const Footer = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const navigateToHome = () => {
+    if (window.location.pathname === '/') {
+      document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.href = '/';
+    }
+  };
+
   return (
     <footer className="bg-black text-white py-8 sm:py-12">
       <div className="max-w-6xl mx-auto px-4">
@@ -89,7 +97,7 @@ export const Footer = () => {
                 Privacy Policy
               </a>
             </div>
-            <button onClick={() => scrollToSection('hero')} className="hover:opacity-75 transition-opacity">
+            <button onClick={navigateToHome} className="hover:opacity-75 transition-opacity">
               <img src="/images/arodoslogo.png" alt="Arodos Logo" className="h-5 sm:h-6" />
             </button>
           </div>

@@ -41,7 +41,7 @@ export const OurServices = () => {
             imageDescription="Workspace with code monitor"
             layout="blue-right"
             imageUrl="/images/services/2.png"
-            blurAmount={0.1}
+            blurAmount={1}
           />
           
           <ServiceCard
@@ -52,7 +52,7 @@ export const OurServices = () => {
             imageDescription="Laptop on wooden desk with water glass"
             layout="blue-left"
             imageUrl="/images/services/3.jpg"
-            blurAmount={0.1}
+            blurAmount={1}
           />
           
           <ServiceCard

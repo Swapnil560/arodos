@@ -19,7 +19,14 @@ export const ContactCard = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    
+    // Clear form fields immediately
+    setFormData({
+      fullName: '',
+      workEmail: '',
+      projectDetails: ''
+    });
+    setGeneratedImage(null);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -181,7 +188,11 @@ export const ContactCard = () => {
 
                   <div className="pt-2 sm:pt-3 md:pt-4 flex justify-center">
                     <button
-                      type="submit"
+                      type="button"
+                      onClick={() => {
+                        setFormData({ fullName: '', workEmail: '', projectDetails: '' });
+                        setGeneratedImage(null);
+                      }}
                       className="bg-white font-jost px-6 py-3 rounded-lg transition-all duration-300 font-medium border border-gray-600"
                       style={{ color: '#870000' }}
                       onMouseEnter={(e) => {

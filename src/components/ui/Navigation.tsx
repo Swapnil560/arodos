@@ -23,17 +23,17 @@ export const Navigation = () => {
     <>
       {/* Desktop Navigation */}
       <nav className="hidden md:flex space-x-6">
-        <button onClick={() => handleNavClick('hero')} className="text-white hover:text-red-500 transition-colors">Home</button>
-        <button onClick={() => handleNavClick('services')} className="text-white hover:text-red-500 transition-colors">Services</button>
-        <button onClick={() => handleNavClick('core-principles')} className="text-white hover:text-red-500 transition-colors">Why Us?</button>
-        <button onClick={() => handleNavClick('who-we-are')} className="text-white hover:text-red-500 transition-colors">About Us</button>
-        <button onClick={() => handleNavClick('contact-us')} className="text-white hover:text-red-500 transition-colors">Contact Us</button>
+        <button onClick={() => handleNavClick('hero')} className="text-white md:hover:text-red-500 active:text-red-400 transition-colors">Home</button>
+        <button onClick={() => handleNavClick('services')} className="text-white md:hover:text-red-500 active:text-red-400 transition-colors">Services</button>
+        <button onClick={() => handleNavClick('core-principles')} className="text-white md:hover:text-red-500 active:text-red-400 transition-colors">Why Us?</button>
+        <button onClick={() => handleNavClick('who-we-are')} className="text-white md:hover:text-red-500 active:text-red-400 transition-colors">About Us</button>
+        <button onClick={() => handleNavClick('contact-us')} className="text-white md:hover:text-red-500 active:text-red-400 transition-colors">Contact Us</button>
       </nav>
 
       {/* Stylish Mobile Hamburger */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden relative w-8 h-8 flex items-center justify-center rounded-lg bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300"
+        className="md:hidden relative w-8 h-8 flex items-center justify-center rounded-lg bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 active:bg-opacity-30 transition-all duration-300"
         style={{ zIndex: 100000 }}
       >
         <div className="w-4 h-4 flex flex-col justify-center items-center">
@@ -52,35 +52,35 @@ export const Navigation = () => {
               <nav className="flex flex-col space-y-2">
                 <button 
                   onClick={() => handleNavClick('hero')} 
-                  className="text-white text-sm font-medium hover:text-red-500 transition-all duration-300 text-left py-2 px-2 rounded hover:bg-white hover:bg-opacity-10 relative"
+                  className="text-white text-sm font-medium active:text-red-500 transition-all duration-300 text-left py-2 px-2 rounded active:bg-white active:bg-opacity-20 relative"
                   style={{ zIndex: 1000001 }}
                 >
                   Home
                 </button>
                 <button 
                   onClick={() => handleNavClick('services')} 
-                  className="text-white text-sm font-medium hover:text-red-500 transition-all duration-300 text-left py-2 px-2 rounded hover:bg-white hover:bg-opacity-10 relative"
+                  className="text-white text-sm font-medium active:text-red-500 transition-all duration-300 text-left py-2 px-2 rounded active:bg-white active:bg-opacity-20 relative"
                   style={{ zIndex: 1000001 }}
                 >
                   Services
                 </button>
                 <button 
                   onClick={() => handleNavClick('core-principles')} 
-                  className="text-white text-sm font-medium hover:text-red-500 transition-all duration-300 text-left py-2 px-2 rounded hover:bg-white hover:bg-opacity-10 relative"
+                  className="text-white text-sm font-medium active:text-red-500 transition-all duration-300 text-left py-2 px-2 rounded active:bg-white active:bg-opacity-20 relative"
                   style={{ zIndex: 1000001 }}
                 >
                   Why Us?
                 </button>
                 <button 
                   onClick={() => handleNavClick('who-we-are')} 
-                  className="text-white text-sm font-medium hover:text-red-500 transition-all duration-300 text-left py-2 px-2 rounded hover:bg-white hover:bg-opacity-10 relative"
+                  className="text-white text-sm font-medium active:text-red-500 transition-all duration-300 text-left py-2 px-2 rounded active:bg-white active:bg-opacity-20 relative"
                   style={{ zIndex: 1000001 }}
                 >
                   About Us
                 </button>
                 <button 
                   onClick={() => handleNavClick('contact-us')} 
-                  className="text-white text-sm font-medium hover:text-red-500 transition-all duration-300 text-left py-2 px-2 rounded hover:bg-white hover:bg-opacity-10 relative"
+                  className="text-white text-sm font-medium active:text-red-500 transition-all duration-300 text-left py-2 px-2 rounded active:bg-white active:bg-opacity-20 relative"
                   style={{ zIndex: 1000001 }}
                 >
                   Contact Us
