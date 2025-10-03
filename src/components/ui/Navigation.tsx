@@ -5,9 +5,17 @@ export const Navigation = () => {
 
   const handleNavClick = (sectionId: string) => {
     setIsOpen(false);
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    
+    // Check if we're on the home page
+    if (window.location.pathname === '/') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else {
+      // Navigate to home page and store section to scroll to
+      sessionStorage.setItem('scrollToSection', sectionId);
+      window.location.href = '/';
     }
   };
 

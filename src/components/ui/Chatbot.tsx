@@ -110,9 +110,7 @@ Let's turn your ideas into innovative solutions together`,
       return `🕐 Current time: ${now.toLocaleTimeString()} on ${now.toLocaleDateString()}. Time zone: ${Intl.DateTimeFormat().resolvedOptions().timeZone}`;
     }
     
-    if (q.includes('demo') || q.includes('video') || q.includes('presentation') || q.includes('showcase') || q.includes('watch')) {
-      return { text: 'Here is a video presentation showcasing our company and services!', hasVideo: true, videoSrc: 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&mute=1' };
-    }
+
     
     return `Hello there!
 
@@ -175,15 +173,26 @@ Let's turn your ideas into innovative solutions together`;
     <>
       <style>{`
         .cyber-glow {
-          box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.3);
+          box-shadow: 0 0 20px rgba(244, 2, 2, 0.5), 0 0 40px rgba(244, 2, 2, 0.3);
         }
         .neon-border {
-          border: 1px solid rgba(0, 255, 255, 0.6);
-          box-shadow: 0 0 10px rgba(0, 255, 255, 0.3), inset 0 0 10px rgba(0, 255, 255, 0.1);
+          border: 1px solid rgba(244, 2, 2, 0.6);
+          box-shadow: 0 0 10px rgba(244, 2, 2, 0.3), inset 0 0 10px rgba(244, 2, 2, 0.1);
         }
         .hologram {
-          background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(20, 20, 40, 0.95));
+          background: linear-gradient(135deg, rgba(15, 15, 15, 0.95), rgba(25, 25, 35, 0.98));
+          backdrop-filter: blur(15px);
+          border: 1px solid rgba(244, 2, 2, 0.3);
+        }
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-5px); }
+        }
+        .float { animation: float 3s ease-in-out infinite; }
+        .glass-effect {
+          background: rgba(255, 255, 255, 0.05);
           backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
         }
         .hide-scrollbar {
           scrollbar-width: none;
@@ -193,8 +202,8 @@ Let's turn your ideas into innovative solutions together`;
           display: none;
         }
         @keyframes pulse-glow {
-          0%, 100% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); }
-          50% { box-shadow: 0 0 30px rgba(255, 0, 255, 0.7); }
+          0%, 100% { box-shadow: 0 0 20px rgba(244, 2, 2, 0.5); }
+          50% { box-shadow: 0 0 30px rgba(244, 2, 2, 0.7); }
         }
         .pulse-glow { animation: pulse-glow 2s infinite; }
         @keyframes slide-in {
@@ -213,7 +222,7 @@ Let's turn your ideas into innovative solutions together`;
       {/* Toggle Button */}
       <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 w-16 h-16 sm:w-16 sm:h-16 z-50">
         <div className="relative w-full h-full">
-          <div className="absolute inset-0 rounded-full border-2 border-cyan-400 animate-spin" style={{ animationDuration: '4s' }}></div>
+          <div className="absolute inset-0 rounded-full border-2 border-red-500 animate-spin" style={{ animationDuration: '4s' }}></div>
           <video
             ref={videoRef}
             onClick={() => {
@@ -248,12 +257,13 @@ Let's turn your ideas into innovative solutions together`;
           }}
         >
           {/* Header */}
-          <div className="p-3 sm:p-4 border-b border-cyan-400/30 rounded-t-2xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-            <h3 className="font-bold text-lg sm:text-xl text-cyan-300" style={{ textShadow: '0 0 10px rgba(0, 255, 255, 0.8)' }}>
-              Aro
+          <div className="p-3 sm:p-4 border-b border-red-500/40 rounded-t-2xl bg-gradient-to-r from-red-500/20 to-red-600/30 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-500/10 to-transparent animate-pulse"></div>
+            <h3 className="font-bold text-lg sm:text-xl text-red-400 relative z-10 float" style={{ textShadow: '0 0 15px rgba(244, 2, 2, 0.9)' }}>
+              🤖 Aro
             </h3>
-
-            <div className="absolute top-3 right-3 sm:top-4 sm:right-4 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <p className="text-xs text-gray-300 relative z-10">Arodos AI Assistant</p>
+            <div className="absolute top-3 right-3 sm:top-4 sm:right-4 w-3 h-3 bg-red-500 rounded-full animate-pulse" style={{ boxShadow: '0 0 10px rgba(244, 2, 2, 0.8)' }}></div>
           </div>
 
           {/* Messages */}
@@ -265,40 +275,32 @@ Let's turn your ideas into innovative solutions together`;
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div
-                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-2xl text-xs sm:text-sm transition-all duration-300 hover:scale-105 font-jost whitespace-pre-line break-words ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-2xl text-xs sm:text-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-lg font-jost whitespace-pre-line break-words ${
                     message.isUser
-                      ? 'bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-100 neon-border'
-                      : 'bg-gradient-to-r from-gray-900/80 to-gray-800/80 text-gray-100 border border-purple-400/30'
+                      ? 'bg-gradient-to-br from-red-500/30 to-red-600/40 text-white glass-effect backdrop-blur-md border border-red-400/50'
+                      : 'bg-gradient-to-br from-gray-800/80 to-gray-900/90 text-gray-100 glass-effect backdrop-blur-md border border-gray-600/30'
                   }`}
+                  style={{
+                    boxShadow: message.isUser 
+                      ? '0 8px 32px rgba(244, 2, 2, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+                      : '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
+                  }}
                 >
                   {message.text}
-                  {message.hasVideo && message.videoSrc && (
-                    <div className="mt-3">
-                      <iframe
-                        src={message.videoSrc}
-                        width="100%"
-                        height="140"
-                        frameBorder="0"
-                        allow="encrypted-media; picture-in-picture"
-                        allowFullScreen
-                        className="rounded-lg border border-cyan-400/30 max-w-[250px] sm:max-w-[280px]"
-                      />
-                    </div>
-                  )}
                 </div>
               </div>
             ))}
             
             {isLoading && (
               <div className="flex justify-start">
-                <div className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 text-gray-100 px-3 sm:px-4 py-2 sm:py-3 rounded-2xl text-xs sm:text-sm border border-purple-400/30">
+                <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/90 text-gray-100 px-3 sm:px-4 py-2 sm:py-3 rounded-2xl text-xs sm:text-sm glass-effect backdrop-blur-md border border-gray-600/30" style={{ boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05)' }}>
                   <div className="flex items-center space-x-2">
                     <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
+                      <div className="w-2 h-2 bg-red-500 rounded-full animate-bounce" style={{ boxShadow: '0 0 8px rgba(244, 2, 2, 0.6)' }}></div>
+                      <div className="w-2 h-2 bg-red-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s', boxShadow: '0 0 8px rgba(244, 2, 2, 0.6)' }}></div>
+                      <div className="w-2 h-2 bg-red-500 rounded-full animate-bounce" style={{ animationDelay: '0.4s', boxShadow: '0 0 8px rgba(244, 2, 2, 0.6)' }}></div>
                     </div>
-                    <span className="text-xs text-cyan-300 font-mono">Processing...</span>
+                    <span className="text-xs text-red-400 font-mono">Processing...</span>
                   </div>
                 </div>
               </div>
@@ -307,46 +309,38 @@ Let's turn your ideas into innovative solutions together`;
           </div>
 
           {/* Input */}
-          <div className="p-3 sm:p-4 border-t border-cyan-400/30 bg-gradient-to-r from-cyan-500/5 to-purple-500/5">
-            <div className="flex space-x-2 sm:space-x-3">
+          <div className="p-3 sm:p-4 border-t border-red-500/40 bg-gradient-to-r from-red-500/10 to-red-600/20 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-t from-transparent via-red-500/5 to-transparent"></div>
+            <div className="flex space-x-2 sm:space-x-3 relative z-10">
               <input
                 type="text"
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 onKeyPress={handleKeyPress}
-                placeholder="Enter query..."
-                className="flex-1 px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-cyan-100 placeholder-cyan-400/60 font-mono neon-border rounded-xl transition-all duration-300 focus:cyber-glow"
+                placeholder="Type your message..."
+                className="flex-1 px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-gray-100 placeholder-gray-400 font-mono neon-border rounded-xl transition-all duration-300 focus:cyber-glow glass-effect backdrop-blur-md"
                 style={{
-                  background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(20, 20, 40, 0.8))',
-                  backdropFilter: 'blur(10px)'
+                  background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(30, 30, 40, 0.6))',
+                  backdropFilter: 'blur(15px)',
+                  boxShadow: 'inset 0 2px 10px rgba(0, 0, 0, 0.3), 0 4px 20px rgba(244, 2, 2, 0.1)'
                 }}
                 disabled={isLoading}
               />
               <button
-                onClick={() => {
-                  setInputText('show me a video');
-                  setTimeout(() => handleSendMessage(), 100);
-                }}
-                disabled={isLoading}
-                className="px-2 sm:px-4 py-2 sm:py-3 text-white rounded-xl transition-all duration-300 hover:scale-110 neon-border"
-                style={{ background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(147, 51, 234, 0.8))' }}
-              >
-                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                </svg>
-              </button>
-              <button
                 onClick={handleSendMessage}
                 disabled={!inputText.trim() || isLoading}
-                className="px-3 sm:px-5 py-2 sm:py-3 text-white rounded-xl transition-all duration-300 hover:scale-110 neon-border disabled:opacity-50"
-                style={{ background: 'linear-gradient(135deg, rgba(0, 255, 255, 0.8), rgba(255, 0, 255, 0.8))' }}
+                className="px-3 sm:px-5 py-2 sm:py-3 text-white rounded-xl transition-all duration-300 hover:scale-110 hover:rotate-12 neon-border disabled:opacity-50 relative overflow-hidden group"
+                style={{ 
+                  background: 'linear-gradient(135deg, rgba(244, 2, 2, 0.9), rgba(220, 38, 38, 0.9))',
+                  boxShadow: '0 8px 25px rgba(244, 2, 2, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
+                }}
               >
-                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                 </svg>
               </button>
             </div>
-
           </div>
         </div>
       )}

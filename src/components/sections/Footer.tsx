@@ -82,14 +82,16 @@ export const Footer = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
             <div className="flex items-center space-x-4 sm:space-x-6">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base">
+              <a href="/terms-of-use" className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base">
                 Terms of Use
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base">
+              <a href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors text-sm sm:text-base">
                 Privacy Policy
               </a>
             </div>
-            <img src="/images/arodoslogo.png" alt="Arodos Logo" className="h-5 sm:h-6" />
+            <button onClick={() => scrollToSection('hero')} className="hover:opacity-75 transition-opacity">
+              <img src="/images/arodoslogo.png" alt="Arodos Logo" className="h-5 sm:h-6" />
+            </button>
           </div>
         </div>
       </div>
