@@ -32,6 +32,12 @@ export const Expertise = () => {
           <button
             onClick={handleGoBack}
             className="flex items-center space-x-2 text-white hover:text-red-400 transition-colors duration-300"
+            onTouchEnd={(e) => {
+              const target = e.target as HTMLButtonElement;
+              setTimeout(() => {
+                target.style.color = 'white';
+              }, 150);
+            }}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

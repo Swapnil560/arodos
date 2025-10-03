@@ -130,6 +130,12 @@ export const PrivacyPolicy = () => {
             <button
               onClick={() => window.location.href = '/'}
               className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg transition-colors duration-300 font-medium flex items-center gap-2"
+              onTouchEnd={(e) => {
+                const target = e.target as HTMLButtonElement;
+                setTimeout(() => {
+                  target.style.backgroundColor = '#dc2626';
+                }, 150);
+              }}
             >
               <span>←</span>
               Back to Home

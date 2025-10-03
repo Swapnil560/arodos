@@ -39,7 +39,7 @@ export const CEOSection = () => {
                       <img 
                         src="/images/Screenshot 2025-10-01 141844.png" 
                         alt="Dhruba Sarma - CEO & Founder" 
-                        className="w-full h-full object-cover object-center grayscale rounded-full group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                        className="w-full h-full object-cover object-center sm:grayscale rounded-full group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                         onTouchEnd={(e) => {
                           const target = e.target as HTMLImageElement;
                           target.style.filter = 'grayscale(100%)';
@@ -72,7 +72,7 @@ export const CEOSection = () => {
                 <img 
                   src="/images/Screenshot 2025-10-01 141844.png" 
                   alt="Dhruba Sarma - CEO & Founder" 
-                  className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                  className="w-full h-full object-cover object-center sm:grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                   onTouchEnd={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.style.filter = 'grayscale(100%)';

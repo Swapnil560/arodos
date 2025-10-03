@@ -13,8 +13,8 @@ export const ContactCard = () => {
         background-color: transparent !important;
         transform: none !important;
       }
-      /* Reset button hover states on mobile */
-      button:hover {
+      /* Reset button hover states on mobile - but not for buttons with touch handlers */
+      button:hover:not([ontouchstart]) {
         background-color: initial !important;
         color: initial !important;
         transform: none !important;
@@ -237,9 +237,11 @@ export const ContactCard = () => {
                       }}
                       onTouchEnd={(e) => {
                         const target = e.target as HTMLButtonElement;
-                        target.style.backgroundColor = 'white';
-                        target.style.color = '#870000';
-                        target.style.transform = 'scale(1)';
+                        setTimeout(() => {
+                          target.style.backgroundColor = 'white';
+                          target.style.color = '#870000';
+                          target.style.transform = 'scale(1)';
+                        }, 150);
                       }}
                     >
                       Submit Request →
