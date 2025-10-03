@@ -48,13 +48,13 @@ export const CEOSection = () => {
                       <p className="text-xs sm:text-sm md:text-base text-gray-700 font-semibold mt-2 sm:mt-3">Let's Connect :</p>
                       <div className="flex gap-2 sm:gap-3 md:gap-4 mt-1 sm:mt-2">
                         <a href="https://www.linkedin.com/in/dhrubasarma/" target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 transition-all duration-300 hover:shadow-lg">
-                          <img src="/images/link.png" alt="LinkedIn" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-md sm:rounded-lg hover:brightness-110" />
+                          <img src="/images/link.png" alt="LinkedIn" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-md sm:rounded-lg grayscale hover:grayscale-0 hover:brightness-110" />
                         </a>
                         <a href="https://www.instagram.com/dhruba2605/" target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 transition-all duration-300 hover:shadow-lg">
-                          <img src="/images/insta.png" alt="Instagram" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-md sm:rounded-lg hover:brightness-110" />
+                          <img src="/images/insta.png" alt="Instagram" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-md sm:rounded-lg grayscale hover:grayscale-0 hover:brightness-110" />
                         </a>
                         <a href="https://www.facebook.com/sarma.jyoti.dhruba" target="_blank" rel="noopener noreferrer" className="transform hover:scale-110 transition-all duration-300 hover:shadow-lg -mt-1">
-                          <img src="/images/Fb.png" alt="Facebook" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-md sm:rounded-lg hover:brightness-110" />
+                          <img src="/images/Fb.png" alt="Facebook" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-md sm:rounded-lg grayscale hover:grayscale-0 hover:brightness-110" />
                         </a>
                       </div>
                     </div>
